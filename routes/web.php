@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/home', function () {
@@ -33,13 +33,13 @@ Route::get('/beranda', function () {
 });
 
 
-// Route::get('/pojok', function () {
-//     return view('pojok');
-// });
+Route::get('/pojok', function () {
+    return view('pojok');
+});
 
 
 
-Route::get('/pojok', [App\Http\Controllers\HomeController::class, 'semuaindex'])->name('semuaindex');
+Route::get('/daftar-pojok', [App\Http\Controllers\HomeController::class, 'semuaindex'])->name('semuaindex');
 
 
 Auth::routes();
