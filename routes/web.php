@@ -17,7 +17,8 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('home');
+
+    return view('beranda');
 });
 
 Route::get('/home', function () {
