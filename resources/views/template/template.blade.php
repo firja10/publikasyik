@@ -89,7 +89,7 @@
         <!-- <a href="index.html" class="logo mr-auto"><img src="{{asset('assets/img/logo.png')}}" alt="" class="img-fluid"></a>-->
 
         <nav class="nav-menu d-none d-lg-block">
-          <ul>
+          <ul >
             <li class="active"><a href="{{url('/home')}}">Beranda</a></li>
             <li><a href="/home/#pricing">Produk</a></li>
             <li><a href="{{url('/pojok')}}">Pojok Publikasyik</a></li>
@@ -115,14 +115,25 @@
               </ul>
             </li>
             <li><a href="#contact">Contact</a></li> --}}
+            
+            
+            
+            
+            
+            
+            
           </ul>
         </nav>
         <!-- .nav-menu -->
 
-        @if(Auth::check())
+    
+    
+     
+            
+                @if(Auth::check())
 
 
-        <li class="dropdown">
+        <li class="dropdown" style = "list-style-type: none; margin-left:15px;margin-right:15px;">
             <button class="btn btn-success dropdown-toggle  py-3 px-0 px-lg-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <strong>   {{Auth::user()->name}} </strong>
             </button>
@@ -155,10 +166,6 @@
         <a href="{{url('/login')}}" class="get-started-btn scrollto">Log In</a>
 
         @endif
-
-
-
-
 
 
 
