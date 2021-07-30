@@ -40,7 +40,8 @@ Route::get('/pojok', function () {
 
 
 
-Route::get('/daftar-pojok', [App\Http\Controllers\HomeController::class, 'semuaindex'])->name('semuaindex');
+Route::get('/daftar-pojok', [App\Http\Controllers\LandingController::class, 'semuaindex'])->name('semuaindex');
+// Route::get('/daftar-pojok', [App\Http\Controllers\HomeController::class, 'semuaindex']) ;
 
 
 Auth::routes();

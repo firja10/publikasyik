@@ -13,7 +13,15 @@ use App\Models\User;
 
 
 class HomeController extends Controller
+
 {
+
+
+
+
+
+
+
     /**
      * Create a new controller instance.
      *
@@ -48,14 +56,6 @@ class HomeController extends Controller
 
 
 
-    public function semuaindex()
-    {
-        //
-        $paper = Paper::all();
-        $jurnal = Jurnal::all();
-        $seminar = Seminar::all();
-        return view('daftar-pojok', compact('paper','jurnal','seminar'));
-    }
 
 
 
