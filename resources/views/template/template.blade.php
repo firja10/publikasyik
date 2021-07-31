@@ -92,7 +92,7 @@
           <ul >
             <li class="active"><a href="{{url('/home')}}">Beranda</a></li>
             <li><a href="/home/#pricing">Produk</a></li>
-            <li><a href="{{url('/pojok')}}">Pojok Publikasyik</a></li>
+            <li><a href="{{url('/daftar-pojok')}}">Pojok Publikasyik</a></li>
             <li><a href="/home/#contact">Kontak Kami</a></li>
             {{-- <li><a href="#team">Team</a></li> --}}
             {{-- <li class="drop-down">

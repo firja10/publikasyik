@@ -1,20 +1,18 @@
 <?php
 
 namespace App\Models;
-use App\Models\User;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
 
-class Jurnal extends Model
+class Ppt extends Model
 {
     use HasFactory;
 
-    public function pesertajurnal()
+    public function pesertappt()
     {
         # code...
         return $this->belongsTo(User::class);
     }
-
-
 }

@@ -2,15 +2,14 @@
 
 namespace App\Models;
 use App\Models\User;
-
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Jurnal extends Model
+class Festival extends Model
 {
     use HasFactory;
 
-    public function pesertajurnal()
+    public function pesertafestival()
     {
         # code...
         return $this->belongsTo(User::class);
