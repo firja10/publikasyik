@@ -21,11 +21,57 @@ class LandingController extends Controller
     public function semuaindex()
     {
         //
-        $paper = Paper::all();
-        $jurnal = Jurnal::all();
-        $seminar = Seminar::all();
+        $paper = Paper::all()->slice(0,4);
+        $jurnal = Jurnal::all()->slice(0,4);
+        $seminar = Seminar::all()->slice(0,4);
         return view('daftar-pojok', compact('paper','jurnal','seminar'));
     }
+
+
+
+
+
+
+
+    public function daftarseminar()
+    {
+        # code...
+        $seminar = Seminar::all();
+        return view('daftar-seminar',compact('seminar'));
+
+    }
+
+
+
+    public function daftarjurnal()
+    {
+        # code...
+        $jurnal = Jurnal::all();
+        return view('daftar-jurnal',compact('jurnal'));
+
+    }
+
+
+
+    public function daftarpaper()
+    {
+        # code...
+        $paper = Paper::all();
+        return view('daftar-paper',compact('paper'));
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -36,6 +82,7 @@ class LandingController extends Controller
         $eksekutif = Eksekutif::all();
         return view('user.daftar-eksekutif',compact('eksekutif'));
     }
+
 
 
     public function liatfestival()

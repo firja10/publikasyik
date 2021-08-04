@@ -74,7 +74,7 @@ url('/startup-unpad/background-1.png');background-size:cover;">
 
     <center>
         <div class="section-title">
-    <a href="" class = "btn" style = "width:400px;border-radius:10px; font-size:30px; background-color:#AD3221; color:white;"> <strong>SELENGKAPNYA</strong> </a>
+    <a href="{{url('/daftar-call-for-papers')}}" class = "btn" style = "width:400px;border-radius:10px; font-size:30px; background-color:#AD3221; color:white;"> <strong>SELENGKAPNYA</strong> </a>
         </div>
 </center>
 
@@ -140,7 +140,7 @@ url('/startup-unpad/background-1.png');background-size:cover;">
 
                 <center>
                     <div class="section-title">
-                <a href="" class = "btn btn-primary" style = "width:400px;border-radius:10px; font-size:30px;"> <strong>SELENGKAPNYA</strong> </a>
+                <a href="{{url('/daftar-seminar')}}" class = "btn btn-primary" style = "width:400px;border-radius:10px; font-size:30px;"> <strong>SELENGKAPNYA</strong> </a>
                     </div>
             </center>
 
@@ -200,7 +200,7 @@ url('/startup-unpad/background-1.png');background-size:cover;">
 
     <center>
         <div class="section-title">
-    <a href="" class = "btn" style = "width:400px;border-radius:10px; font-size:30px; background-color:#AD3221; color:white;"> <strong>SELENGKAPNYA</strong> </a>
+    <a href="{{url('/daftar-jurnal')}}" class = "btn" style = "width:400px;border-radius:10px; font-size:30px; background-color:#AD3221; color:white;"> <strong>SELENGKAPNYA</strong> </a>
         </div>
 </center>
 

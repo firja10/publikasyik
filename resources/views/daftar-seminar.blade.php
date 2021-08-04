@@ -1,7 +1,10 @@
 
+@extends('template.template')
 
+@section('content')
+<br><br> <br> <br>
   <!-- ======= Services Section ======= -->
-  <section id="services" class="services section-bg">
+  <section id="services" class="services">
     <div class="container" data-aos="fade-up">
       <div class="section-title">
         <h2 style = "color:#AD3221">Seminar Nasional</h2>
@@ -13,7 +16,7 @@
         @foreach ( $seminar as $webinar )
 
 
-        <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+        <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400" style = "padding-top:20px;">
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="{{asset('storage/Seminar/'.$webinar->poster_seminar)}}" alt="Card image cap">
                 <div class="card-body">
@@ -39,6 +42,7 @@
         @endforeach
       </div>
     </center>
+    <br>
 
 
 
@@ -47,11 +51,7 @@
     <br><br><br>
 
 
-                <center>
-                    <div class="section-title">
-                <a href="" class = "btn btn-primary" style = "width:400px;border-radius:10px; font-size:30px;"> <strong>SELENGKAPNYA</strong> </a>
-                    </div>
-            </center>
-
   </section>
   <!-- End Services Section -->
+
+  @endsection

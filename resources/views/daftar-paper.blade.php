@@ -2,7 +2,10 @@
 
 @section('content')
 
-
+<br>
+<br>
+<br>
+<br>
 
   <!-- ======= Services Section ======= -->
   <section id="services" class="services">
@@ -43,13 +46,6 @@
 
 
     <br><br><br>
-
-
-    <center>
-        <div class="section-title">
-    <a href="" class = "btn" style = "width:400px;border-radius:10px; font-size:30px; background-color:#AD3221; color:white;"> <strong>SELENGKAPNYA</strong> </a>
-        </div>
-</center>
 
 
 
