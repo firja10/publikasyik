@@ -1,6 +1,23 @@
 @extends('admin.template.app')
 
 
+
+@section('title')
+<title>Daftar Seminar - Admin</title>
+
+@endsection
+
+
+@section('judul')
+
+
+<h1 class="h3 mb-0 text-gray-800">Daftar Seminar</h1>
+@endsection
+
+
+
+
+
 @section('button')
 
 

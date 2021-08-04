@@ -1,5 +1,26 @@
 @extends('admin.template.app')
 
+@section('title')
+<title>Daftar Call for Papers - Admin</title>
+
+@endsection
+
+
+@section('judul')
+
+
+<h1 class="h3 mb-0 text-gray-800">Daftar Call for Papers</h1>
+@endsection
+
+
+
+@section('content')
+
+
+
+
+
+
 
 @section('button')
 

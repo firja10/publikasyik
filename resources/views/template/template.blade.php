@@ -141,7 +141,7 @@
               <a class="dropdown-item" href="#">
 
                 @if(Auth::user()->is_admin == 1)
-                  <a class="dropdown-item" href="{{url('/admin/home')}}"> Halaman Admin</a>
+                  <a class="dropdown-item" href="{{url('/admin/dashboard')}}"> Halaman Admin</a>
                 @endif
 
                 <a class = "dropdown-item" href="{{ route('logout') }}"
