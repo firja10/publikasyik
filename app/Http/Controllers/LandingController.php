@@ -63,6 +63,13 @@ class LandingController extends Controller
 
 
 
+    public function daftarkelas()
+    {
+        # code...
+        $eksekutif = Eksekutif::all();
+        return view('daftar-kelas',compact('eksekutif'));
+    }
+
 
 
 

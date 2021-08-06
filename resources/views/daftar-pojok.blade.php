@@ -1,5 +1,11 @@
 @extends('template.template')
 
+@section('title')
+Pojok Publikasyik Menantimu !
+@endsection
+
+
+
 @section('content')
 
 

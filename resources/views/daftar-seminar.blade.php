@@ -1,6 +1,10 @@
 
 @extends('template.template')
 
+@section('title')
+Daftar Seminar Nasional
+@endsection
+
 @section('content')
 <br><br> <br> <br>
   <!-- ======= Services Section ======= -->

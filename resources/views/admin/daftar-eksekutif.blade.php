@@ -23,7 +23,7 @@
     <div class="col-xl-12 col-lg-11">
 
 
-        <table class="table table-dark">
+        <table class="table table-dark" >
             <thead>
               <tr>
                 <th scope="col">No</th>
@@ -62,6 +62,7 @@
                 </td>
 
               </tr>
+
             @endforeach
             </tbody>
           </table>
@@ -78,7 +79,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Form Tambah Paper</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Form Tambah Kelas</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -96,7 +97,7 @@
               </div>
 
               <div class="form-group">
-                <label for="materi_kelas" class="col-form-label">Materi Festival : </label>
+                <label for="materi_kelas" class="col-form-label">Materi Kelas : </label>
                 <input type="text" class="form-control" id="materi_kelas" name = "materi_kelas">
               </div>
 

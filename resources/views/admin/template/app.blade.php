@@ -144,6 +144,7 @@
 
 
 
+
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -159,6 +160,13 @@
                 <i class="fas fa-fw fa-home"></i>
                 <span>Beranda</span></a>
         </li>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{url('/admin/daftar-ppt')}}">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Daftar User</span></a>
+            </li>
 
                <!-- Nav Item - Tables -->
                <li class="nav-item">

@@ -1,5 +1,9 @@
 @extends('template.template')
 
+@section('title')
+Daftar Call For Papers
+@endsection
+
 @section('content')
 
 <br>

@@ -1,5 +1,9 @@
 @extends('template.template')
 
+@section('title')
+Daftar Jurnal
+@endsection
+
 @section('content')
 
 <br>

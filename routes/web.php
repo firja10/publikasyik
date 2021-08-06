@@ -26,7 +26,7 @@ Route::get('/', function () {
 });
 
 Route::get('/home', function () {
-    return view('home');
+    return view('beranda');
 });
 
 // Route::get('/loginpage', function () {
@@ -50,10 +50,14 @@ Route::get('/daftar-call-for-papers',[App\Http\Controllers\LandingController::cl
 Route::get('/daftar-seminar',[App\Http\Controllers\LandingController::class, 'daftarseminar'])->name('daftarseminar');
 Route::get('/daftar-jurnal',[App\Http\Controllers\LandingController::class, 'daftarjurnal'])->name('daftarjurnal');
 
+
+
 Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/admin/dashboard', [App\Http\Controllers\HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
+
+Route::get('/daftar-kelas',[LandingController::class,'daftarkelas'])->name('daftarkelas')->middleware('auth');
 
 Route::resource('admin/daftar-paper', PaperController::class)->middleware('is_admin');
 Route::resource('admin/daftar-seminar', SeminarController::class)->middleware('is_admin');

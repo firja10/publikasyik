@@ -1,4 +1,10 @@
 @extends('template.template')
+
+@section('title')
+Selamat Datang di Publikasyik
+@endsection
+
+
 @section('content')
 
     <!-- ======= Hero Section ======= -->
@@ -313,7 +319,7 @@
                   <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
                   <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
                 </ul> --}}
-                <a href="#" class="buy-btn">Daftar</a>
+                <a href="{{url('/daftar-kelas')}}" class="buy-btn">Daftar</a>
               </div>
             </div>
 
