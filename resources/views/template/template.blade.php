@@ -67,6 +67,25 @@
       .typing-container {
         display: flex;
       }
+
+      /* @media */
+      @media only screen and (max-width: 600px) {
+        #logo-asli-panjang{
+            display: none;
+        }
+
+
+      }
+
+      @media only screen and (min-width: 601px)
+      {
+          #logo-asli-pendek{
+              display:none;
+          }
+      }
+
+
+
     </style>
 
     <!-- =======================================================
@@ -83,7 +102,8 @@
       <div class="container d-flex align-items-center">
         <h1 class="logo mr-auto">
           <a href="{{url('/home')}}" class="typing-container">
-             <img src="{{asset('startup-unpad/logo-publikasyik-asli.png')}}" alt="" style = "margin-right:15px;" >
+             <img src="{{asset('startup-unpad/logo-publikasyik-asli.png')}}" id = "logo-asli-panjang" alt="" style = "margin-right:15px;" >
+             <img src="{{asset('startup-unpad/publikasyik.png')}}" id = "logo-asli-pendek" alt="" style = "margin-right:15px;" >
              {{-- <span style = "display:inline-block;margin-top:5px;"> U B L I K A S Y I K</span> --}}
               {{-- <span class="input-cursor"></span> --}}
             </a>
