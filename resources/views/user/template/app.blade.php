@@ -9,7 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    @yield('title')
+    <title>@yield('title')</title>
+
     {{-- <title>SB Admin 2 - Dashboard</title> --}}
         <!-- Favicons -->
         <link href="{{asset('startup-unpad/publikasyik.png')}}" rel="icon" />
@@ -23,6 +24,9 @@
 
     <!-- Custom styles for this template-->
     <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
+
+    @yield('style')
+
 
 </head>
 
@@ -63,74 +67,39 @@
             <div class="sidebar-heading">
                 Halaman User
             </div>
+            <br>
 
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="{{url('/admin/home')}}">
+            <li class="nav-item" id = "dashboard">
+                <a class="nav-link" href="{{url('/user/dashboard')}}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
 
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('/admin/daftar-paper')}}">
+            <li class="nav-item" id = "riwayat-kelas">
+                <a class="nav-link" href="{{url('/user/riwayat-kelas')}}">
                     <i class="fas fa-fw fa fa-calendar"></i>
                     <span>Riwayat Kelas</span></a>
             </li>
 
 
-
-
-
-
-
-
-
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Produk
-            </div>
-
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('/admin/daftar-eksekutif')}}">
-                    <i class="fas fa-fw fa-university"></i>
-                    <span>Daftar Kelas Eksekutif</span></a>
+             <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item" id = "daftar-kelas-baru" >
+                <a class="nav-link" href="{{url('/user/daftar-kelas-baru')}}">
+                    <i class="fas fa-fw fa fa-university"></i>
+                    <span>Daftar Kelas Baru</span></a>
             </li>
 
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('/admin/daftar-festival')}}">
-                    <i class="fas fa-fw fa-gift"></i>
-                    <span>Daftar Festival Publikasyik</span></a>
+             <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item" id = "tagihan-anda" >
+                <a class="nav-link" href="{{url('/admin/daftar-paper')}}">
+                    <i class="fas fa-fw fa fa-money-check"></i>
+                    <span>Tagihan Anda</span></a>
             </li>
-
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('/admin/daftar-ppt')}}">
-                    <i class="fas fa-fw fa-trophy"></i>
-                    <span>Daftar PPT</span></a>
-            </li>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -145,6 +114,8 @@
             <div class="sidebar-heading">
                 Halaman Common
             </div>
+
+            <br>
 
 
         <!-- Nav Item - Tables -->
@@ -242,9 +213,12 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{Auth::user()->name}}</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                <span class="mr-2 d-none d-lg-inline text-dark-600 small text-dark"> <strong>{{Auth::user()->name}}
+                                <i class = "fas fa-caret-down"></i>
+
+                                </strong> </span>
+                                {{-- <img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg"> --}}
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -283,8 +257,7 @@
 
                         @yield('judul')
 
-                        <button href="#" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" type="button" data-toggle="modal" data-target="#exampleModal"><i
-                                class="fas fa-plus fa-sm text-white-50" ></i> Tambah Data</button>
+                            @yield('button')
                                 {{-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i
                                     class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> --}}
                     </div>
@@ -315,7 +288,7 @@
             <footer class="sticky-footer bg-dark">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span style = "color:white">Copyright &copy; Your Website 2021</span>
+                        <span style = "color:white">Copyright &copy; Publikasyik <?php echo date('Y'); ?></span>
                     </div>
                 </div>
             </footer>

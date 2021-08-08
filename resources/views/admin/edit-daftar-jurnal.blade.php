@@ -13,12 +13,12 @@
 @section('content')
 
 
-
+<h1>EDIT Jurnal {{$jurnal->judul_jurnal}} </h1>
 
     <!-- Area Chart -->
     <div class="col-xl-6 col-lg-5">
 
-        <h1>EDIT Jurnal {{$jurnal->judul_jurnal}} </h1>
+
 
 
             <form action = "{{route('daftar-jurnal.update', $jurnal->id)}}" method = "POST" enctype="multipart/form-data">

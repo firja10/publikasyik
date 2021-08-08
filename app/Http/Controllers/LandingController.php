@@ -115,10 +115,34 @@ class LandingController extends Controller
     {
         # code...
         $eksekutif = Eksekutif::all();
+        return view('user.dashboard',compact('eksekutif'));
+
+    }
+
+    public function riwayatkelas()
+    {
+        # code...
+        $eksekutif = Eksekutif::all();
         return view('user.daftar-eksekutif',compact('eksekutif'));
 
     }
 
+    public function daftarkelasbaru()
+    {
+        # code...
+        $eksekutif = Eksekutif::all();
+        return view('user.daftar-eksekutif-baru',compact('eksekutif'));
+
+    }
+
+
+    public function pembayarananda()
+    {
+        # code...
+        $eksekutif = Eksekutif::all();
+        return view('user.daftar-eksekutif-baru',compact('eksekutif'));
+
+    }
 
 
 

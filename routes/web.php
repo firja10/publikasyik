@@ -78,6 +78,10 @@ Route::resource('admin/daftar-ppt', PptController::class)->middleware('is_admin'
 
 Route::get('/daftar-kelas',[LandingController::class,'daftarkelas'])->name('daftarkelas')->middleware('auth');
 Route::get('/user/dashboard',[LandingController::class,'indexuser'])->name('indexuser')->middleware('auth');
+Route::get('/user/riwayat-kelas',[LandingController::class,'riwayatkelas'])->name('riwayatkelas')->middleware('auth');
+Route::get('/user/daftar-kelas-baru',[LandingController::class,'daftarkelasbaru'])->name('daftarkelasbaru')->middleware('auth');
+Route::get('/user/tagihan-anda',[LandingController::class,'pembayarananda'])->name('pembayarananda');
+
 
 // Auth::routes();
 

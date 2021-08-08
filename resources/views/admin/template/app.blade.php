@@ -297,8 +297,15 @@
 
                         @yield('judul')
 
-                        <button href="#" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" type="button" data-toggle="modal" data-target="#exampleModal"><i
-                                class="fas fa-plus fa-sm text-white-50" ></i> Tambah Data</button>
+
+                        @yield('button')
+
+
+
+
+
+
+
                                 {{-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i
                                     class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> --}}
                     </div>

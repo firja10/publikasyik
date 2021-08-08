@@ -12,6 +12,10 @@
 <h1 class="h3 mb-0 text-gray-800">Daftar Call for Papers</h1>
 @endsection
 
+@section('button')
+<button href="#" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" type="button" data-toggle="modal" data-target="#exampleModal"><i
+    class="fas fa-plus fa-sm text-white-50" ></i> Tambah Data</button>
+@endsection
 
 
 @section('content')

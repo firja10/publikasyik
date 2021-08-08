@@ -12,7 +12,7 @@
 
 @section('content')
 
-
+<h1>EDIT Jurnal {{$paper->judul_paper}} </h1>
 
 
     <!-- Area Chart -->

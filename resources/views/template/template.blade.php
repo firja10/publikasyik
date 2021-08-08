@@ -110,6 +110,10 @@
             display:none;
         }
 
+        #hal-user-hp {
+            display:none;
+        }
+
 
       }
 
@@ -150,6 +154,8 @@
             @if(Auth::user()->is_admin == 1)
             <li> <a href="{{url('/admin.dashboard')}}" id = "halaman-admin"> Halaman Admin </a> </li>
             @endif
+
+            <a href="{{url('/user/dashboard')}}" id = "hal-user-hp"> Halaman User</a>
             @endif
 
             <li><a href="{{url('/home/#hero')}}">Beranda</a></li>
@@ -189,6 +195,8 @@
                 @if(Auth::user()->is_admin == 1)
                   <a class="dropdown-item" href="{{url('/admin/dashboard')}}"> Halaman Admin</a>
                 @endif
+
+                <a href="{{url('/user/dashboard')}}" class="dropdown-item"> Halaman User</a>
 
                 <a class = "dropdown-item" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
