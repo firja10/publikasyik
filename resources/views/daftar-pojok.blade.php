@@ -49,7 +49,7 @@ url('/startup-unpad/background-1.png');background-size:cover;">
 
 
         @foreach ( $paper as $kertas )
-        <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0 " data-aos="zoom-in" data-aos-delay="100">
+        <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0 " data-aos="zoom-in" data-aos-delay="100" style = "text-align: center">
             <div class="card" style="width: 18rem;">
                 <center>
                 <img class="card-img-top" src="{{asset('storage/Paper/'.$kertas->poster_paper)}}" alt="Card image cap">
@@ -110,7 +110,7 @@ url('/startup-unpad/background-1.png');background-size:cover;">
         @foreach ( $seminar as $webinar )
 
 
-        <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+        <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="100" style = "text-align: center">
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="{{asset('storage/Seminar/'.$webinar->poster_seminar)}}" alt="Card image cap">
                 <div class="card-body">
@@ -175,7 +175,7 @@ url('/startup-unpad/background-1.png');background-size:cover;">
         @foreach ( $jurnal as $journal )
 
 
-        <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="100">
+        <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="100" style = "text-align: center">
 
             <div class="card" style="width: 18rem;">
                 <center>
