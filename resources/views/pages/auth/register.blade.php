@@ -45,7 +45,7 @@
                                 <div class="p-5">
                                     <div class="text-center">
                                         <center>
-                                        <img src="{{asset('startup-unpad/logo-publikasyik-asli.png')}}" alt="" style ="width:400px;">
+                                        <img src="{{asset('startup-unpad/logo-publikasyik-asli.png')}}" alt="" style ="width: 90%;">
                                     </center>
                                     <br>
                                        <h1 class="h4 text-yellow-900 mb-4" style = "color:#F1C21C;"> <strong>DAFTAR</strong> </h1>
