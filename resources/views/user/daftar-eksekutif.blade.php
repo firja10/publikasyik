@@ -1,4 +1,5 @@
-@extends('template.template')
+@extends('user.template.app')
+{{-- @extends('template.template') --}}
 
 @section('content')
 
@@ -12,7 +13,7 @@
     <div class="container" data-aos="fade-up">
       <div class="section-title">
         <h2>Daftar Kelas Eksekutif</h2>
-      </div>
+    </div>
 
       <div class="row">
 

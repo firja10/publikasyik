@@ -54,10 +54,12 @@ Route::get('/daftar-jurnal',[App\Http\Controllers\LandingController::class, 'daf
 
 Auth::routes();
 
+
+// HALAMAN ADMIN
+
+
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/admin/dashboard', [App\Http\Controllers\HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
-
-Route::get('/daftar-kelas',[LandingController::class,'daftarkelas'])->name('daftarkelas')->middleware('auth');
 
 Route::resource('admin/daftar-paper', PaperController::class)->middleware('is_admin');
 Route::resource('admin/daftar-seminar', SeminarController::class)->middleware('is_admin');
@@ -69,6 +71,13 @@ Route::resource('admin/daftar-eksekutif', EksekutifController::class)->middlewar
 Route::resource('admin/daftar-festival', FestivalController::class)->middleware('is_admin');
 Route::resource('admin/daftar-ppt', PptController::class)->middleware('is_admin');
 
+
+
+
+//HALAMAN USER
+
+Route::get('/daftar-kelas',[LandingController::class,'daftarkelas'])->name('daftarkelas')->middleware('auth');
+Route::get('/user/dashboard',[LandingController::class,'indexuser'])->name('indexuser')->middleware('auth');
 
 // Auth::routes();
 

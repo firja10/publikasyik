@@ -109,6 +109,18 @@ class LandingController extends Controller
 
 
 
+    //HALAMAN USER
+
+    public function indexuser()
+    {
+        # code...
+        $eksekutif = Eksekutif::all();
+        return view('user.daftar-eksekutif',compact('eksekutif'));
+
+    }
+
+
+
 
 
 

@@ -32,7 +32,11 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-danger sidebar sidebar-dark accordion" id="accordionSidebar">
+        {{-- <ul class="navbar-nav bg-gradient-danger sidebar sidebar-dark accordion" id="accordionSidebar" > --}}
+
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style = "background-color: #AD3221;" >
+
+
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{url('/')}}">
@@ -44,7 +48,22 @@
             </a>
 
             <!-- Divider -->
-            <hr class="sidebar-divider my-0">
+            {{-- <hr class="sidebar-divider my-0"> --}}
+
+
+
+
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Halaman User
+            </div>
+
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
@@ -54,39 +73,14 @@
             </li>
 
 
-
-
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Dashboard Admin
-            </div>
-
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link" href="{{url('/admin/daftar-paper')}}">
                     <i class="fas fa-fw fa fa-calendar"></i>
-                    <span>Daftar Call of Papers</span></a>
+                    <span>Riwayat Kelas</span></a>
             </li>
 
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('/admin/daftar-seminar')}}">
-                    <i class="fas fa-fw fa-camera"></i>
-                    <span>Daftar Seminar</span></a>
-            </li>
-
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('/admin/daftar-jurnal')}}">
-                    <i class="fas fa-fw fa-book"></i>
-                    <span>Daftar Jurnal</span></a>
-            </li>
 
 
 
@@ -218,7 +212,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-warning bg-warning topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -242,7 +236,7 @@
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-                        <div class="topbar-divider d-none d-sm-block"></div>
+                        {{-- <div class="topbar-divider d-none d-sm-block"></div> --}}
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
