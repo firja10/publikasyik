@@ -30,6 +30,9 @@
     <!-- Template Main CSS File -->
     <link href="{{asset('assets/css/style.css')}}" rel="stylesheet" />
     <style>
+
+
+
       @keyframes blink {
         0% {
           opacity: 1;
@@ -74,6 +77,12 @@
             display: none;
         }
 
+        #dropdownMenuButton {
+              display:none;
+          }
+
+
+
 
       }
 
@@ -82,6 +91,26 @@
           #logo-asli-pendek{
               display:none;
           }
+
+
+
+          #buttonhp {
+          display:none;
+        }
+
+        #keluar {
+          display:none;
+        }
+
+        #halaman-admin{
+            display:none;
+        }
+
+        #nama-hp {
+            display:none;
+        }
+
+
       }
 
 
@@ -113,31 +142,25 @@
 
         <nav class="nav-menu d-none d-lg-block">
           <ul >
-            <li class="active"><a href="{{url('/home')}}">Beranda</a></li>
-            <li><a href="/home/#pricing">Produk</a></li>
+            {{-- <li class="active"><a href="{{url('/home')}}">Beranda</a></li> --}}
+
+            @if(Auth::check())
+            <li> <a id = "nama-hp" style = "color:#AD3221;"> <strong>{{Auth::user()->name}}</strong>  </a> </li>
+
+            @if(Auth::user()->is_admin == 1)
+            <li> <a href="{{url('/admin.dashboard')}}" id = "halaman-admin"> Halaman Admin </a> </li>
+            @endif
+            @endif
+
+            <li><a href="{{url('/home/#hero')}}">Beranda</a></li>
+            <li><a href="{{url('/home/#pricing')}}">Produk</a></li>
             <li><a href="{{url('/daftar-pojok')}}">Pojok Publikasyik</a></li>
-            <li><a href="/home/#contact">Kontak Kami</a></li>
-            {{-- <li><a href="#team">Team</a></li> --}}
-            {{-- <li class="drop-down">
-              <a href="">Drop Down</a>
-              <ul>
-                <li><a href="#">Drop Down 1</a></li>
-                <li class="drop-down">
-                  <a href="#">Deep Drop Down</a>
-                  <ul>
-                    <li><a href="#">Deep Drop Down 1</a></li>
-                    <li><a href="#">Deep Drop Down 2</a></li>
-                    <li><a href="#">Deep Drop Down 3</a></li>
-                    <li><a href="#">Deep Drop Down 4</a></li>
-                    <li><a href="#">Deep Drop Down 5</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Drop Down 2</a></li>
-                <li><a href="#">Drop Down 3</a></li>
-                <li><a href="#">Drop Down 4</a></li>
-              </ul>
-            </li>
-            <li><a href="#contact">Contact</a></li> --}}
+            <li><a href="{{url('/home/#contact')}}">Kontak Kami</a></li>
+
+            @if(Auth::check())
+            <li><a href="{{ route('logout') }}" id = "keluar"  onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();">Logout</a></li>
+            @endif
 
 
 
@@ -157,7 +180,7 @@
 
 
         <li class="dropdown" style = "list-style-type: none; margin-left:15px;margin-right:15px;">
-            <button class="btn btn-success dropdown-toggle  py-3 px-0 px-lg-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="btn btn-success dropdown-toggle  py-3 px-0 px-lg-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style = "padding-right:5%;padding-left:5%; margin-right:5%;margin-left:5%'">
             <strong>   {{Auth::user()->name}} </strong>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -181,7 +204,9 @@
             </div>
         </li>
 
+        {{-- Conditional Button HP --}}
 
+        {{-- <a href="" class="btn btn-success" id = "buttonhp"> <i class = "fas fa-user" style = "width:50%; color:#5cb85c"></i>  </a> --}}
 
 
         @else
