@@ -94,7 +94,7 @@ class EksekutifController extends Controller
     {
         //
         $eksekutif = Eksekutif::findOrFail($id);
-        return view('admin.daftar-eksekutif', compact('eksekutif'));
+        return view('admin.edit-daftar-eksekutif', compact('eksekutif'));
     }
 
     /**

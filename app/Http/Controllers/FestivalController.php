@@ -96,7 +96,7 @@ class FestivalController extends Controller
     {
         //
         $festival = Festival::findOrFail($id);
-        return view('admin.daftar-festival', compact('festival'));
+        return view('admin.edit-daftar-festival', compact('festival'));
     }
 
     /**

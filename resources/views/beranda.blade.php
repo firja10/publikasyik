@@ -55,6 +55,7 @@ Selamat Datang di Publikasyik
                 {{-- <div class="icon"><i class="bx bx-file"></i></div>
                 <h4><a href="">Sed ut perspici</a></h4>
                 <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p> --}}
+                {{-- <div class="icon"> <img src="{{asset('startup-unpad/jcena-2.png')}}" alt="" style = "width:210px;"> </div> --}}
                 <div class="icon"> <img src="{{asset('startup-unpad/jcena-2.png')}}" alt="" style = "width:210px;"> </div>
               </div>
             </div>
@@ -91,7 +92,7 @@ Selamat Datang di Publikasyik
 
           <div class="row content">
             <div class="col-lg-6">
-                <img src="{{asset('startup-unpad/gambar-layananpng.png')}}" alt="" style = "margin-top:25px; width:600px;text-align:center;">
+                <img src="{{asset('startup-unpad/gambar-layananpng.png')}}" alt="" style = "margin-top:25px; width:100%;text-align:center;">
             </div>
 
             <div class="col-lg-6 pt-4 pt-lg-0">
@@ -179,10 +180,11 @@ Selamat Datang di Publikasyik
           <div class="row">
             <div class="col-lg-6">
               <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                <div class="pic"><img src="{{asset('assets/img/team/team-1.jpg')}}" class="img-fluid" alt="" /></div>
+                {{-- <div class="pic"><img src="{{asset('assets/img/team/team-1.jpg')}}" class="img-fluid" alt="" /></div> --}}
+                <div class="pic"><img src="{{asset('mentor/mas-thoriq.png')}}" class="img-fluid" alt="" /></div>
                 <div class="member-info">
-                  <h4>Walter White</h4>
-                  <span>Mahasiswa Unpad</span>
+                  <h4>Mochamad Thoriq Akbar</h4>
+                  <span>Research Associate at J-PAL</span>
                   {{-- <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p> --}}
                   <div class="social">
                     <a href=""><i class="ri-twitter-fill"></i></a>

@@ -106,7 +106,7 @@ class JurnalController extends Controller
         //
 
         $jurnal = Jurnal::findOrFail($id);
-        return view('admin/daftar-jurnal',compact('jurnal'));
+        return view('admin.edit-daftar-jurnal',compact('jurnal'));
     }
 
     /**
