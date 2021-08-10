@@ -96,7 +96,7 @@
 
              <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item" id = "tagihan-anda" >
-                <a class="nav-link" href="{{url('/admin/daftar-paper')}}">
+                <a class="nav-link" href="{{url('/user/tagihan-anda')}}">
                     <i class="fas fa-fw fa fa-money-check"></i>
                     <span>Tagihan Anda</span></a>
             </li>

@@ -7,6 +7,8 @@ use App\Models\Seminar;
 use App\Models\Eksekutif;
 use App\Models\Festival;
 use App\Models\Ppt;
+use App\Models\Pemesanan;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use PhpParser\Node\Stmt\Return_;
 
@@ -119,13 +121,37 @@ class LandingController extends Controller
 
     }
 
-    public function riwayatkelas()
-    {
-        # code...
-        $eksekutif = Eksekutif::all();
-        return view('user.daftar-eksekutif',compact('eksekutif'));
+    // public function riwayatkelas()
+    // {
+    //     # code...
+    //     $eksekutif = Eksekutif::all();
+    //     return view('user.daftar-eksekutif',compact('eksekutif'));
+
+    // }
+
+    // public function daftarkelasbaru()
+    // {
+    //     # code...
+    //     $eksekutif = Eksekutif::all();
+    //     return view('user.daftar-eksekutif-baru',compact('eksekutif'));
+
+    // }
+
+
+    public function riwayatkelas(){
+
+        $pemesanan = new Pemesanan;
+        $user_id = Auth::id();
+        $data = $pemesanan->where('user_id',$user_id)->get();
+        return view('user.daftar-eksekutif',compact('data'));
 
     }
+
+
+
+
+
+
 
     public function daftarkelasbaru()
     {
@@ -136,6 +162,55 @@ class LandingController extends Controller
     }
 
 
+
+
+
+
+
+    public function daftarkelasbaruspesifik($id, Eksekutif $eksekutif)
+    {
+        # code...
+        $pemesanan = New Pemesanan;
+        $eksekutif = Eksekutif::findOrFail($id);
+        $data = $pemesanan->where('kelas_id', $eksekutif);
+        return view('user.daftar-eksekutif-baru-spesifik',compact('eksekutif','data'));
+
+    }
+
+
+
+    public function pemesananstore( Request $request)
+    {
+        # code...
+        $user_id = Auth::id();
+        $data = new Pemesanan;
+        $data->nama_kelas = $request['nama_kelas'];
+        $data->deskripsi_kelas = $request['deskripsi_kelas'];
+        $data->materi_kelas = $request['materi_kelas'];
+        $data->grup_kelas = $request['grup_kelas'];
+        $data->harga_kelas = $request['harga_kelas'];
+        $data->metode_pembayaran = $request['metode_pembayaran'];
+        $data->user_id = $user_id;
+        $data->status_pembayaran = 1;
+        $data->save();
+
+        return redirect('/user/riwayat-kelas')->with('pemesanan-kelas','data berhasil diupdate');
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public function pembayarananda()
     {
         # code...
@@ -144,6 +219,47 @@ class LandingController extends Controller
 
     }
 
+
+
+
+    public function langganan()
+    {
+        # code...
+        $pemesanan = Pemesanan::all();
+        return view('admin.daftar-langganan',compact('pemesanan'));
+    }
+
+    public function tagihananda()
+    {
+        # code...
+        $pemesanan = new Pemesanan;
+        $user_id = Auth::id();
+        $datasaya = $pemesanan->where('user_id',$user_id);
+        $data = $datasaya->where('status_pembayaran',1)->get();
+        return view('user.daftar-tagihan-anda',compact('data'));
+    }
+
+
+
+    public function akseskelas()
+    {
+        # code...
+        return view('user.akses-kelas');
+
+    }
+
+    public function konfirmasibayar(Request $request, $id, Pemesanan $pemesanan)
+    {
+        $pemesanan = Pemesanan::where('id', $id)->update([
+
+
+            // 'poster_Jurnal' => $request['poster_Jurnal'],
+            'status_pembayaran' => 2,
+
+        ]);
+
+        return redirect('/admin/daftar-langganan')->with('berhasil-bayar','Sudah Dikonfirmasi');
+    }
 
 
 

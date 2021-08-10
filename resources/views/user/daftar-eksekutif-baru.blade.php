@@ -55,7 +55,7 @@ Daftar Kelas Baru
                     <p> {{$exe->deskripsi_kelas}} </p>
 
                     <center>
-                     <a href="" class="btn btn-success"> Daftar Kelas</a>
+                     <a href="{{route('daftarkelasbaruspesifik', $exe->id)}}" class="btn btn-success"> Daftar Kelas</a>
                     </center>
 
                 </div>

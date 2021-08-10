@@ -65,6 +65,9 @@ Route::resource('admin/daftar-paper', PaperController::class)->middleware('is_ad
 Route::resource('admin/daftar-seminar', SeminarController::class)->middleware('is_admin');
 Route::resource('admin/daftar-jurnal', JurnalController::class)->middleware('is_admin');
 Route::resource('admin/daftar-eksekutif', EksekutifController::class)->middleware('is_admin');
+Route::get('/admin/daftar-langganan',[LandingController::class,'langganan'])->name('langganan')->middleware('is_admin');
+Route::post('/admin/daftar-langganan/{id}',[LandingController::class,'konfirmasibayar'])->name('konfirmasibayar')->middleware('is_admin');
+
 
 
 // Route daftar festival, PPT, dan Kelas Eksekutif
@@ -80,7 +83,10 @@ Route::get('/daftar-kelas',[LandingController::class,'daftarkelas'])->name('daft
 Route::get('/user/dashboard',[LandingController::class,'indexuser'])->name('indexuser')->middleware('auth');
 Route::get('/user/riwayat-kelas',[LandingController::class,'riwayatkelas'])->name('riwayatkelas')->middleware('auth');
 Route::get('/user/daftar-kelas-baru',[LandingController::class,'daftarkelasbaru'])->name('daftarkelasbaru')->middleware('auth');
-Route::get('/user/tagihan-anda',[LandingController::class,'pembayarananda'])->name('pembayarananda');
+Route::get('/user/daftar-kelas-baru/{id}',[LandingController::class,'daftarkelasbaruspesifik'])->name('daftarkelasbaruspesifik')->middleware('auth');
+Route::post('/user/daftar-kelas-baru/',[LandingController::class,'pemesananstore'])->name('pemesananstore')->middleware('auth');
+Route::get('/user/tagihan-anda',[LandingController::class,'tagihananda'])->name('tagihananda')->middleware('auth');
+Route::get('/user/akseskelas',[LandingController::class,'akseskelas'])->name('akseskelas')->middleware('auth');
 
 
 // Auth::routes();

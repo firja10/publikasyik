@@ -88,6 +88,14 @@
                     <span>Daftar Jurnal</span></a>
             </li>
 
+             <!-- Nav Item - Pages Collapse Menu -->
+                       <li class="nav-item">
+                        <a class="nav-link" href="{{url('/admin/daftar-langganan')}}">
+                            <i class="fas fa-fw fa-money-bill-alt"></i>
+                            <span>Daftar Langganan</span></a>
+                    </li>
+
+
 
 
 
