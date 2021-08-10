@@ -8,6 +8,8 @@ use App\Http\Controllers\EksekutifController;
 use App\Http\Controllers\FestivalController;
 use App\Http\Controllers\PptController;
 use App\Http\Controllers\LandingController;
+use App\Http\Controllers\MateriController;
+use App\Http\Controllers\SubmateriController;
 use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
@@ -65,6 +67,9 @@ Route::resource('admin/daftar-paper', PaperController::class)->middleware('is_ad
 Route::resource('admin/daftar-seminar', SeminarController::class)->middleware('is_admin');
 Route::resource('admin/daftar-jurnal', JurnalController::class)->middleware('is_admin');
 Route::resource('admin/daftar-eksekutif', EksekutifController::class)->middleware('is_admin');
+Route::resource('admin/daftar-materi', MateriController::class)->middleware('is_admin');
+Route::resource('admin/daftar-submateri', SubmateriController::class)->middleware('is_admin');
+
 Route::get('/admin/daftar-langganan',[LandingController::class,'langganan'])->name('langganan')->middleware('is_admin');
 Route::post('/admin/daftar-langganan/{id}',[LandingController::class,'konfirmasibayar'])->name('konfirmasibayar')->middleware('is_admin');
 
