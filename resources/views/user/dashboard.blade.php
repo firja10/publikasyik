@@ -63,7 +63,7 @@ Dashboard
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-white text-uppercase mb-1">
                                            Jumlah Kelas Yang Anda Ikuti</div>
-                                        <div class="h5 mb-0 font-weight-bold text-warning-800 text-warning">0</div>
+                                        <div class="h5 mb-0 font-weight-bold text-warning-800 text-warning"><?php echo $pemesanans ?></div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-graduation-cap fa-2x text-gray-300"></i>
@@ -85,7 +85,7 @@ Dashboard
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-white text-uppercase mb-1">
                                           Jumlah Kelas Baru saat ini</div>
-                                        <div class="h5 mb-0 font-weight-bold text-white-800">0</div>
+                                        <div class="h5 mb-0 font-weight-bold text-white-800"><?php echo $eksekutifs; ?></div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-university fa-2x text-gray-300"></i>
@@ -104,7 +104,7 @@ Dashboard
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-white text-uppercase mb-1">
                                               Jumlah Tagihan Pembayaran Anda</div>
-                                            <div class="h5 mb-0 font-weight-bold text-white-800">0</div>
+                                            <div class="h5 mb-0 font-weight-bold text-white-800"><?php echo $tagihans; ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-money-check fa-2x text-gray-300"></i>

@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Materi;
 use App\Models\Submateri;
+use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use PhpParser\Node\Stmt\Return_;
 
@@ -119,8 +120,15 @@ class LandingController extends Controller
     public function indexuser()
     {
         # code...
-        $eksekutif = Eksekutif::all();
-        return view('user.dashboard',compact('eksekutif'));
+        // $eksekutif = Eksekutif::all();
+        $eksekutif = new Eksekutif;
+        $user_id = Auth::id();
+
+        $tagihans = DB::table('pemesanans')->where('status_pembayaran',1)->count();
+        $pemesanans = DB::table('pemesanans')->where('user_id',$user_id)->count();
+        $eksekutifs = DB::table('eksekutifs')->count();
+        $kelas = $eksekutif->where('user_id', $user_id);
+        return view('user.dashboard',compact('eksekutif','eksekutifs','pemesanans','tagihans','kelas'));
 
     }
 
@@ -193,6 +201,7 @@ class LandingController extends Controller
         $data->grup_kelas = $request['grup_kelas'];
         $data->harga_kelas = $request['harga_kelas'];
         $data->metode_pembayaran = $request['metode_pembayaran'];
+        $data->kelas_id = $request['kelas_id'];
         $data->user_id = $user_id;
         $data->status_pembayaran = 1;
         $data->save();
@@ -244,20 +253,29 @@ class LandingController extends Controller
 
 
 
-    public function akseskelas($id, Eksekutif $eksekutif)
+    public function akseskelas($id, Pemesanan $pemesanan)
     {
         # code...
         $materi = new Materi;
-
-        $pemesanan = new Pemesanan;
-        $eksekutif = Eksekutif::findOrFail($id);
+        $submateri = new Submateri;
+        // $pemesanan = new Pemesanan;
+        $pemesanan = Pemesanan::findOrFail($id);
+        // $eksekutif = Eksekutif::findOrFail($id);
         $user_id = Auth::id();
 
-        $datamateri = $materi->where('kelas_id', $eksekutif);
-        $datakelas = $pemesanan->where('user_id',$user_id);
+
+        // $datamateri = $materi->where('kelas_id', $pemesanan->kelas_id)->first();
+        $datamateri = $materi->where('kelas_id', $pemesanan->kelas_id)->get();
+
+        // $datasubmateri = $submateri->where('')
+
+
+        // $datakelas = $pemesanan->where('user_id',$user_id)->get();
+        // $datakelas = $pemesanan->where('user_id',$user_id)->first();
         // $datasubmateri = $submateri->where('materi_id',$materi_id)->get();
 
-        return view('user.akses-kelas', compact('eksekutif','datamateri','datakelas','user_id'));
+        // return view('user.akses-kelas', compact('eksekutif','datamateri','datakelas','user_id'));
+        return view('user.akses-kelas', compact('pemesanan','datamateri'));
 
     }
 

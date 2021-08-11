@@ -82,7 +82,7 @@ Akses Kelas
               <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" style = "margin-top:20px;margin-left:10px;">
                     <ul style = "margin-bottom:5px;">
-                        <li style = "margin-bottom:10px;"> Kelas : {{$eksekutif->nama_kelas}} </li>
+                        <li style = "margin-bottom:10px;"> Kelas : {{$pemesanan->nama_kelas}} </li>
                         <li style = "margin-bottom:10px;">Tanggal Mulai Kelas : 16 Agustus 2021</li>
                         <li style = "margin-bottom:10px;">Tanggal Selesai Kelas : 16 September 2021</li>
                         <li style = "margin-bottom:10px;">Mentor :</li>
@@ -98,7 +98,11 @@ Akses Kelas
 
 
                     <ul style = "list-style-type: none;" >
-                        <li> <div class="alert alert-primary">Materi 1</div>
+
+
+
+{{--
+                        <li> <div class="alert alert-primary">Materi 1 </div>
                             <ul>
                                 <li style = "margin-bottom:10px;"> <a href="">Sub Materi 1</a> </li>
                                 <li style = "margin-bottom:10px;"> <a href="">Sub Materi 2</a> </li>
@@ -111,7 +115,25 @@ Akses Kelas
                             <ul>
                                 <li style = "margin-bottom:10px;"> <a href="">Sub Materi 1</a> </li>
                             </ul>
-                        </li>
+                        </li> --}}
+
+                        @foreach ( $datamateri as $datamateris )
+                              <li> <div class="alert alert-primary">{{$datamateris->nama_materi}} </div>
+
+                                <ul>
+                                @foreach ( $datamateris->submateri as $submateris )
+                                    <li style = "margin-bottom:10px;"> <a href="">{{$submateris->nama_submateri}}</a> </li>
+                                @endforeach
+
+                                </ul>
+
+
+
+
+                            </li>
+                        @endforeach
+
+
                     </ul>
 
 
@@ -122,20 +144,26 @@ Akses Kelas
 
 
                     <ul style = "list-style-type: none;" >
-                        <li> <div class="alert alert-primary"> Materi 1</div>
+                        @foreach ($datamateri as $datamat )
+                        <li> <div class="alert alert-primary"> {{$datamat->nama_materi}}</div>
                             <ul>
-                                <li style = "margin-bottom:10px;"> <a href="">Pertemuan 1</a> </li>
+                                @foreach ($datamat->submateri as $submat )
+                                <li style = "margin-bottom:10px;"> <a href="">{{$submat->link_submateri}}</a> </li>
+                                @endforeach
+
                             </ul>
                         </li>
+                        @endforeach
                     </ul>
 
-                    <ul style = "list-style-type: none;" >
-                        <li> <div class="alert alert-primary"> Materi 2</div>
-                            <ul>
-                                <li style = "margin-bottom:10px;"> <a href="">Pertemuan 1 </a> </li>
-                            </ul>
-                        </li>
-                    </ul>
+
+
+
+
+
+
+
+
 
 
                 </div>

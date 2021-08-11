@@ -110,7 +110,7 @@ Riwayat Kelas
                               @if($datas->status_pembayaran == 1)
                                 <center><a href="" class="btn btn-danger"> Selesaikan Pembayaran </a></center>
                               @elseif($datas->status_pembayaran == 2)
-                              <center><a href="" class="btn btn-success"> Akses Kelas </a></center>
+                              <center><a href="{{route('akseskelas', $datas->id)}}" class="btn btn-success"> Akses Kelas </a></center>
                               @elseif($datas->status_pembayaran == 0 || $datas->status_pembayaran == NULL)
                               <center><a href="" class="btn btn-danger"> Anda Belum Mendaftar </a></center>
                               @endif
