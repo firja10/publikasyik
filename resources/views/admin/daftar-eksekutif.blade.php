@@ -32,6 +32,7 @@
             <thead>
               <tr>
                 <th scope="col">No</th>
+                <th scope="col">ID Kelas</th>
                 <th scope="col">Nama Kelas</th>
                 <th scope="col"> Deskripsi Kelas</th>
                 <th scope="col"> Materi Kelas</th>
@@ -48,6 +49,7 @@
 
               <tr>
                 <th scope="row"><?php echo $no++; ?></th>
+                <td>{{$exe->id}}</td>
                 <td>{{$exe->nama_kelas}}</td>
                 <td>{{$exe->deskripsi_kelas}}</td>
                 <td>{{$exe->materi_kelas}}</td>

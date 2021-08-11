@@ -47,6 +47,7 @@
             <thead>
               <tr>
                 <th scope="col">No</th>
+                <th scope="col">ID Materi</th>
                 <th scope="col">Nama Submateri</th>
                 <th scope="col"> Penjelasan Submateri</th>
                 <th scope="col"> Link Submateri</th>
@@ -64,10 +65,11 @@
 
               <tr>
                 <th scope="row"><?php echo $no++; ?></th>
+                <td> {{$webinar->materi_id}} </td>
                 <td>{{$webinar->nama_submateri}}</td>
                 <td>{{$webinar->penjelasan_submateri}}</td>
                 <td> <a href="{{$webinar->link_submateri}}">{{$webinar->link_submateri}}</a> </td>
-                <td><img src="{{asset('storage/Seminar/'.$webinar->gambar_submateri)}}" alt="" style="width:50px;"> </td>
+                <td><img src="{{asset('storage/Submateri/'.$webinar->gambar_submateri)}}" alt="" style="width:50px;"> </td>
                 <td>{{$webinar->referensi_submateri}}</td>
 
                 <td>
@@ -77,7 +79,7 @@
                         @method('DELETE')
                         <button type = "submit" class = "btn btn-danger" style = "margin-left:5px;margin-right:5px;margin-bottom:10px;"> Hapus</button>
                         <br>
-                        <a href="{{route('daftar-seminar.edit', $webinar->id)}}" class = "btn btn-primary" style = "margin-left:5px;margin-right:5px;">Edit</a>
+                        <a href="{{route('daftar-submateri.edit', $webinar->id)}}" class = "btn btn-primary" style = "margin-left:5px;margin-right:5px;">Edit</a>
                     </form>
                 </center>
 
@@ -101,7 +103,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Form Tambah seminar</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Form Tambah Submateri</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -125,7 +127,7 @@
 
               <div class="form-group">
                 <label for="referensi_submateri" class="col-form-label"> Referensi Submateri : </label>
-                <input type="date" class="form-control" id="referensi_submateri" name = "referensi_submateri">
+                <input type="text" class="form-control" id="referensi_submateri" name = "referensi_submateri">
               </div>
 
 
@@ -134,6 +136,17 @@
                 <label for="gambar_submateri" class="col-form-label"> Gambar Submateri : </label>
                 <input type="file" class="form-control" id="gambar_submateri" name = "gambar_submateri">
               </div>
+
+              <div class="form-group">
+                <label for="kelas_id"> ID Materi</label>
+                <select name="kelas_id" id="kelas_id" class="form-control">
+                  @foreach ($materi as $materis )
+                    <option>{{$materis->id}}</option>
+                    @endforeach
+                    {{-- <option value="1">1</option>
+                    <option value="2">2</option> --}}
+                </select>
+            </div>
 
 
 

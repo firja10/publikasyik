@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Submateri;
+use App\Models\Materi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -16,8 +17,9 @@ class SubmateriController extends Controller
     public function index()
     {
         //
+        $materi = Materi::all();
         $submateri = Submateri::all();
-        return view('admin.daftar-submateri',compact('submateri'));
+        return view('admin.daftar-submateri',compact('submateri','materi'));
     }
 
     /**
@@ -70,7 +72,7 @@ class SubmateriController extends Controller
     {
         //
         $submateri = Submateri::findOrFail($id);
-        return view('admin.edit-submateri',compact('submateri'));
+        return view('admin.edit-daftar-submateri',compact('submateri'));
     }
 
     /**
@@ -83,7 +85,7 @@ class SubmateriController extends Controller
     {
         //
         $submateri = Submateri::findOrFail($id);
-        return view('admin.edit-submateri',compact('submateri'));
+        return view('admin.edit-daftar-submateri',compact('submateri'));
     }
 
     /**
@@ -111,10 +113,11 @@ class SubmateriController extends Controller
 
             'gambar_submateri' => $filename,
             // 'gambar_submateri' => $request['gambar_submateri'],
-            'nama_submateri' => $request['judul_submateri'],
+            'nama_submateri' => $request['nama_submateri'],
             'referensi_submateri' => $request['referensi_submateri'],
             'penjelasan_submateri' => $request['penjelasan_submateri'],
             'link_submateri' => $request['link_submateri'],
+            'materi_id' =>$request['materi_id'],
 
         ]);
 

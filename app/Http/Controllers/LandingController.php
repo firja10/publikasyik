@@ -10,6 +10,9 @@ use App\Models\Ppt;
 use App\Models\Pemesanan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Models\Materi;
+use App\Models\Submateri;
+use App\Models\User;
 use PhpParser\Node\Stmt\Return_;
 
 class LandingController extends Controller
@@ -241,12 +244,29 @@ class LandingController extends Controller
 
 
 
-    public function akseskelas()
+    public function akseskelas($id, Eksekutif $eksekutif)
     {
         # code...
-        return view('user.akses-kelas');
+        $materi = new Materi;
+
+        $pemesanan = new Pemesanan;
+        $eksekutif = Eksekutif::findOrFail($id);
+        $user_id = Auth::id();
+
+        $datamateri = $materi->where('kelas_id', $eksekutif);
+        $datakelas = $pemesanan->where('user_id',$user_id);
+        // $datasubmateri = $submateri->where('materi_id',$materi_id)->get();
+
+        return view('user.akses-kelas', compact('eksekutif','datamateri','datakelas','user_id'));
 
     }
+
+
+
+
+
+
+
 
     public function konfirmasibayar(Request $request, $id, Pemesanan $pemesanan)
     {

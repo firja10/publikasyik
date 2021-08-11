@@ -47,6 +47,7 @@
             <thead>
               <tr>
                 <th scope="col">No</th>
+                <th scope="col">ID Materi</th>
                 <th scope="col">Nama Materi</th>
                 <th scope="col"> Penjelasan Materi</th>
                 <th scope="col"> Link Materi</th>
@@ -65,6 +66,7 @@
 
               <tr>
                 <th scope="row"><?php echo $no++; ?></th>
+                <td>{{$webinar->id}}</td>
                 <td>{{$webinar->nama_materi}}</td>
                 <td>{{$webinar->penjelasan_materi}}</td>
                 <td> <a href="{{$webinar->link_materi}}">{{$webinar->link_materi}}</a> </td>
@@ -79,7 +81,7 @@
                         @method('DELETE')
                         <button type = "submit" class = "btn btn-danger" style = "margin-left:5px;margin-right:5px;margin-bottom:10px;"> Hapus</button>
                         <br>
-                        <a href="{{route('daftar-seminar.edit', $webinar->id)}}" class = "btn btn-primary" style = "margin-left:5px;margin-right:5px;">Edit</a>
+                        <a href="{{route('daftar-materi.edit', $webinar->id)}}" class = "btn btn-primary" style = "margin-left:5px;margin-right:5px;">Edit</a>
                     </form>
                 </center>
 
@@ -142,6 +144,8 @@
                     @foreach ($eksekutif as $kelas )
                       <option>{{$kelas->id}}</option>
                       @endforeach
+                      {{-- <option value="1">1</option>
+                      <option value="2">2</option> --}}
                   </select>
               </div>
 

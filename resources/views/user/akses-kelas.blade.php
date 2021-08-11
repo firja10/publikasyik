@@ -82,6 +82,7 @@ Akses Kelas
               <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" style = "margin-top:20px;margin-left:10px;">
                     <ul style = "margin-bottom:5px;">
+                        <li style = "margin-bottom:10px;"> Kelas : {{$eksekutif->nama_kelas}} </li>
                         <li style = "margin-bottom:10px;">Tanggal Mulai Kelas : 16 Agustus 2021</li>
                         <li style = "margin-bottom:10px;">Tanggal Selesai Kelas : 16 September 2021</li>
                         <li style = "margin-bottom:10px;">Mentor :</li>

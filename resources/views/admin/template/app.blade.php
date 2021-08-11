@@ -96,6 +96,21 @@
                     </li>
 
 
+                     <!-- Nav Item - Pages Collapse Menu -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('/admin/daftar-materi')}}">
+                            <i class="fas fa-fw fa-book"></i>
+                            <span>Daftar Materi</span></a>
+                    </li>
+
+                    <!-- Nav Item - Pages Collapse Menu -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('/admin/daftar-submateri')}}">
+                            <i class="fas fa-fw fa-book-open"></i>
+                            <span>Daftar SubMateri</span></a>
+                    </li>
+
+
 
 
 

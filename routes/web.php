@@ -91,7 +91,7 @@ Route::get('/user/daftar-kelas-baru',[LandingController::class,'daftarkelasbaru'
 Route::get('/user/daftar-kelas-baru/{id}',[LandingController::class,'daftarkelasbaruspesifik'])->name('daftarkelasbaruspesifik')->middleware('auth');
 Route::post('/user/daftar-kelas-baru/',[LandingController::class,'pemesananstore'])->name('pemesananstore')->middleware('auth');
 Route::get('/user/tagihan-anda',[LandingController::class,'tagihananda'])->name('tagihananda')->middleware('auth');
-Route::get('/user/akseskelas',[LandingController::class,'akseskelas'])->name('akseskelas')->middleware('auth');
+Route::get('/user/akseskelas/{id}',[LandingController::class,'akseskelas'])->name('akseskelas')->middleware('auth');
 
 
 // Auth::routes();

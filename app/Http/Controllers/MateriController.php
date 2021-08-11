@@ -58,6 +58,7 @@ class MateriController extends Controller
         $data->penjelasan_materi = $request['penjelasan_materi'];
         $data->referensi_materi = $request['referensi_materi'];
         $data->link_materi = $request['link_materi'];
+        $data->kelas_id = $request['kelas_id'];
         $data->save();
         return redirect('/admin/daftar-materi');
 
@@ -75,7 +76,7 @@ class MateriController extends Controller
     {
         //
         $materi = Materi::findOrFail($id);
-        return view('admin.edit-materi',compact('materi'));
+        return view('admin.edit-daftar-materi',compact('materi'));
     }
 
     /**
@@ -88,7 +89,7 @@ class MateriController extends Controller
     {
         //
         $materi = Materi::findOrFail($id);
-        return view('admin.edit-materi',compact('materi'));
+        return view('admin.edit-daftar-materi',compact('materi'));
     }
 
     /**
@@ -118,10 +119,11 @@ class MateriController extends Controller
 
             'gambar_materi' => $filename,
             // 'gambar_materi' => $request['gambar_materi'],
-            'nama_materi' => $request['judul_materi'],
+            'nama_materi' => $request['nama_materi'],
             'referensi_materi' => $request['referensi_materi'],
             'penjelasan_materi' => $request['penjelasan_materi'],
             'link_materi' => $request['link_materi'],
+            'kelas_id' => $request['kelas_id'],
 
         ]);
 
