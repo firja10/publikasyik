@@ -204,10 +204,45 @@ class LandingController extends Controller
         $data->kelas_id = $request['kelas_id'];
         $data->user_id = $user_id;
         $data->status_pembayaran = 1;
+        $data->link_grup_diskusi = $request['link_grup_diskusi'];
+        $data->tanggal_mulai = $request['tanggal_mulai'];
+        $data->tanggal_akhir = $request['tanggal_akhir'];
+        $data->mentor = $request['mentor'];
+        $data->sertifikat = $request['sertifikat'];
         $data->save();
 
         return redirect('/user/riwayat-kelas')->with('pemesanan-kelas','data berhasil diupdate');
     }
+
+
+
+
+    public function deletepemesanan($id, Pemesanan $pemesanan)
+    {
+        # code...
+        $pemesanan = Pemesanan::findOrFail($id);
+        $pemesanan->delete();
+        return redirect('/admin/daftar-langganan')->with('pemesanan-delete'.'data berhasil dihapus');
+
+    }
+
+
+
+    public function batalkanpemesanan($id, Pemesanan $pemesanan)
+    {
+        # code...
+        $pemesanan = Pemesanan::findOrFail($id);
+        $pemesanan->delete();
+        return redirect('/user/riwayat-kelas')->with('pemesanan-delete'.'data berhasil dihapus');
+
+    }
+
+
+
+
+
+
+
 
 
 
@@ -297,6 +332,36 @@ class LandingController extends Controller
         ]);
 
         return redirect('/admin/daftar-langganan')->with('berhasil-bayar','Sudah Dikonfirmasi');
+    }
+
+
+    public function daftaruser()
+    {
+        # code...
+        $user = User::all();
+        return view('admin.daftar-user',compact('user'));
+    }
+
+
+    public function konfirmasiadmin($id, Request $request, User $user)
+    {
+        $user = User::where('id',$id)->update(
+            [
+                'is_admin' => 1,
+            ]
+            );
+
+        return redirect('/admin/daftar-user')->with('berhasil-admin','user berhasil dijadikan admin');
+
+
+    }
+
+    public function hapususer($id, User $user)
+    {
+        # code...
+        $user = User::findOrFail($id);
+        $user->delete();
+        return redirect('/admin/daftar-user')->with('hapus-user','User Sudah terhapus');
     }
 
 

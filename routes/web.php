@@ -72,6 +72,9 @@ Route::resource('admin/daftar-submateri', SubmateriController::class)->middlewar
 
 Route::get('/admin/daftar-langganan',[LandingController::class,'langganan'])->name('langganan')->middleware('is_admin');
 Route::post('/admin/daftar-langganan/{id}',[LandingController::class,'konfirmasibayar'])->name('konfirmasibayar')->middleware('is_admin');
+Route::delete('/admin/daftar-user/{id}',[LandingController::class,'hapususer'])->name('hapususer')->middleware('is_admin');
+Route::get('/admin/daftar-user', [LandingController::class,'daftaruser'])->name('daftaruser')->middleware('is_admin');
+Route::patch('admin/daftar-user/{id}',[LandingController::class,'konfirmasiadmin'])->name('konfirmasiadmin')->middleware('is_admin');
 
 
 
@@ -92,6 +95,8 @@ Route::get('/user/daftar-kelas-baru/{id}',[LandingController::class,'daftarkelas
 Route::post('/user/daftar-kelas-baru/',[LandingController::class,'pemesananstore'])->name('pemesananstore')->middleware('auth');
 Route::get('/user/tagihan-anda',[LandingController::class,'tagihananda'])->name('tagihananda')->middleware('auth');
 Route::get('/user/akseskelas/{id}',[LandingController::class,'akseskelas'])->name('akseskelas')->middleware('auth');
+Route::delete('/user/riwayat-kelas/{id}',[LandingController::class,'batalkanpemesanan'])->name('batalkanpemesanan')->middleware('auth');
+
 
 
 // Auth::routes();

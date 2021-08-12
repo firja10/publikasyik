@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddBagianToPemesanans extends Migration
+class AddBagianToEksekutifs extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class AddBagianToPemesanans extends Migration
      */
     public function up()
     {
-        Schema::table('pemesanans', function (Blueprint $table) {
+        Schema::table('eksekutifs', function (Blueprint $table) {
             //
+
             $table->longText('link_grup_diskusi')->nullable();
             $table->date('tanggal_mulai')->nullable();
             $table->date('tanggal_akhir')->nullable();
             $table->string('mentor')->nullable();
             $table->string('sertifikat')->nullable();
-
         });
     }
 
@@ -31,7 +31,7 @@ class AddBagianToPemesanans extends Migration
      */
     public function down()
     {
-        Schema::table('pemesanans', function (Blueprint $table) {
+        Schema::table('eksekutifs', function (Blueprint $table) {
             //
             $table->dropColumn('link_grup_diskusi');
             $table->dropColumn('tanggal_mulai');

@@ -179,7 +179,7 @@ Selamat Datang di Publikasyik
                 <div class="pic"><img src="{{asset('mentor/mas-thoriq.png')}}" class="img-fluid" alt="" /></div>
                 <div class="member-info">
                   <h4>Mochamad Thoriq Akbar</h4>
-                  <span>Research Associate at J-PAL</span>
+                  <span>Research Associate at Abdul Latif Jameel Poverty Action Lab (J-PAL)</span>
                   {{-- <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p> --}}
                   <div class="social">
                     <a href=""><i class="ri-twitter-fill"></i></a>
@@ -195,8 +195,8 @@ Selamat Datang di Publikasyik
               <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
                 <div class="pic"><img src="{{asset('assets/img/team/team-2.jpg')}}" class="img-fluid" alt="" /></div>
                 <div class="member-info">
-                  <h4>Sarah Jhonson</h4>
-                  <span>Product Manager</span>
+                  <h4>Muhamad Diki Permana</h4>
+                  <span>Laboratory Assistant in Inorganic Chemistry, Universitas Padjadjaran</span>
                   {{-- <p>Aut maiores voluptates amet et quis praesentium qui senda para</p> --}}
                   <div class="social">
                     <a href=""><i class="ri-twitter-fill"></i></a>

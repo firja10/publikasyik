@@ -48,6 +48,34 @@
                 <input type="file" class="form-control" id="gambar_kelas" name = "gambar_kelas" placeholder="{{$eksekutif->gambar_kelas}}" value = "{{$eksekutif->gambar_kelas}}">
               </div>
 
+
+
+
+              <div class="form-group">
+                <label for="link_grup_diskusi" class="col-form-label"> Link Grup Diskusi : </label>
+                <input type="text" class="form-control" id="link_grup_diskusi" name = "link_grup_diskusi" placeholder="{{$eksekutif->link_grup_diskusi}}" value = "{{$eksekutif->link_grup_diskusi}}">
+              </div>
+
+              <div class="form-group">
+                <label for="tanggal_mulai" class="col-form-label"> Tanggal Mulai : </label>
+                <input type="date" class="form-control" id="tanggal_mulai" name = "tanggal_mulai" placeholder="{{$eksekutif->tanggal_mulai}}" value = "{{$eksekutif->tanggal_mulai}}">
+              </div>
+
+              <div class="form-group">
+                <label for="tanggal_akhir" class="col-form-label"> Tanggal Berakhir : </label>
+                <input type="date" class="form-control" id="tanggal_akhir" name = "tanggal_akhir" placeholder="{{$eksekutif->tanggal_akhir}}" value = "{{$eksekutif->tanggal_akhir}}">
+              </div>
+
+              <div class="form-group">
+                <label for="mentor" class="col-form-label"> Mentor : </label>
+                <input type="text" class="form-control" id="mentor" name = "mentor" placeholder="{{$eksekutif->mentor}}" value = "{{$eksekutif->mentor}}">
+              </div>
+
+              <div class="form-group">
+                <label for="sertifikat" class="col-form-label"> Sertifikat : </label>
+                <input type="text" class="form-control" id="sertifikat" name = "sertifikat" placeholder="{{$eksekutif->sertifikat}}" value = "{{$eksekutif->sertifikat}}">
+              </div>
+
               <center>
 
               <button class="btn btn-primary" type = "submit" name = "submit">Submit</button>

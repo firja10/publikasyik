@@ -15,7 +15,7 @@
 @section('judul')
 
 
-<h1 class="h3 mb-0 text-gray-800">Daftar Kelas Eksekutif</h1>
+<h1 class="h3 mb-0 text-gray-800">Daftar Pendaftar Kelas Eksekutif</h1>
 @endsection
 
 

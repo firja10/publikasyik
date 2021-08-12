@@ -67,6 +67,32 @@ Daftar Kelas Baru
             <input type="hidden" class="form-control" id="harga_kelas" name = "harga_kelas" placeholder="{{$eksekutif->harga_kelas}}" value = "{{$eksekutif->harga_kelas}}">
           </div>
 
+
+          <div class="form-group">
+            {{-- <label for="harga_kelas" class="col-form-label"> Tanggal Kelas : </label> --}}
+            <input type="hidden" class="form-control" id="link_grup_diskusi" name = "link_grup_diskusi" placeholder="{{$eksekutif->link_grup_diskusi}}" value = "{{$eksekutif->link_grup_diskusi}}">
+          </div>
+
+          <div class="form-group">
+            {{-- <label for="harga_kelas" class="col-form-label"> Tanggal Kelas : </label> --}}
+            <input type="hidden" class="form-control" id="tanggal_mulai" name = "tanggal_mulai" placeholder="{{$eksekutif->tanggal_mulai}}" value = "{{$eksekutif->tanggal_mulai}}">
+          </div>
+
+          <div class="form-group">
+            {{-- <label for="harga_kelas" class="col-form-label"> Tanggal Kelas : </label> --}}
+            <input type="hidden" class="form-control" id="tanggal_akhir" name = "tanggal_akhir" placeholder="{{$eksekutif->tanggal_akhir}}" value = "{{$eksekutif->tanggal_akhir}}">
+          </div>
+
+          <div class="form-group">
+            {{-- <label for="harga_kelas" class="col-form-label"> Tanggal Kelas : </label> --}}
+            <input type="hidden" class="form-control" id="mentor" name = "mentor" placeholder="{{$eksekutif->mentor}}" value = "{{$eksekutif->mentor}}">
+          </div>
+
+          <div class="form-group">
+            {{-- <label for="harga_kelas" class="col-form-label"> Tanggal Kelas : </label> --}}
+            <input type="hidden" class="form-control" id="sertifikat" name = "sertifikat" placeholder="{{$eksekutif->sertifikat}}" value = "{{$eksekutif->sertifikat}}">
+          </div>
+
           <div class="form-group">
             <label for="metode_pembayaran">Metode Pembayaran</label>
             <select name="metode_pembayaran" id="metode_pembayaran" class = "form-control">

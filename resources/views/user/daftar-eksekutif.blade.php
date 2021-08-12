@@ -108,12 +108,29 @@ Riwayat Kelas
                                 ?></td>
                             <td>
                               @if($datas->status_pembayaran == 1)
-                                <center><a href="" class="btn btn-danger"> Selesaikan Pembayaran </a></center>
+                                <center><a href="" class="btn btn-warning" style = "color:black;"> Selesaikan Pembayaran </a></center>
+                                <br>
+                                <center>
+                                    <form action="{{route('batalkanpemesanan', $datas->id)}}" method="POST" enctype="multipart/form-data">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" name = "submit" class="btn btn-danger">Batalkan Kelas</button>
+                                    </form>
+                                </center>
                               @elseif($datas->status_pembayaran == 2)
                               <center><a href="{{route('akseskelas', $datas->id)}}" class="btn btn-success"> Akses Kelas </a></center>
+                              <br>
+                              <center>
+                                <form action="{{route('batalkanpemesanan', $datas->id)}}" method="POST" enctype="multipart/form-data">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" name = "submit" class="btn btn-danger">Hapus Riwayat Kelas</button>
+                                </form>
+                            </center>
                               @elseif($datas->status_pembayaran == 0 || $datas->status_pembayaran == NULL)
                               <center><a href="" class="btn btn-danger"> Anda Belum Mendaftar </a></center>
                               @endif
+
 
                             </td>
                         </tr>
