@@ -14,6 +14,8 @@ use App\Models\Materi;
 use App\Models\Submateri;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
+use App\Models\Pesan;
+use App\Models\Daftarfestival;
 use PhpParser\Node\Stmt\Return_;
 
 class LandingController extends Controller
@@ -362,6 +364,48 @@ class LandingController extends Controller
         $user = User::findOrFail($id);
         $user->delete();
         return redirect('/admin/daftar-user')->with('hapus-user','User Sudah terhapus');
+    }
+
+    public function storepesan(Request $request)
+    {
+        # code...
+        $data = new Pesan;
+        $data->nama = $request['nama'];
+        $data->email = $request['email'];
+        $data->judul_pesan = $request['judul_pesan'];
+        $data->isi_pesan = $request['isi_pesan'];
+        $data->save();
+        return redirect('/')->with('store-pesan','Pesan Sudah Terkirim !');
+
+    }
+
+
+    public function festivalindex()
+    {
+        # code...
+        $festival = Festival::all();
+        $hitung = DB::table('festivals')->count();
+        return view('festival',compact('festival','hitung'));
+    }
+
+    public function daftarfestival(Request $request)
+    {
+        # code...
+        $data = new Daftarfestival;
+        $user_id = Auth::id();
+        $data->nama_festival = $request['nama_festival'];
+        $data->gambar_festival = $request['gambar_festival'];
+        $data->deskripsi_festival = $request['deskripsi_festival'];
+        $data->harga_festival = $request['harga_festival'];
+        $data->materi_festival = $request['materi_festival'];
+        $data->link_festival = $request['link_festival'];
+        $data->tanggal_mulai = $request['tanggal_mulai'];
+        $data->tanggal_berakhir = $request['tanggal_berakhir'];
+        $data->user_id = $user_id;
+        $data->save();
+        return redirect('/daftar-festival')->with('daftarfestival-store','Anda Sudah Terdaftar');
+
+
     }
 
 

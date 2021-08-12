@@ -1,5 +1,10 @@
 @extends('admin.template.app')
 
+@section('title')
+Edit Festival
+
+@endsection
+
 
 @section('button')
 
@@ -39,9 +44,25 @@
               </div>
 
               <div class="form-group">
-                <label for="harga_festival" class="col-form-label"> Tanggal Festival : </label>
+                <label for="harga_festival" class="col-form-label"> Harga Festival : ( Jika Gratis ketik "FREE" )</label>
                 <input type="text" class="form-control" id="harga_festival" name = "harga_festival" placeholder="{{$festival->harga_festival}}" value = "{{$festival->harga_festival}}">
               </div>
+
+              <div class="form-group">
+                <label for="tanggal_mulai" class="col-form-label"> Tanggal Mulai : </label>
+                <input type="date" class="form-control" id="tanggal_mulai" name = "tanggal_mulai" placeholder="{{$festival->tanggal_mulai}}" value = "{{$festival->tanggal_mulai}}">
+              </div>
+
+              <div class="form-group">
+                <label for="tanggal_berakhir" class="col-form-label"> Tanggal Berakhir : </label>
+                <input type="date" class="form-control" id="tanggal_berakhir" name = "tanggal_berakhir" placeholder="{{$festival->tanggal_berakhir}}" value = "{{$festival->tanggal_berakhir}}">
+              </div>
+
+              <div class="form-group">
+                <label for="link_festival" class="col-form-label">Link Festival :</label>
+                <textarea class="form-control" id="link_festival" name = "link_festival" placeholder="{{$festival->link_festival}}" value = "{{$festival->link_festival}}">{{$festival->link_festival}}</textarea>
+              </div>
+
 
               <div class="form-group">
                 <label for="gambar_festival" class="col-form-label"> Poster festival : </label>
@@ -53,6 +74,9 @@
               <button class="btn btn-primary" type = "submit" name = "submit">Submit</button>
             </center>
             </form>
+
+
+            <br><br>
 
 
 

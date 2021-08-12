@@ -65,6 +65,9 @@ class FestivalController extends Controller
         $data->deskripsi_festival = $request['deskripsi_festival'];
         $data->harga_festival = $request['harga_festival'];
         $data->materi_festival = $request['materi_festival'];
+        $data->link_festival = $request['link_festival'];
+        $data->tanggal_mulai = $request['tanggal_mulai'];
+        $data->tanggal_berakhir = $request['tanggal_berakhir'];
         $data->save();
         return redirect('/admin/daftar-festival');
 
@@ -133,6 +136,9 @@ class FestivalController extends Controller
             'materi_festival' => $request['materi_festival'],
             'deskripsi_festival' => $request['deskripsi_festival'],
             'harga_festival' => $request['harga_festival'],
+            'link_festival' => $request['link_festival'],
+            'tanggal_mulai' => $request['tanggal_mulai'],
+            'tanggal_berakhir' => $request['tanggal_berakhir'],
             // 'tanggal_akhir_paper' => $request['tanggal_akhir_paper'],
         ]);
 

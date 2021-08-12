@@ -57,10 +57,25 @@ url('/startup-unpad/background-1.png');background-size:cover;">
                   <h5 class="card-title">{{$kertas->judul_paper}}</h5>
                   <?php
                   $tanggal = $kertas->tanggal_paper;
+                  $tanggal_akhir = $kertas->tanggal_akhir_paper;
                   $tanggalbaru = strtotime($tanggal);
+                  $tanggalbaruakhir = strtotime($tanggal_akhir);
 
                   ?>
-                  <p class="card-text"> <i class = "fa fa-calendar"></i> <?php echo date('d M Y', "$tanggalbaru")  ?>  </p>
+                  <p class="card-text"> <i class = "fa fa-calendar"></i>
+                    <?//php echo date('d M Y', "$tanggalbaru")  ?>
+
+                    @if($tanggalbaruakhir != NULL)
+                    <?php echo date('d', "$tanggalbaru")  ?> -
+                    <?php echo date('d M Y', "$tanggalbaruakhir")  ?>
+
+                    @elseif($tanggalbaruakhir == NULL)
+                    <?php echo date('d M Y', "$tanggalbaru")  ?>
+
+                    @endif
+
+
+                 </p>
                   <hr>
                   <a href="storage/Paper/{{$kertas->poster_paper}}" class="btn btn-success">Lihat Poster</a>
                 </div>

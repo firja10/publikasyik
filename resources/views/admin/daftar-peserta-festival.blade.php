@@ -3,7 +3,7 @@
 
 
 @section('title')
-<title>Daftar Festival Publikasyik - Admin</title>
+Daftar Peserta Festival Publikasyik - Admin
 
 @endsection
 
@@ -38,6 +38,7 @@
             <thead>
               <tr>
                 <th scope="col">No</th>
+                <th scope="col">ID Pendaftar</th>
                 <th scope="col">Nama Festival</th>
                 <th scope="col"> Deskripsi Festival</th>
                 <th scope="col">Harga</th>
@@ -52,10 +53,11 @@
                 <?php
                     $no = 1;
                 ?>
-                @foreach ($festival as $fest )
+                @foreach ($daftarfestival as $fest )
 
               <tr>
                 <th scope="row"><?php echo $no++; ?></th>
+                <td>{{$fest->user_id}}</td>
                 <td>{{$fest->nama_festival}}</td>
                 <td>{{$fest->deskripsi_festival}}</td>
                 <td>{{$fest->harga_festival}}</td>
@@ -65,12 +67,12 @@
                 <td> <img src="{{asset('storage/Festival/'.$fest->gambar_festival)}}" alt="" style="width:50px;"> </td>
                 <td>
                     <center>
-                    <form action="{{route('daftar-festival.destroy', $fest->id)}}" method = "POST">
+                    <form action="{{route('daftar-peserta-festival.destroy', $fest->id)}}" method = "POST">
                         @csrf
                         @method('DELETE')
                         <button type = "submit" class = "btn btn-danger" style = "margin-left:5px;margin-right:5px;margin-bottom:10px;"> Hapus</button>
                         <br>
-                        <a href="{{route('daftar-festival.edit', $fest->id)}}" class = "btn btn-primary" style = "margin-left:5px;margin-right:5px;">Edit</a>
+                        <a href="{{route('daftar-peserta-festival.edit', $fest->id)}}" class = "btn btn-primary" style = "margin-left:5px;margin-right:5px;">Edit</a>
                     </form>
                 </center>
 

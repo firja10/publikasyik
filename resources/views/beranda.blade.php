@@ -193,7 +193,7 @@ Selamat Datang di Publikasyik
 
             <div class="col-lg-6 mt-4 mt-lg-0">
               <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
-                <div class="pic"><img src="{{asset('assets/img/team/team-2.jpg')}}" class="img-fluid" alt="" /></div>
+                <div class="pic"><img src="{{asset('mentor/mas-diki.jpeg')}}" class="img-fluid" alt="" /></div>
                 <div class="member-info">
                   <h4>Muhamad Diki Permana</h4>
                   <span>Laboratory Assistant in Inorganic Chemistry, Universitas Padjadjaran</span>
@@ -208,13 +208,13 @@ Selamat Datang di Publikasyik
               </div>
             </div>
 
-            <div class="col-lg-6 mt-4">
+            {{-- <div class="col-lg-6 mt-4">
               <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
                 <div class="pic"><img src="{{asset('assets/img/team/team-3.jpg')}}" class="img-fluid" alt="" /></div>
                 <div class="member-info">
                   <h4>William Anderson</h4>
                   <span>CTO</span>
-                  {{-- <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p> --}}
+
                   <div class="social">
                     <a href=""><i class="ri-twitter-fill"></i></a>
                     <a href=""><i class="ri-facebook-fill"></i></a>
@@ -231,7 +231,7 @@ Selamat Datang di Publikasyik
                 <div class="member-info">
                   <h4>Amanda Jepson</h4>
                   <span>Accountant</span>
-                  {{-- <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p> --}}
+
                   <div class="social">
                     <a href=""><i class="ri-twitter-fill"></i></a>
                     <a href=""><i class="ri-facebook-fill"></i></a>
@@ -240,7 +240,8 @@ Selamat Datang di Publikasyik
                   </div>
                 </div>
               </div>
-            </div>
+            </div> --}}
+            <br>
           </div>
         </div>
       </section>
@@ -291,7 +292,7 @@ Selamat Datang di Publikasyik
                 <p id = "fp">Berisikan mengenai informasi kegiatan webinar yang diadakan pada bulan Agustus-November dengan mencantumkan posternya dan tempat untuk upload screenshot persyaratan yang telah calon peserta ikuti untuk mengikuti webinar yang akan diadakan</p>
                 <br>
                 <br>
-                <a href="#" class="buy-btn" style = "margin-top:10px;">Daftar</a>
+                <a href="{{route('festivalindex')}}" class="buy-btn" style = "margin-top:10px;">Daftar</a>
               </div>
             </div>
 
@@ -329,7 +330,7 @@ Selamat Datang di Publikasyik
                <p>Lomba karya tulis ilmiah (literature review atau berbasis penelitian) tingkat mahasiswa yang dapat diikuti oleh mahasiswa jurusan saintek/soshum dengan output bahwa karya ilmiah pemenang akan dipublikasikan di jurnal mitra</p>
                     <br><br> <br>
 
-                <a href="#" class="buy-btn" style = "margin-top:10px;">Daftar</a>
+                <a href="{{url('/ppt')}}" class="buy-btn" style = "margin-top:10px;">Daftar</a>
               </div>
             </div>
           </div>
@@ -351,35 +352,48 @@ Selamat Datang di Publikasyik
 
 
             <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+
+              <form action="{{route('storepesan')}}" method="POST" role="form" class="php-email-form">
+                @csrf
+
+                @if ($message = Session::get('store-pesan'))
+                <div class="alert alert-success alert-block">
+                  <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>{{ $message }}</strong>
+                </div>
+              @endif
+
+
                 <div class="form-row">
+
+
                   <div class="form-group col-md-6">
-                    <label for="name">Nama Anda</label>
-                    <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                    <div class="validate"></div>
+                    <label for="nama">Nama Anda</label>
+                    <input type="text" name="nama" class="form-control" id="nama" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                    {{-- <div class="validate"></div> --}}
                   </div>
                   <div class="form-group col-md-6">
-                    <label for="name">Email Anda</label>
+                    <label for="email">Email Anda</label>
                     <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
-                    <div class="validate"></div>
+                    {{-- <div class="validate"></div> --}}
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="name">Judul Pesan</label>
-                  <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validate"></div>
+                  <label for="judul_pesan">Judul Pesan</label>
+                  <input type="text" class="form-control" name="judul_pesan" id="judul_pesan" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  {{-- <div class="validate"></div> --}}
                 </div>
                 <div class="form-group">
-                  <label for="name">Isi Pesan</label>
-                  <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
-                  <div class="validate"></div>
+                  <label for="isi_pesan">Isi Pesan</label>
+                  <textarea class="form-control" name="isi_pesan" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
+                  {{-- <div class="validate"></div> --}}
                 </div>
-                <div class="mb-3">
+                {{-- <div class="mb-3">
                   <div class="loading">Loading</div>
                   <div class="error-message"></div>
                   <div class="sent-message">Pesan Telah Terkirim, Terima Kasih</div>
-                </div>
-                <div class="text-center"><button type="submit">Kirimkan Pesan</button></div>
+                </div> --}}
+                <div class="text-center"><button type="submit" name = "submit">Kirimkan Pesan</button></div>
               </form>
             </div>
           </div>

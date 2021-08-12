@@ -9,7 +9,9 @@ use App\Http\Controllers\FestivalController;
 use App\Http\Controllers\PptController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\MateriController;
+use App\Http\Controllers\PesanController;
 use App\Http\Controllers\SubmateriController;
+use App\Http\Controllers\DaftarfestivalController;
 use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +46,10 @@ Route::get('/pojok', function () {
     return view('pojok');
 });
 
+Route::get('/ppt', function () {
+    return view('ppt-home');
+});
+
 
 
 Route::get('/daftar-pojok', [App\Http\Controllers\LandingController::class, 'semuaindex'])->name('semuaindex');
@@ -51,6 +57,8 @@ Route::get('/daftar-pojok', [App\Http\Controllers\LandingController::class, 'sem
 Route::get('/daftar-call-for-papers',[App\Http\Controllers\LandingController::class, 'daftarpaper'])->name('daftarpaper');
 Route::get('/daftar-seminar',[App\Http\Controllers\LandingController::class, 'daftarseminar'])->name('daftarseminar');
 Route::get('/daftar-jurnal',[App\Http\Controllers\LandingController::class, 'daftarjurnal'])->name('daftarjurnal');
+Route::post('/',[LandingController::class,'storepesan'])->name('storepesan');
+Route::post('/daftar-festival',[LandingController::class,'daftarfestival'])->name('daftarfestival')->middleware('auth');
 
 
 
@@ -69,12 +77,14 @@ Route::resource('admin/daftar-jurnal', JurnalController::class)->middleware('is_
 Route::resource('admin/daftar-eksekutif', EksekutifController::class)->middleware('is_admin');
 Route::resource('admin/daftar-materi', MateriController::class)->middleware('is_admin');
 Route::resource('admin/daftar-submateri', SubmateriController::class)->middleware('is_admin');
+Route::resource('admin/daftar-pesan',PesanController::class)->middleware('is_admin');
+Route::resource('admin/daftar-peserta-festival', DaftarfestivalController::class)->middleware('is_admin');
 
 Route::get('/admin/daftar-langganan',[LandingController::class,'langganan'])->name('langganan')->middleware('is_admin');
 Route::post('/admin/daftar-langganan/{id}',[LandingController::class,'konfirmasibayar'])->name('konfirmasibayar')->middleware('is_admin');
 Route::delete('/admin/daftar-user/{id}',[LandingController::class,'hapususer'])->name('hapususer')->middleware('is_admin');
 Route::get('/admin/daftar-user', [LandingController::class,'daftaruser'])->name('daftaruser')->middleware('is_admin');
-Route::patch('admin/daftar-user/{id}',[LandingController::class,'konfirmasiadmin'])->name('konfirmasiadmin')->middleware('is_admin');
+Route::patch('/admin/daftar-user/{id}',[LandingController::class,'konfirmasiadmin'])->name('konfirmasiadmin')->middleware('is_admin');
 
 
 
@@ -96,6 +106,7 @@ Route::post('/user/daftar-kelas-baru/',[LandingController::class,'pemesananstore
 Route::get('/user/tagihan-anda',[LandingController::class,'tagihananda'])->name('tagihananda')->middleware('auth');
 Route::get('/user/akseskelas/{id}',[LandingController::class,'akseskelas'])->name('akseskelas')->middleware('auth');
 Route::delete('/user/riwayat-kelas/{id}',[LandingController::class,'batalkanpemesanan'])->name('batalkanpemesanan')->middleware('auth');
+Route::get('/daftar-festival',[LandingController::class,'festivalindex'])->name('festivalindex')->middleware('auth');
 
 
 
