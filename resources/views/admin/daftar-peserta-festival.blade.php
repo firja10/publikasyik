@@ -11,7 +11,7 @@ Daftar Peserta Festival Publikasyik - Admin
 @section('judul')
 
 
-<h1 class="h3 mb-0 text-gray-800">Daftar Festival Publikasyik</h1>
+<h1 class="h3 mb-0 text-gray-800">Daftar Peserta Festival Publikasyik</h1>
 @endsection
 
 
