@@ -93,6 +93,18 @@
                     <span>Daftar Kelas Baru</span></a>
             </li>
 
+            <li class="nav-item" id = "riwayat-festival" >
+                <a class="nav-link" href="{{url('/user/riwayat-festival')}}">
+                    <i class="fas fa-fw fa fa-birthday-cake"></i>
+                    <span>Riwayat Festival</span></a>
+            </li>
+
+            <li class="nav-item" id = "daftar-festival-baru" >
+                <a class="nav-link" href="{{url('/user/daftar-festival-baru')}}">
+                    <i class="fas fa-fw fa fa-glass-martini"></i>
+                    <span>Daftar Festival Baru</span></a>
+            </li>
+
 
              <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item" id = "tagihan-anda" >
@@ -223,7 +235,7 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                {{-- <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
@@ -234,7 +246,7 @@
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Activity Log
-                                </a>
+                                </a> --}}
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>

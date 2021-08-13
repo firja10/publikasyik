@@ -119,7 +119,7 @@ Dashboard
         <div class="col-lg-6 mb-4">
 
             <!-- Illustrations -->
-            <div class="card shadow mb-4">
+            {{-- <div class="card shadow mb-4">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-danger">Jadwal Terdekat Anda</h6>
                 </div>
@@ -129,7 +129,8 @@ Dashboard
                     </div>
                     <p></p>
                 </div>
-            </div>
+            </div> --}}
+
 
         </div>
 

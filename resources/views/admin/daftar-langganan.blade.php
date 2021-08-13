@@ -2,7 +2,7 @@
 
 
 @section('title')
-<title>Daftar Kelas Eksekutif - Admin</title>
+Daftar Kelas Eksekutif - Admin
 
 @endsection
 
@@ -32,6 +32,7 @@
             <thead>
               <tr>
                 <th scope="col">No</th>
+                <th scope="col">Nama User / Peserta</th>
                 <th scope="col">Nama Kelas</th>
                 <th scope="col"> Deskripsi Kelas</th>
                 <th scope="col"> Materi Kelas</th>
@@ -49,11 +50,13 @@
 
               <tr>
                 <th scope="row"><?php echo $no++; ?></th>
+                <td>{{$exe->user_name}}</td>
                 <td>{{$exe->nama_kelas}}</td>
                 <td>{{$exe->deskripsi_kelas}}</td>
                 <td>{{$exe->materi_kelas}}</td>
                 <td>{{$exe->harga_kelas}}</td>
                 <td>{{$exe->user_id}}</td>
+
                 <td>
                     <center>
                         @if($exe->status_pembayaran == 1)
@@ -78,8 +81,20 @@
                         @csrf
                     <button type = "submit" name = "submit" class = "btn btn-warning" style = "color:black;" >Jika Sudah, Konfirmasi Pembayaran</button>
                     </form>
+                        <br>
+                    <form action="{{route('deletepemesanan', $exe->id)}}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" name = "submit" class="btn btn-danger">Hapus Kelas</button>
+                    </form>
                     @elseif($exe->status_pembayaran == 2)
                     <a href="" class="btn btn-success">Sudah Membayar</a>
+                    <br> <br>
+                    <form action="{{route('deletepemesanan', $exe->id)}}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" name = "submit" class="btn btn-danger">Hapus Kelas</button>
+                    </form>
                     @endif
                 </center>
 

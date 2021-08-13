@@ -292,7 +292,8 @@ Selamat Datang di Publikasyik
                 <p id = "fp">Berisikan mengenai informasi kegiatan webinar yang diadakan pada bulan Agustus-November dengan mencantumkan posternya dan tempat untuk upload screenshot persyaratan yang telah calon peserta ikuti untuk mengikuti webinar yang akan diadakan</p>
                 <br>
                 <br>
-                <a href="{{route('festivalindex')}}" class="buy-btn" style = "margin-top:10px;">Daftar</a>
+                {{-- <a href="{{route('festivalindex')}}" class="buy-btn" style = "margin-top:10px;">Daftar</a> --}}
+                <a href="{{url('user/daftar-festival-baru')}}" class="buy-btn">Daftar</a>
               </div>
             </div>
 
@@ -317,7 +318,8 @@ Selamat Datang di Publikasyik
                   <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
                   <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
                 </ul> --}}
-                <a href="{{url('/daftar-kelas')}}" class="buy-btn">Daftar</a>
+                {{-- <a href="{{url('/daftar-kelas')}}" class="buy-btn">Daftar</a> --}}
+                <a href="{{url('user/daftar-kelas-baru')}}" class="buy-btn">Daftar</a>
               </div>
             </div>
 

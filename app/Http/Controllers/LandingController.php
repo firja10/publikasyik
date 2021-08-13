@@ -196,6 +196,7 @@ class LandingController extends Controller
     {
         # code...
         $user_id = Auth::id();
+        $user_name = Auth::user()->name;
         $data = new Pemesanan;
         $data->nama_kelas = $request['nama_kelas'];
         $data->deskripsi_kelas = $request['deskripsi_kelas'];
@@ -205,6 +206,7 @@ class LandingController extends Controller
         $data->metode_pembayaran = $request['metode_pembayaran'];
         $data->kelas_id = $request['kelas_id'];
         $data->user_id = $user_id;
+        $data->user_name = $user_name;
         $data->status_pembayaran = 1;
         $data->link_grup_diskusi = $request['link_grup_diskusi'];
         $data->tanggal_mulai = $request['tanggal_mulai'];
@@ -213,7 +215,7 @@ class LandingController extends Controller
         $data->sertifikat = $request['sertifikat'];
         $data->save();
 
-        return redirect('/user/riwayat-kelas')->with('pemesanan-kelas','data berhasil diupdate');
+        return redirect('/user/riwayat-kelas')->with('pemesanan-kelas','Anda telah mendaftar kelas');
     }
 
 
@@ -317,8 +319,33 @@ class LandingController extends Controller
     }
 
 
+    public function daftarfestivalbaruspesifik($id, Festival $festival)
+    {
+        # code...
+        $daftarfestival = New Daftarfestival;
+        $festival = Festival::findOrFail($id);
+        $data = $daftarfestival->where('kelas_id', $festival);
+        return view('user.daftar-peserta-festival-baru-spesifik',compact('festival','data'));
+
+    }
 
 
+
+
+
+
+    public function konfirmasibayarfestival(Request $request, $id, Daftarfestival $daftarfestival)
+    {
+        $daftarfestival = Daftarfestival::where('id', $id)->update([
+
+
+            // 'poster_Jurnal' => $request['poster_Jurnal'],
+            'status_pembayaran' => 2,
+
+        ]);
+
+        return redirect('/admin/daftar-peserta-festival')->with('berhasil-bayar','Sudah Dikonfirmasi');
+    }
 
 
 
@@ -388,11 +415,62 @@ class LandingController extends Controller
         return view('festival',compact('festival','hitung'));
     }
 
-    public function daftarfestival(Request $request)
+    // public function daftarfestival(Request $request)
+    // {
+    //     # code...
+    //     $data = new Daftarfestival;
+    //     $user_id = Auth::id();
+    //     $user_name = Auth::user()->name;
+    //     $data->nama_festival = $request['nama_festival'];
+    //     $data->gambar_festival = $request['gambar_festival'];
+    //     $data->deskripsi_festival = $request['deskripsi_festival'];
+    //     $data->harga_festival = $request['harga_festival'];
+    //     $data->materi_festival = $request['materi_festival'];
+    //     $data->link_festival = $request['link_festival'];
+    //     $data->tanggal_mulai = $request['tanggal_mulai'];
+    //     $data->tanggal_berakhir = $request['tanggal_berakhir'];
+    //     $data->status_pembayaran = 2;
+    //     $data->user_id = $user_id;
+    //     $data->user_name = $user_name;
+    //     $data->save();
+    //     return redirect('/daftar-festival')->with('daftarfestival-store','Anda Sudah Terdaftar');
+
+
+    // }
+
+
+
+    // public function daftarfestivalbayar(Request $request)
+    // {
+    //     # code...
+    //     $data = new Daftarfestival;
+    //     $user_id = Auth::id();
+    //     $user_name = Auth::user()->name;
+    //     $data->nama_festival = $request['nama_festival'];
+    //     $data->gambar_festival = $request['gambar_festival'];
+    //     $data->deskripsi_festival = $request['deskripsi_festival'];
+    //     $data->harga_festival = $request['harga_festival'];
+    //     $data->materi_festival = $request['materi_festival'];
+    //     $data->link_festival = $request['link_festival'];
+    //     $data->tanggal_mulai = $request['tanggal_mulai'];
+    //     $data->tanggal_berakhir = $request['tanggal_berakhir'];
+    //     $data->metode_pembayaran = $request['metode_pembayaran'];
+    //     $data->status_pembayaran = 1;
+    //     $data->user_id = $user_id;
+    //     $data->user_name = $user_name;
+    //     $data->save();
+    //     return redirect('/daftar-festival')->with('daftarfestival-store','Anda Sudah Terdaftar');
+
+
+    // }
+
+
+    public function daftarfestivaluser(Request $request)
     {
         # code...
         $data = new Daftarfestival;
         $user_id = Auth::id();
+        $user_name = Auth::user()->name;
         $data->nama_festival = $request['nama_festival'];
         $data->gambar_festival = $request['gambar_festival'];
         $data->deskripsi_festival = $request['deskripsi_festival'];
@@ -401,12 +479,75 @@ class LandingController extends Controller
         $data->link_festival = $request['link_festival'];
         $data->tanggal_mulai = $request['tanggal_mulai'];
         $data->tanggal_berakhir = $request['tanggal_berakhir'];
+        // $data->status_pembayaran = 2;
         $data->user_id = $user_id;
+        $data->user_name = $user_name;
         $data->save();
-        return redirect('/daftar-festival')->with('daftarfestival-store','Anda Sudah Terdaftar');
+        return redirect('user/daftar-festival-baru')->with('daftarfestivaluser-store','Anda Sudah Terdaftar');
 
 
     }
+
+
+    public function daftarfestivaluserbayar(Request $request)
+    {
+        # code...
+        $data = new Daftarfestival;
+        $user_id = Auth::id();
+        $user_name = Auth::user()->name;
+        $data->nama_festival = $request['nama_festival'];
+        $data->gambar_festival = $request['gambar_festival'];
+        $data->deskripsi_festival = $request['deskripsi_festival'];
+        $data->harga_festival = $request['harga_festival'];
+        $data->materi_festival = $request['materi_festival'];
+        $data->link_festival = $request['link_festival'];
+        $data->tanggal_mulai = $request['tanggal_mulai'];
+        $data->tanggal_berakhir = $request['tanggal_berakhir'];
+        $data->metode_pembayaran = $request['metode_pembayaran'];
+        $data->status_pembayaran = 1;
+        $data->user_id = $user_id;
+        $data->user_name = $user_name;
+        $data->save();
+        return redirect('user/daftar-festival-baru')->with('daftarfestivaluser-store','Anda Sudah Terdaftar');
+
+
+    }
+
+
+
+
+
+
+
+    public function festivaluserbaru()
+    {
+        # code...
+        $festival = Festival::all();
+        $hitung = DB::table('festivals')->count();
+        return view('user.daftar-peserta-festival-baru',compact('festival','hitung'));
+
+    }
+
+    public function festivaluser()
+    {
+        # code...
+        $daftarfestival = new Daftarfestival;
+        $user_id = Auth::id();
+        $data = $daftarfestival->where('user_id',$user_id)->get();
+        return view('user.daftar-peserta-festival',compact('data'));
+
+    }
+
+
+    public function batalkanfestival($id, Daftarfestival $daftarfestival)
+    {
+        # code...
+        $daftarfestival = Daftarfestival::findOrFail($id);
+        $daftarfestival->delete();
+        return redirect('user/riwayat-festival')->with('daftarfestival-hapus','Data Sudah Terhapus');
+
+    }
+
 
 
 

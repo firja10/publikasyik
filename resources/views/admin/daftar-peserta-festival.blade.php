@@ -39,6 +39,7 @@ Daftar Peserta Festival Publikasyik - Admin
               <tr>
                 <th scope="col">No</th>
                 <th scope="col">ID Pendaftar</th>
+                <th scope="col">Username Pendaftar</th>
                 <th scope="col">Nama Festival</th>
                 <th scope="col"> Deskripsi Festival</th>
                 <th scope="col">Harga</th>
@@ -58,6 +59,7 @@ Daftar Peserta Festival Publikasyik - Admin
               <tr>
                 <th scope="row"><?php echo $no++; ?></th>
                 <td>{{$fest->user_id}}</td>
+                <td>{{$fest->user_name}}</td>
                 <td>{{$fest->nama_festival}}</td>
                 <td>{{$fest->deskripsi_festival}}</td>
                 <td>{{$fest->harga_festival}}</td>
@@ -66,7 +68,50 @@ Daftar Peserta Festival Publikasyik - Admin
                 <td>{{$fest->link_festival}}</td>
                 <td> <img src="{{asset('storage/Festival/'.$fest->gambar_festival)}}" alt="" style="width:50px;"> </td>
                 <td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     <center>
+                        @if($fest->status_pembayaran == 1)
+                        <form action="{{route('konfirmasibayarfestival', $fest->id)}}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                        <button type = "submit" name = "submit" class = "btn btn-warning" style = "color:black;" >Jika Sudah, Konfirmasi Pembayaran</button>
+                        </form>
+                        <br>
+                        @elseif($fest->status_pembayaran == 2)
+                        <a href="" class="btn btn-success">Sudah Membayar</a>
+                        <br> <br>
+                        @elseif($fest->status_pembayaran == 0)
+                            @if($fest->harga_festival == 'FREE' || $fest->harga_festival == 'Free')
+                                <a href="" class="btn btn-secondary">Gratis</a>
+                                <br> <br>
+                            @else
+                                <a href="" class="btn btn-success">Belum Mendaftar</a>
+                                <br> <br>
+                            @endif
+
+                        @endif
+
                     <form action="{{route('daftar-peserta-festival.destroy', $fest->id)}}" method = "POST">
                         @csrf
                         @method('DELETE')
@@ -74,6 +119,8 @@ Daftar Peserta Festival Publikasyik - Admin
                         <br>
                         <a href="{{route('daftar-peserta-festival.edit', $fest->id)}}" class = "btn btn-primary" style = "margin-left:5px;margin-right:5px;">Edit</a>
                     </form>
+                    <br>
+
                 </center>
 
                 </td>
