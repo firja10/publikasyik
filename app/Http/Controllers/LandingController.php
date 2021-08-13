@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use App\Models\Pesan;
 use App\Models\Daftarfestival;
+use Illuminate\Support\Facades\Storage;
 use PhpParser\Node\Stmt\Return_;
 
 class LandingController extends Controller
@@ -154,8 +155,10 @@ class LandingController extends Controller
     public function riwayatkelas(){
 
         $pemesanan = new Pemesanan;
+        // $daftarfestival = new Daftarfestival;
         $user_id = Auth::id();
         $data = $pemesanan->where('user_id',$user_id)->get();
+        // $datafest = $daftarfestival->where('user_id',$user_id)->get();
         return view('user.daftar-eksekutif',compact('data'));
 
     }
@@ -213,9 +216,49 @@ class LandingController extends Controller
         $data->tanggal_akhir = $request['tanggal_akhir'];
         $data->mentor = $request['mentor'];
         $data->sertifikat = $request['sertifikat'];
+        $data->diskon = $request['diskon'];
         $data->save();
 
         return redirect('/user/riwayat-kelas')->with('pemesanan-kelas','Anda telah mendaftar kelas');
+    }
+
+
+    public function updatepemesanan(Request $request, $id, Pemesanan $pemesanan)
+    {
+        # code...
+
+        if($request->hasFile('gambar_kelas')){
+            $filename = $request["gambar_kelas"]->getClientOriginalName();
+
+            if( Pemesanan::find($id)->gambar_kelas ){
+                Storage::delete('/public/storage/Eksekutif/'.Pemesanan::find($id)->gambar_kelas);
+            }
+            $request["gambar_kelas"]->storeAs('Eksekutif', $filename, 'public');
+        }else{
+            $filename=Pemesanan::find($id)->gambar_kelas;
+        }
+
+    $pemesanan = Pemesanan::where('id', $id)->update([
+
+            'gambar_kelas' => $filename,
+            // 'gambar_kelas' => $request['gambar_kelas'],
+            'nama_kelas' => $request['nama_kelas'],
+            'materi_kelas' => $request['materi_kelas'],
+            'deskripsi_kelas' => $request['deskripsi_kelas'],
+            'harga_kelas' => $request['harga_kelas'],
+            // 'tanggal_akhir_paper' => $request['tanggal_akhir_paper'],
+            'link_grup_diskusi'  => $request['link_grup_diskusi'],
+           'tanggal_mulai'  => $request['tanggal_mulai'],
+            'tanggal_akhir'  => $request['tanggal_akhir'],
+           'mentor'  => $request['mentor'],
+            'sertifikat'  => $request['sertifikat'],
+            'diskon'  => $request['diskon'],
+        ]);
+
+
+
+
+        return redirect('admin/daftar-eksekutif')->with('update-eksekutif','Data Berhasil Terupdate');
     }
 
 
@@ -284,10 +327,15 @@ class LandingController extends Controller
     {
         # code...
         $pemesanan = new Pemesanan;
+        $daftarfestival = new Daftarfestival;
         $user_id = Auth::id();
         $datasaya = $pemesanan->where('user_id',$user_id);
         $data = $datasaya->where('status_pembayaran',1)->get();
-        return view('user.daftar-tagihan-anda',compact('data'));
+
+        $datafest = $daftarfestival->where('user_id',$user_id);
+        $datadua = $datafest->where('status_pembayaran',1)->get();
+
+        return view('user.daftar-tagihan-anda',compact('data','datadua'));
     }
 
 

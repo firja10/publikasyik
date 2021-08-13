@@ -88,7 +88,36 @@ Riwayat Festival
                         <tr>
                             <td>{{$datas->nama_festival}}</td>
                             <td>{{$datas->deskripsi_festival}}</td>
-                            <td>{{$datas->harga_festival}}</td>
+                            <td>
+                                {{-- {{$datas->harga_festival}} --}}
+
+                                <?php
+
+                                $angkasatu = $datas->harga_festival;
+                                $angkafloat = floatval($angkasatu);
+                                $hasil_rupiahsatu = "Rp " . number_format($angkafloat,2,',','.');
+
+                                $angkadiskonsatu = $datas->diskon;
+                                $angkadiskonfloat = floatval($angkadiskonsatu);
+                                $hasil_diskonsatu = "Rp " . number_format($angkadiskonfloat,2,',','.');
+
+                                // $hasil_diskonsatu =  "Rp " . number_format($angkadiskonsatu,2,',','.');
+
+                                if($angkadiskonsatu != NULL || $angkadiskonsatu != 0)
+                                {
+                                    echo $hasil_diskonsatu;
+                                }
+
+                                elseif($angkadiskonsatu == NULL || $angkadiskonsatu == 0)
+                                {
+                                    echo $hasil_rupiahsatu;
+                                }
+
+
+                            ?>
+
+
+                            </td>
                             <td>
                                 {{$datas->metode_pembayaran}}
                             </td>

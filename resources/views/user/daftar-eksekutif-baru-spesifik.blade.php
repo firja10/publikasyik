@@ -93,6 +93,12 @@ Daftar Kelas Baru
             <input type="hidden" class="form-control" id="sertifikat" name = "sertifikat" placeholder="{{$eksekutif->sertifikat}}" value = "{{$eksekutif->sertifikat}}">
           </div>
 
+
+          <div class="form-group">
+            {{-- <label for="harga_kelas" class="col-form-label"> Tanggal Kelas : </label> --}}
+            <input type="hidden" class="form-control" id="diskon" name = "diskon" placeholder="{{$eksekutif->diskon}}" value = "{{$eksekutif->diskon}}">
+          </div>
+
           <div class="form-group">
             <label for="metode_pembayaran">Metode Pembayaran</label>
             <select name="metode_pembayaran" id="metode_pembayaran" class = "form-control">

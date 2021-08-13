@@ -88,7 +88,34 @@ Riwayat Kelas
                         <tr>
                             <td>{{$datas->nama_kelas}}</td>
                             <td>{{$datas->deskripsi_kelas}}</td>
-                            <td>{{$datas->harga_kelas}}</td>
+                            <td>
+
+                                <?php
+
+                                $angka = $datas->harga_kelas;
+                                $hasil_rupiah = "Rp " . number_format($angka,2,',','.');
+
+                                $angkadiskon = $datas->diskon;
+
+                                $hasil_diskon =  "Rp " . number_format($angkadiskon,2,',','.');
+
+                                if($angkadiskon != NULL || $angkadiskon != 0)
+                                {
+                                    echo $hasil_diskon;
+                                }
+
+                                elseif($angkadiskon == NULL || $angkadiskon == 0)
+                                {
+                                    echo $hasil_rupiah;
+                                }
+
+
+                            ?>
+
+
+                                {{-- {{$datas->harga_kelas}} --}}
+
+                            </td>
                             <td>
                                 {{$datas->metode_pembayaran}}
                             </td>

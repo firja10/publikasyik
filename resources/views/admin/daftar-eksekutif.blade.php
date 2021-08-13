@@ -35,8 +35,10 @@ Daftar Kelas Eksekutif - Admin
                 <th scope="col">ID Kelas</th>
                 <th scope="col">Nama Kelas</th>
                 <th scope="col"> Deskripsi Kelas</th>
-                <th scope="col"> Materi Kelas</th>
+                {{-- <th scope="col"> Materi Kelas</th> --}}
+                <th scope="col"> Tanggal Mulai</th>
                 <th scope="col">Harga Kelas</th>
+                <th scope="col">Harga Diskon</th>
                 <th scope="col">Poster Kelas</th>
                 <th scope="col">Aksi</th>
               </tr>
@@ -52,8 +54,10 @@ Daftar Kelas Eksekutif - Admin
                 <td>{{$exe->id}}</td>
                 <td>{{$exe->nama_kelas}}</td>
                 <td>{{$exe->deskripsi_kelas}}</td>
-                <td>{{$exe->materi_kelas}}</td>
+                {{-- <td>{{$exe->materi_kelas}}</td> --}}
+                <td>{{$exe->tanggal_mulai}}</td>
                 <td>{{$exe->harga_kelas}}</td>
+                <td>{{$exe->diskon}}</td>
                 <td> <img src="{{asset('storage/Eksekutif/'.$exe->gambar_kelas)}}" alt="" style="width:50px;"> </td>
                 <td>
                     <center>
@@ -73,10 +77,10 @@ Daftar Kelas Eksekutif - Admin
             @endforeach
             </tbody>
           </table>
-          <br><br><br>
+
     </div>
 
-
+    <br><br><br>
 
 
 
@@ -112,6 +116,11 @@ Daftar Kelas Eksekutif - Admin
               <div class="form-group">
                 <label for="harga_kelas" class="col-form-label"> Harga Kelas : </label>
                 <input type="text" class="form-control" id="harga_kelas" name = "harga_kelas">
+              </div>
+
+              <div class="form-group">
+                <label for="diskon" class="col-form-label"> Harga Diskon: </label>
+                <input type="text" class="form-control" id="diskon" name = "diskon" >
               </div>
 
 

@@ -66,6 +66,12 @@ class EksekutifController extends Controller
         $data->deskripsi_kelas = $request['deskripsi_kelas'];
         $data->harga_kelas = $request['harga_kelas'];
         $data->materi_kelas = $request['materi_kelas'];
+        $data->link_grup_diskusi = $request['link_grup_diskusi'];
+        $data->tanggal_mulai = $request['tanggal_mulai'];
+        $data->tanggal_akhir = $request['tanggal_akhir'];
+        $data->mentor = $request['mentor'];
+        $data->sertifikat = $request['sertifikat'];
+        $data->diskon = $request['diskon'];
         $data->save();
         return redirect('/admin/daftar-eksekutif');
 
@@ -131,16 +137,18 @@ class EksekutifController extends Controller
             'deskripsi_kelas' => $request['deskripsi_kelas'],
             'harga_kelas' => $request['harga_kelas'],
             // 'tanggal_akhir_paper' => $request['tanggal_akhir_paper'],
+            'link_grup_diskusi'  => $request['link_grup_diskusi'],
+           'tanggal_mulai'  => $request['tanggal_mulai'],
+            'tanggal_akhir'  => $request['tanggal_akhir'],
+           'mentor'  => $request['mentor'],
+            'sertifikat'  => $request['sertifikat'],
+            'diskon'  => $request['diskon'],
         ]);
 
 
 
 
         return redirect('admin/daftar-eksekutif')->with('update-eksekutif','Data Berhasil Terupdate');
-
-
-
-
 
 
     }

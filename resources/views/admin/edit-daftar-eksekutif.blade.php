@@ -44,6 +44,12 @@
               </div>
 
               <div class="form-group">
+                <label for="diskon" class="col-form-label"> Harga Diskon: </label>
+                <input type="text" class="form-control" id="diskon" name = "diskon" placeholder="{{$eksekutif->diskon}}" value = "{{$eksekutif->diskon}}">
+              </div>
+
+
+              <div class="form-group">
                 <label for="gambar_kelas" class="col-form-label"> Poster Kelas : </label>
                 <input type="file" class="form-control" id="gambar_kelas" name = "gambar_kelas" placeholder="{{$eksekutif->gambar_kelas}}" value = "{{$eksekutif->gambar_kelas}}">
               </div>

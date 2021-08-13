@@ -82,10 +82,24 @@ Akses Kelas
               <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" style = "margin-top:20px;margin-left:10px;">
                     <ul style = "margin-bottom:5px;">
+                        <?php
+
+                            $tanggalstart = $pemesanan->tanggal_mulai;
+                            $tanggalmulai = strtotime($tanggalstart);
+                            $startdate = date('d M Y',$tanggalmulai);
+
+                            ?>
                         <li style = "margin-bottom:10px;"> Kelas : {{$pemesanan->nama_kelas}} </li>
-                        <li style = "margin-bottom:10px;">Tanggal Mulai Kelas : 16 Agustus 2021</li>
-                        <li style = "margin-bottom:10px;">Tanggal Selesai Kelas : 16 September 2021</li>
-                        <li style = "margin-bottom:10px;">Mentor :</li>
+                        <li style = "margin-bottom:10px;">Tanggal Mulai Kelas :
+                           <?php
+
+                            echo $startdate;
+
+                            ?>
+
+                        </li>
+                        {{-- <li style = "margin-bottom:10px;">Tanggal Selesai Kelas : 16 September 2021</li> --}}
+                        {{-- <li style = "margin-bottom:10px;">Mentor :</li> --}}
                         <li style = "margin-bottom:10px;">Link Grup Diskusi : <a href="" class = "btn btn-warning"> Grup Diskusi</a> </li>
                     </ul>
                     {{-- <p>Tanggal Mulai Kelas : 16 Agustus 2021</p>

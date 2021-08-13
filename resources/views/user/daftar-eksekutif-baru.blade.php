@@ -58,16 +58,17 @@ Daftar Kelas Baru
                     <?php
 
                         $angka = $exe->harga_kelas;
-                        $hasil_rupiah = "Rp " . number_format($angka,2,',','.');
-                        $pembagian = $angka*(0.1);
-                        $total = $angka - $pembagian;
-                        $hasil_total =  "Rp " . number_format($total,2,',','.');
+                        $hasil_rupiah = "Rp. " . number_format($angka,2,',','.');
+
+                        $angkadiskon = $exe->diskon;
+
+                        $hasil_diskon =  "Rp. " . number_format($angkadiskon,2,',','.');
                     ?>
 
                     <center><h5 style = "color:black;"> Harga : <del>
                          <?php echo $hasil_rupiah; ?>
                         </del></h5></center>
-                        <center> <strong><h4 style = "color:red;"> <?php echo $hasil_total; ?> </h4></strong></center>
+                        <center> <strong><h4 style = "color:red;"> <?php echo $hasil_diskon; ?> </h4></strong></center>
 
 
                     <p>

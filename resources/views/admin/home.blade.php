@@ -4,7 +4,7 @@
 
 
 @section('title')
-<title>Dashboard - Admin</title>
+Dashboard - Admin
 
 @endsection
 
