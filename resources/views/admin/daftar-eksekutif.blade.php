@@ -73,6 +73,7 @@ Daftar Kelas Eksekutif - Admin
             @endforeach
             </tbody>
           </table>
+          <br><br><br>
     </div>
 
 

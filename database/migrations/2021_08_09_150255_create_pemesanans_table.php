@@ -22,6 +22,7 @@ class CreatePemesanansTable extends Migration
             $table->string('grup_kelas')->nullable();
             $table->string('metode_pembayaran')->nullable();
             $table->integer('status_pembayaran')->nullable();
+            $table->string('diskon')->nullable();
             $table->timestamps();
         });
     }

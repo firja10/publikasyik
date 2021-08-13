@@ -18,9 +18,10 @@ class CreateEksekutifsTable extends Migration
 
             $table->string('nama_kelas')->nullable();
             $table->string('gambar_kelas')->nullable();
-            $table->string('deskripsi_kelas')->nullable();
+            $table->longText('deskripsi_kelas')->nullable();
             $table->string('harga_kelas')->nullable();
             $table->string('materi_kelas')->nullable();
+            $table->string('diskon')->nullable();
             $table->timestamps();
         });
     }

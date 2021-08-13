@@ -39,7 +39,7 @@
               </div>
 
               <div class="form-group">
-                <label for="harga_kelas" class="col-form-label"> Tanggal Kelas : </label>
+                <label for="harga_kelas" class="col-form-label"> Harga Kelas : </label>
                 <input type="text" class="form-control" id="harga_kelas" name = "harga_kelas" placeholder="{{$eksekutif->harga_kelas}}" value = "{{$eksekutif->harga_kelas}}">
               </div>
 
