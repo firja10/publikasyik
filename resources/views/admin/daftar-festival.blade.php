@@ -3,7 +3,7 @@
 
 
 @section('title')
-<title>Daftar Festival Publikasyik - Admin</title>
+Daftar Festival Publikasyik - Admin
 
 @endsection
 

@@ -3,8 +3,7 @@
 
 
 @section('title')
-<title>Daftar User - Admin</title>
-
+Daftar User - Admin
 @endsection
 
 

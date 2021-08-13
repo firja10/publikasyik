@@ -1,7 +1,7 @@
 @extends('admin.template.app')
 
 @section('title')
-<title>Daftar Call for Papers - Admin</title>
+Daftar Call for Papers - Admin
 
 @endsection
 

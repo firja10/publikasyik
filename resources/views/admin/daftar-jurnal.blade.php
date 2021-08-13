@@ -2,7 +2,7 @@
 
 
 @section('title')
-<title>Daftar Jurnal - Admin</title>
+Daftar Jurnal - Admin
 
 @endsection
 

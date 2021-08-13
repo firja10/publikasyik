@@ -2,7 +2,7 @@
 
 
 @section('title')
-<title>Daftar Kelas Eksekutif - Admin</title>
+Daftar Kelas Eksekutif - Admin
 
 @endsection
 

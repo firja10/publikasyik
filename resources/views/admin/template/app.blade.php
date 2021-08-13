@@ -69,58 +69,31 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="{{url('/admin/daftar-paper')}}">
-                    <i class="fas fa-fw fa fa-calendar"></i>
-                    <span>Daftar Call of Papers</span></a>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePojok"
+                    aria-expanded="true" aria-controls="collapsePojok">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Daftar Pojok</span>
+                </a>
+                <div id="collapsePojok" class="collapse" aria-labelledby="headingPojok" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Daftar Pojok:</h6>
+                        <a class="collapse-item" href="{{url('/admin/daftar-paper')}}">
+                            <i class="fas fa-fw fa fa-calendar"></i>
+                            <span>Daftar Call of Papers</span></a>
+
+                        <a class="collapse-item" href="{{url('/admin/daftar-jurnal')}}">
+                                <i class="fas fa-fw fa-book"></i>
+                                <span>Daftar Jurnal</span></a>
+
+                            <a class="collapse-item" href="{{url('/admin/daftar-seminar')}}">
+                                <i class="fas fa-fw fa-camera"></i>
+                                <span>Daftar Seminar</span></a>
+
+                    </div>
+                </div>
             </li>
 
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('/admin/daftar-seminar')}}">
-                    <i class="fas fa-fw fa-camera"></i>
-                    <span>Daftar Seminar</span></a>
-            </li>
-
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('/admin/daftar-jurnal')}}">
-                    <i class="fas fa-fw fa-book"></i>
-                    <span>Daftar Jurnal</span></a>
-            </li>
-
-             <!-- Nav Item - Pages Collapse Menu -->
-                       <li class="nav-item">
-                        <a class="nav-link" href="{{url('/admin/daftar-langganan')}}">
-                            <i class="fas fa-fw fa-money-bill-alt"></i>
-                            <span>Daftar Langganan</span></a>
-                    </li>
-
-
-                     <!-- Nav Item - Pages Collapse Menu -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{url('/admin/daftar-materi')}}">
-                            <i class="fas fa-fw fa-book"></i>
-                            <span>Daftar Materi</span></a>
-                    </li>
-
-                    <!-- Nav Item - Pages Collapse Menu -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{url('/admin/daftar-submateri')}}">
-                            <i class="fas fa-fw fa-book-open"></i>
-                            <span>Daftar SubMateri</span></a>
-                    </li>
-
-
-
-
-
-
-
-
-
-            <!-- Divider -->
+          <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Heading -->
@@ -128,28 +101,88 @@
                 Produk
             </div>
 
-
-            <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="{{url('/admin/daftar-eksekutif')}}">
-                    <i class="fas fa-fw fa-university"></i>
-                    <span>Daftar Kelas Eksekutif</span></a>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProduk"
+                    aria-expanded="true" aria-controls="collapseProduk">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Produk Kita</span>
+                </a>
+                <div id="collapseProduk" class="collapse" aria-labelledby="headingProduk"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Daftar Produk :</h6>
+
+                            <a class="collapse-item" href="{{url('/admin/daftar-eksekutif')}}">
+                                <i class="fas fa-fw fa-university"></i>
+                                <span>Daftar Kelas Eksekutif</span></a>
+
+                            <a class="collapse-item" href="{{url('/admin/daftar-festival')}}">
+                                <i class="fas fa-fw fa-gift"></i>
+                                <span>Festival Publikasyik</span></a>
+
+
+                            <a class="collapse-item" href="{{url('/admin/daftar-ppt')}}">
+                                <i class="fas fa-fw fa-trophy"></i>
+                                <span>Daftar PPT</span></a>
+
+                    </div>
+                </div>
             </li>
 
 
-            <!-- Nav Item - Pages Collapse Menu -->
+
+
             <li class="nav-item">
-                <a class="nav-link" href="{{url('/admin/daftar-festival')}}">
-                    <i class="fas fa-fw fa-gift"></i>
-                    <span>Daftar Festival Publikasyik</span></a>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBahanajar"
+                    aria-expanded="true" aria-controls="collapseBahanajar">
+                    <i class="fas fa-fw fa-book"></i>
+                    <span>Bahan Ajar</span>
+                </a>
+                <div id="collapseBahanajar" class="collapse" aria-labelledby="headingBahanajar"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Bahan Ajar Kita:</h6>
+
+                            <a class="collapse-item" href="{{url('/admin/daftar-langganan')}}">
+                                <i class="fas fa-fw fa-money-bill-alt"></i>
+                                <span>Daftar Langganan</span></a>
+
+                            <a class="collapse-item" href="{{url('/admin/daftar-materi')}}">
+                                <i class="fas fa-fw fa-book"></i>
+                                <span>Daftar Materi</span></a>
+
+                            <a class="collapse-item" href="{{url('/admin/daftar-submateri')}}">
+                                <i class="fas fa-fw fa-book-open"></i>
+                                <span>Daftar SubMateri</span></a>
+
+
+                    </div>
+                </div>
             </li>
 
 
-            <!-- Nav Item - Pages Collapse Menu -->
+
             <li class="nav-item">
-                <a class="nav-link" href="{{url('/admin/daftar-ppt')}}">
-                    <i class="fas fa-fw fa-trophy"></i>
-                    <span>Daftar PPT</span></a>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLangganan"
+                    aria-expanded="true" aria-controls="collapseLangganan">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Pelanggan Kita</span>
+                </a>
+                <div id="collapseLangganan" class="collapse" aria-labelledby="headingLangganan"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Daftar Pelanggan :</h6>
+
+                            <a class="collapse-item" href="{{url('/admin/daftar-langganan')}}">
+                                <i class="fas fa-fw fa-university"></i>
+                                <span>Langganan Kelas</span></a>
+
+                            <a class="collapse-item" href="{{url('/admin/daftar-peserta-festival')}}">
+                                <i class="fas fa-fw fa-gift"></i>
+                                <span>Peserta Festival</span></a>
+
+                    </div>
+                </div>
             </li>
 
 
@@ -188,7 +221,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="{{url('/admin/daftar-ppt')}}">
+                <a class="nav-link" href="{{url('/admin/daftar-user')}}">
                     <i class="fas fa-fw fa-user"></i>
                     <span>Daftar User</span></a>
             </li>

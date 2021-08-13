@@ -10,15 +10,15 @@ Daftar Festival
 
 <style>
 
-    #daftar-kelas-baru a {
+    #daftar-festival-baru a {
         background-color: white;
     }
 
-    #daftar-kelas-baru a span {
+    #daftar-festival-baru a span {
         color: #AD3221;
     }
 
-    #daftar-kelas-baru a i{
+    #daftar-festival-baru a i{
         color: #AD3221;
     }
 

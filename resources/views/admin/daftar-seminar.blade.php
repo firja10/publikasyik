@@ -3,7 +3,7 @@
 
 
 @section('title')
-<title>Daftar Seminar - Admin</title>
+Daftar Seminar - Admin
 
 @endsection
 

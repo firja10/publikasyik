@@ -1,7 +1,7 @@
 @extends('admin.template.app')
 
 @section('title')
-<title>Daftar Lomba - Admin</title>
+Daftar Lomba - Admin
 
 @endsection
 
