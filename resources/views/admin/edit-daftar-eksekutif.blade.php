@@ -1,5 +1,11 @@
 @extends('admin.template.app')
 
+@section('title')
+Edit Kelas {{$eksekutif->nama_kelas}}
+@endsection
+
+
+
 
 @section('button')
 
@@ -88,7 +94,7 @@
             </center>
             </form>
 
-
+            <br><br>
 
 
 

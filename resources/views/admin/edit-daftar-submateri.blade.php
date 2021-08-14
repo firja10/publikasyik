@@ -1,13 +1,11 @@
 @extends('admin.template.app')
 
+@section('title')
+Edit Submateri {{$submateri->nama_submateri}}
+@endsection
+
 
 @section('button')
-
-
-@section('title')
-<title>Edit Submateri - Admin</title>
-
-@endsection
 
 
 
@@ -63,7 +61,7 @@
 
             </form>
 
-
+            <br><br>
 
 
 

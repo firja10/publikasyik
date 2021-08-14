@@ -82,7 +82,7 @@ class PptController extends Controller
     {
         //
         $ppt = Ppt::findOrFail($id);
-        return view('admin.daftar-ppt', compact('ppt'));
+        return view('admin.edit-daftar-ppt', compact('ppt'));
 
     }
 
@@ -96,7 +96,7 @@ class PptController extends Controller
     {
         //
         $ppt = Ppt::findOrFail($id);
-        return view('admin.daftar-ppt', compact('ppt'));
+        return view('admin.edit-daftar-ppt', compact('ppt'));
 
     }
 

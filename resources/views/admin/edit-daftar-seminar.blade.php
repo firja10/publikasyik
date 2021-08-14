@@ -1,5 +1,9 @@
 @extends('admin.template.app')
 
+@section('title')
+Edit Seminar {{$seminar->judul_seminar}}
+@endsection
+
 
 @section('button')
 

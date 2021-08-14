@@ -1,6 +1,13 @@
 @extends('admin.template.app')
 
 
+@section('title')
+Edit Daftar {{$jurnal->judul_jurnal}}
+@endsection
+
+
+
+
 @section('button')
 
 
@@ -60,7 +67,7 @@
             </form>
 
 
-
+            <br><br>
 
 
 

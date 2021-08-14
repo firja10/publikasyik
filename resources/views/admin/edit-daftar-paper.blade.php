@@ -1,5 +1,9 @@
 @extends('admin.template.app')
 
+@section('title')
+Edit Jurnal {{$paper->judul_paper}}
+@endsection
+
 
 @section('button')
 
@@ -57,7 +61,7 @@
 
             </form>
 
-
+            <br><br>
 
 
 

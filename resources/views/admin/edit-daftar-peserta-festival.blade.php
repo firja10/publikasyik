@@ -1,7 +1,7 @@
 @extends('admin.template.app')
 
 @section('title')
-Edit Festival
+Edit Festival {{$daftarfestival->nama_festival}}
 
 @endsection
 
