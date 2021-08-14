@@ -319,7 +319,7 @@ class LandingController extends Controller
     public function langganan()
     {
         # code...
-        $pemesanan = Pemesanan::all();
+        $pemesanan = Pemesanan::paginate(5);
         return view('admin.daftar-langganan',compact('pemesanan'));
     }
 
@@ -415,7 +415,7 @@ class LandingController extends Controller
     public function daftaruser()
     {
         # code...
-        $user = User::all();
+        $user = User::paginate(5);
         return view('admin.daftar-user',compact('user'));
     }
 
@@ -450,7 +450,7 @@ class LandingController extends Controller
         $data->judul_pesan = $request['judul_pesan'];
         $data->isi_pesan = $request['isi_pesan'];
         $data->save();
-        return redirect('/')->with('store-pesan','Pesan Sudah Terkirim !');
+        return redirect('/#contact')->with('store-pesan','Pesan Sudah Terkirim !');
 
     }
 

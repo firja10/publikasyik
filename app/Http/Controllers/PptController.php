@@ -16,7 +16,7 @@ class PptController extends Controller
     public function index()
     {
         //
-        $ppt = Ppt::all();
+        $ppt = Ppt::paginate(5);
         return view('admin.daftar-ppt', compact('ppt'));
     }
 

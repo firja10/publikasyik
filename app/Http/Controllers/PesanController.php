@@ -15,7 +15,7 @@ class PesanController extends Controller
     public function index()
     {
         //
-        $pesan = Pesan::all();
+        $pesan = Pesan::paginate(5);
         return view('admin.daftar-pesan',compact('pesan'));
     }
 

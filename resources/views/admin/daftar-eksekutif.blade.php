@@ -25,10 +25,20 @@ Daftar Kelas Eksekutif - Admin
 
 
     <!-- Area Chart -->
-    <div class="col-xl-12 col-lg-11">
+    {{-- <div class="col-xl-12 col-lg-11"> --}}
 
 
-        <table class="table table-dark" >
+
+                    <!-- DataTales Example -->
+      <div class="card shadow mb-4">
+          <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Table Kelas Eksekutif</h6>
+           </div>
+              <div class="card-body">
+                  <div class="table-responsive">
+
+
+        <table class="table table-dark table-bordered" id = "datatable">
             <thead>
               <tr>
                 <th scope="col">No</th>
@@ -76,9 +86,33 @@ Daftar Kelas Eksekutif - Admin
 
             @endforeach
             </tbody>
+
           </table>
 
+
+          Halaman : {{ $eksekutif->currentPage() }} <br/>
+          Jumlah Data : {{ $eksekutif->total() }} <br/>
+          Data Per Halaman : {{ $eksekutif->perPage() }} <br/>
+
+
+            <br> <br>
+          <div class="d-flex justify-content-center">
+            <center> {{ $eksekutif->links() }}</center>
+          </div>
+
+
+
+
+
+          <br><br>
+
     </div>
+</div>
+</div>
+
+
+
+    {{-- </div> --}}
 
     <br><br><br>
 

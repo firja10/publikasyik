@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Eksekutif;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class EksekutifController extends Controller
@@ -16,7 +17,10 @@ class EksekutifController extends Controller
     public function index()
     {
         //
-        $eksekutif = Eksekutif::all();
+        // $eksekutif = Eksekutif::all();
+        $eksekutif = Eksekutif::paginate(5);
+        // $exekutif = DB::table('eksekutifs')->paginate(3);
+        // return view('admin.daftar-eksekutif', compact('eksekutif','exekutif'));
         return view('admin.daftar-eksekutif', compact('eksekutif'));
     }
 

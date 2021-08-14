@@ -1,16 +1,8 @@
 
-
-
-
-
-
-
-
-
 @extends('template.template')
 
 @section('title')
-Publikasyik Paper Talent
+Festival Publikasyik
 @endsection
 
 @section('content')
@@ -23,7 +15,7 @@ Publikasyik Paper Talent
       </div>
 
       <center>
-          <h1>Terkait Publikasyik Paper Talent ( PPT ) masih belum ada. Mohon Menunggu dan Bersabar ya. Tetap Semangat Kawan </h1>
+          <h1>Terkait Festival Publikasyik masih belum ada. Mohon Menunggu dan Bersabar ya. Tetap Semangat Kawan </h1>
       </center>
 
 

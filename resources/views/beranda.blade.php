@@ -293,7 +293,9 @@ Selamat Datang di Publikasyik
                 <br>
                 <br>
                 {{-- <a href="{{route('festivalindex')}}" class="buy-btn" style = "margin-top:10px;">Daftar</a> --}}
-                <a href="{{url('user/daftar-festival-baru')}}" class="buy-btn">Daftar</a>
+
+                <a href="{{url('festival-publikasyik')}}" class="buy-btn">Daftar</a>
+                  {{-- <a href="{{url('user/daftar-festival-baru')}}" class="buy-btn">Daftar</a> --}}
               </div>
             </div>
 

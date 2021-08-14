@@ -1,7 +1,7 @@
 @extends('admin.template.app')
 
 @section('title')
-<title>Daftar Call for pesans - Admin</title>
+Daftar Pesan - Admin
 
 @endsection
 
@@ -9,7 +9,7 @@
 @section('judul')
 
 
-<h1 class="h3 mb-0 text-gray-800">Daftar Call for pesans</h1>
+<h1 class="h3 mb-0 text-gray-800">Daftar Pesan</h1>
 @endsection
 
 @section('button')
@@ -41,7 +41,14 @@
 
 
     <!-- Area Chart -->
-    <div class="col-xl-12 col-lg-11">
+    {{-- <div class="col-xl-12 col-lg-11"> --}}
+
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Table Pesan</h6>
+             </div>
+                <div class="card-body">
+                    <div class="table-responsive">
 
 
         <table class="table table-dark">
@@ -84,9 +91,22 @@
             @endforeach
             </tbody>
           </table>
-    </div>
 
 
+          Halaman : {{ $pesan->currentPage() }} <br/>
+          Jumlah Data : {{ $pesan->total() }} <br/>
+          Data Per Halaman : {{ $pesan->perPage() }} <br/>
+
+
+            <br> <br>
+          <div class="d-flex justify-content-center">
+            <center> {{ $pesan->links() }}</center>
+          </div>
+    {{-- </div> --}}
+
+</div>
+</div>
+</div>
 
 
 

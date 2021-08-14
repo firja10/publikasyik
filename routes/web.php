@@ -50,6 +50,11 @@ Route::get('/ppt', function () {
     return view('ppt-home');
 });
 
+Route::get('/festival-publikasyik', function () {
+    return view('festival-home');
+});
+
+
 
 
 Route::get('/daftar-pojok', [App\Http\Controllers\LandingController::class, 'semuaindex'])->name('semuaindex');

@@ -16,7 +16,7 @@ class DaftarfestivalController extends Controller
     public function index()
     {
         //
-        $daftarfestival = Daftarfestival::all();
+        $daftarfestival = Daftarfestival::paginate(5);
         return view('admin.daftar-peserta-festival',compact('daftarfestival'));
     }
 

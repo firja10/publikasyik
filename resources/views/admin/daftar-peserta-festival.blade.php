@@ -31,7 +31,14 @@ Daftar Peserta Festival Publikasyik - Admin
 
 
     <!-- Area Chart -->
-    <div class="col-xl-12 col-lg-11">
+    {{-- <div class="col-xl-12 col-lg-11"> --}}
+
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Table Peserta Festival</h6>
+             </div>
+                <div class="card-body">
+                    <div class="table-responsive">
 
 
         <table class="table table-dark">
@@ -68,28 +75,6 @@ Daftar Peserta Festival Publikasyik - Admin
                 <td>{{$fest->link_festival}}</td>
                 <td> <img src="{{asset('storage/Festival/'.$fest->gambar_festival)}}" alt="" style="width:50px;"> </td>
                 <td>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     <center>
                         @if($fest->status_pembayaran == 1)
                         <form action="{{route('konfirmasibayarfestival', $fest->id)}}" method="POST">
@@ -129,7 +114,21 @@ Daftar Peserta Festival Publikasyik - Admin
             @endforeach
             </tbody>
           </table>
-    </div>
+
+          Halaman : {{ $daftarfestival->currentPage() }} <br/>
+          Jumlah Data : {{ $daftarfestival->total() }} <br/>
+          Data Per Halaman : {{ $daftarfestival->perPage() }} <br/>
+
+
+            <br> <br>
+          <div class="d-flex justify-content-center">
+            <center> {{ $daftarfestival->links() }}</center>
+          </div>
+
+    {{-- </div> --}}
+</div>
+</div>
+</div>
 
 
 

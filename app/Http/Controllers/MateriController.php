@@ -17,7 +17,7 @@ class MateriController extends Controller
     public function index()
     {
         //
-        $materi = Materi::all();
+        $materi = Materi::paginate(5);
         $eksekutif = Eksekutif::all();
         return view('admin.daftar-materi',compact('materi','eksekutif'));
     }

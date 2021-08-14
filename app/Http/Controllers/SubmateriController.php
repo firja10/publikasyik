@@ -17,8 +17,8 @@ class SubmateriController extends Controller
     public function index()
     {
         //
-        $materi = Materi::all();
-        $submateri = Submateri::all();
+        $materi = Materi::paginate(5);
+        $submateri = Submateri::paginate(5);
         return view('admin.daftar-submateri',compact('submateri','materi'));
     }
 

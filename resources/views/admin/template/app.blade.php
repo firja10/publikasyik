@@ -17,6 +17,11 @@
         <link href="{{asset('startup-unpad/publikasyik.png')}}" rel="icon" />
         <link href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon" />
 
+                {{-- Tambahan Bootstrap --}}
+
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+
     <!-- Custom fonts for this template-->
     <link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
     <link
@@ -25,6 +30,7 @@
 
     <!-- Custom styles for this template-->
     <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
+    <link href="{{asset('vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
 
 </head>
 
@@ -182,6 +188,11 @@
                             <a class="collapse-item" href="{{url('/admin/daftar-peserta-festival')}}">
                                 <i class="fas fa-fw fa-gift"></i>
                                 <span>Peserta Festival</span></a>
+
+
+                            <a class="collapse-item" href="{{url('/admin/daftar-pesan')}}">
+                                <i class="fas fa-fw fa-envelope"></i>
+                                <span>Daftar Pesan</span></a>
 
                     </div>
                 </div>
@@ -371,7 +382,7 @@
                     </div>
 
                     <!-- Content Row -->
-                    <div class="row">
+                    {{-- <div class="row"> --}}
 
 
 
@@ -384,7 +395,7 @@
 
 
 
-                    </div>
+                    {{-- </div> --}}
 
                 </div>
                 <!-- /.container-fluid -->
@@ -443,6 +454,12 @@
     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
         @csrf
     </form>
+
+
+    <!-- Page level plugins -->
+    <script src="{{asset('vendor/datatables/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('js/demo/datatables-demo.js')}}"></script>
 
     <!-- Bootstrap core JavaScript-->
     <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>

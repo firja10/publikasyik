@@ -40,7 +40,14 @@ Daftar Seminar - Admin
 
 
     <!-- Area Chart -->
-    <div class="col-xl-12 col-lg-11">
+    {{-- <div class="col-xl-12 col-lg-11"> --}}
+
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Table Seminar</h6>
+             </div>
+                <div class="card-body">
+                    <div class="table-responsive">
 
 
         <table class="table table-dark">
@@ -88,7 +95,20 @@ Daftar Seminar - Admin
             @endforeach
             </tbody>
           </table>
-    </div>
+
+          Halaman : {{ $seminar->currentPage() }} <br/>
+          Jumlah Data : {{ $seminar->total() }} <br/>
+          Data Per Halaman : {{ $seminar->perPage() }} <br/>
+
+
+            <br> <br>
+          <div class="d-flex justify-content-center">
+            <center> {{ $seminar->links() }}</center>
+          </div>
+    {{-- </div> --}}
+</div>
+</div>
+</div>
 
 
 

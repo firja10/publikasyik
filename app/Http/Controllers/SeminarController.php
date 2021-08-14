@@ -16,7 +16,7 @@ class SeminarController extends Controller
     public function index()
     {
         //
-        $seminar = Seminar::all();
+        $seminar = Seminar::paginate(5);
         return view('admin/daftar-seminar', compact('seminar'));
     }
 

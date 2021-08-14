@@ -39,8 +39,13 @@ Daftar User - Admin
 
 
     <!-- Area Chart -->
-    <div class="col-xl-12 col-lg-11">
-
+    {{-- <div class="col-xl-12 col-lg-11"> --}}
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Table User</h6>
+             </div>
+                <div class="card-body">
+                    <div class="table-responsive">
 
         <table class="table table-dark">
             <thead>
@@ -110,10 +115,23 @@ Daftar User - Admin
             @endforeach
             </tbody>
           </table>
-    </div>
 
 
+          Halaman : {{ $user->currentPage() }} <br/>
+          Jumlah Data : {{ $user->total() }} <br/>
+          Data Per Halaman : {{ $user->perPage() }} <br/>
 
+
+            <br> <br>
+          <div class="d-flex justify-content-center">
+            <center> {{ $user->links() }}</center>
+          </div>
+
+
+    {{-- </div> --}}
+</div>
+</div>
+</div>
 
 
 

@@ -17,7 +17,7 @@ class PaperController extends Controller
     public function index()
     {
         //
-        $paper = Paper::all();
+        $paper = Paper::paginate(5);
         return view('admin.daftar-paper', compact('paper'));
     }
 

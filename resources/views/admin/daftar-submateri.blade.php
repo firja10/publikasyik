@@ -40,8 +40,14 @@ Daftar Submateri - Admin
 
 
     <!-- Area Chart -->
-    <div class="col-xl-12 col-lg-11">
+    {{-- <div class="col-xl-12 col-lg-11"> --}}
 
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Table Submateri</h6>
+             </div>
+                <div class="card-body">
+                    <div class="table-responsive">
 
         <table class="table table-dark">
             <thead>
@@ -90,10 +96,24 @@ Daftar Submateri - Admin
             @endforeach
             </tbody>
           </table>
-    </div>
+
+
+          Halaman : {{ $submateri->currentPage() }} <br/>
+          Jumlah Data : {{ $submateri->total() }} <br/>
+          Data Per Halaman : {{ $submateri->perPage() }} <br/>
+
+
+            <br> <br>
+          <div class="d-flex justify-content-center">
+            <center> {{ $submateri->links() }}</center>
+          </div>
 
 
 
+    {{-- </div> --}}
+</div>
+</div>
+</div>
 
 
 

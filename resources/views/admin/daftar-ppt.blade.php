@@ -25,8 +25,13 @@ Daftar Lomba - Admin
 
 
     <!-- Area Chart -->
-    <div class="col-xl-12 col-lg-11">
-
+    {{-- <div class="col-xl-12 col-lg-11"> --}}
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Table PPT</h6>
+             </div>
+                <div class="card-body">
+                    <div class="table-responsive">
 
         <table class="table table-dark">
             <thead>
@@ -70,11 +75,22 @@ Daftar Lomba - Admin
             @endforeach
             </tbody>
           </table>
-    </div>
+
+          Halaman : {{ $ppt->currentPage() }} <br/>
+          Jumlah Data : {{ $ppt->total() }} <br/>
+          Data Per Halaman : {{ $ppt->perPage() }} <br/>
 
 
+            <br> <br>
+          <div class="d-flex justify-content-center">
+            <center> {{ $ppt->links() }}</center>
+          </div>
 
 
+    {{-- </div> --}}
+  </div>
+</div>
+</div>
 
 
 
