@@ -6,6 +6,17 @@ use Illuminate\Http\Request;
 use App\Models\Paper;
 use App\Models\Jurnal;
 use App\Models\Seminar;
+use App\Models\Eksekutif;
+use App\Models\Festival;
+use App\Models\Ppt;
+use App\Models\Pemesanan;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Materi;
+use App\Models\Submateri;
+use Illuminate\Support\Facades\DB;
+use App\Models\Pesan;
+use App\Models\Daftarfestival;
+
 use Illuminate\Support\Facades\Storage;
 use App\Models\User;
 
@@ -49,7 +60,16 @@ class HomeController extends Controller
      */
     public function adminHome()
     {
-        return view('admin.home');
+
+        $user = DB::table('users')->count();
+        $daftarfestival = DB::table('daftarfestivals')->count();
+        $eksekutif = DB::table('eksekutifs')->count();
+        $pesan = DB::table('pesans')->count();
+        $pemesanan = DB::table('pemesanans')->count();
+        $festival = DB::table('festivals')->count();
+
+        return view('admin.home',compact('user','daftarfestival','eksekutif','pesan','pemesanan','festival'));
+        // return view('admin.home');
     }
 
 

@@ -78,11 +78,9 @@ Auth::routes();
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-// Route::get('/admin/dashboard', [App\Http\Controllers\HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
+Route::get('/admin/dashboard', [App\Http\Controllers\HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 
-
-
-Route::get('/admin/dashboard', [LandingController::class, 'indexadmin'])->name('indexadmin')->middleware('is_admin');
+// Route::get('/admin/dashboard', [LandingController::class, 'indexadmin'])->name('indexadmin')->middleware('is_admin');
 
 Route::resource('admin/daftar-paper', PaperController::class)->middleware('is_admin');
 Route::resource('admin/daftar-seminar', SeminarController::class)->middleware('is_admin');
