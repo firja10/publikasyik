@@ -146,7 +146,7 @@ Daftar Submateri - Admin
               </div>
 
               <div class="form-group">
-                <label for="referensi_submateri" class="col-form-label"> Referensi Submateri : </label>
+                <label for="referensi_submateri" class="col-form-label"> Referensi Submateri : ( Jika lebih dari 1, maka tulis ', ' misal : https://www.google.com, https://www.canva.com,  ) </label>
                 <input type="text" class="form-control" id="referensi_submateri" name = "referensi_submateri">
               </div>
 

@@ -66,7 +66,34 @@ Halaman Kelas
                     <br>
                     <center> <p style = "margin-left:50px;margin-right:50px;">{{$submateri->penjelasan_submateri}}</p></center>
 
-                   <p style = "margin-left:20px;"> <strong> Referensi Materi :<a href="{{$submateri->referensi_submateri}}"> {{$submateri->referensi_submateri}} </a></strong> </p>
+
+                    <?php
+
+                    $submat = $submateri->referensi_submateri;
+                    $pisahsubmat  = explode(', ',$submat);
+
+
+                    ?>
+
+                   <p style = "margin-left:30px;"> <strong> Referensi Materi :
+                        <?php
+
+                        foreach($pisahsubmat as $pisahsubmats){
+                            echo "<li style = 'margin-left:30px;'> <a href = '$pisahsubmats'>" . $pisahsubmats . "</a></li>";
+                        }
+
+
+
+                            ?>
+                       {{-- <a href="{{$submateri->referensi_submateri}}">
+                         {{$submateri->referensi_submateri}} </a> --}}
+
+
+
+                        </strong>
+                        </p>
+
+
 
                 {{-- </div> --}}
                 <br><br>
