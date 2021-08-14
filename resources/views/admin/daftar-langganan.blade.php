@@ -44,6 +44,7 @@ Daftar Kelas Eksekutif - Admin
                 <th scope="col"> Materi Kelas</th>
                 <th scope="col">Harga Kelas</th>
                 <th scope="col">ID User</th>
+                <th scope="col">ID Kelas</th>
                 <th scope = "col">Status Pembayaran</th>
                 <th scope="col">Aksi</th>
               </tr>
@@ -62,6 +63,7 @@ Daftar Kelas Eksekutif - Admin
                 <td>{{$exe->materi_kelas}}</td>
                 <td>{{$exe->harga_kelas}}</td>
                 <td>{{$exe->user_id}}</td>
+                <td>{{$exe->kelas_id}}</td>
 
                 <td>
                     <center>

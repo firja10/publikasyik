@@ -100,6 +100,11 @@ Daftar Kelas Baru
           </div>
 
           <div class="form-group">
+            {{-- <label for="harga_kelas" class="col-form-label"> Tanggal Kelas : </label> --}}
+            <input type="hidden" class="form-control" id="kelas_id" name = "kelas_id" placeholder="{{$eksekutif->id}}" value = "{{$eksekutif->id}}">
+          </div>
+
+          <div class="form-group">
             <label for="metode_pembayaran">Metode Pembayaran</label>
             <select name="metode_pembayaran" id="metode_pembayaran" class = "form-control">
                   <option value = "BNI">BNI</option>

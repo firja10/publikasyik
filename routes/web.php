@@ -55,6 +55,15 @@ Route::get('/festival-publikasyik', function () {
 });
 
 
+Route::get('/halaman-kelas', function () {
+        return view('user.halaman-materi');
+});
+
+
+
+
+
+
 
 
 Route::get('/daftar-pojok', [App\Http\Controllers\LandingController::class, 'semuaindex'])->name('semuaindex');
@@ -129,6 +138,7 @@ Route::get('users/daftar-festival-baru/{id}', [LandingController::class,'daftarf
 Route::post('/user/daftar-festival-baru/',[LandingController::class,'daftarfestivaluserbayar'])->name('daftarfestivaluserbayar')->middleware('auth');
 Route::post('user/daftar-festival-baru/gratis',[LandingController::class,'daftarfestivaluser'])->name('daftarfestivaluser')->middleware('auth');
 Route::delete('/user/riwayat-festival/{id}',[LandingController::class,'batalkanfestival'])->name('batalkanfestival')->middleware('auth');
+Route::get('user/halaman-materi/{id}',[LandingController::class,'halamanmateri'] )->name('halamanmateri')->middleware('auth');
 
 
 // Auth::routes();

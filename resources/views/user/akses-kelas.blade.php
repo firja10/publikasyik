@@ -136,7 +136,7 @@ Akses Kelas
 
                                 <ul>
                                 @foreach ( $datamateris->submateri as $submateris )
-                                    <li style = "margin-bottom:10px;"> <a href="">{{$submateris->nama_submateri}}</a> </li>
+                                    <li style = "margin-bottom:10px;"> <a href="{{route('halamanmateri', $submateris->id)}}">{{$submateris->nama_submateri}}</a> </li>
                                 @endforeach
 
                                 </ul>

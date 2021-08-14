@@ -632,7 +632,36 @@ class LandingController extends Controller
     }
 
 
+    // public function halamankelas($id, Pemesanan $pemesanan)
+    // {
+    //     # code...
 
+    //        # code...
+    //        $materi = new Materi;
+    //        $submateri = new Submateri;
+
+    //        $pemesanan = Pemesanan::findOrFail($id);
+
+    //        $user_id = Auth::id();
+
+    //        $datamateri = $materi->where('kelas_id', $pemesanan->kelas_id)->get();
+
+    //        return view('user.akses-kelas', compact('pemesanan','datamateri'));
+
+    // }
+
+
+
+
+
+    public function halamanmateri($id, Submateri $submateri)
+    {
+        # code...
+        $submateri = Submateri::findOrFail($id);
+        return view('user.halaman-materi',compact('submateri'));
+
+
+    }
 
 
 
