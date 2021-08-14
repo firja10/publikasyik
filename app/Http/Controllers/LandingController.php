@@ -118,6 +118,7 @@ class LandingController extends Controller
 
 
 
+
     //HALAMAN USER
 
     public function indexuser()
@@ -595,6 +596,44 @@ class LandingController extends Controller
         return redirect('user/riwayat-festival')->with('daftarfestival-hapus','Data Sudah Terhapus');
 
     }
+
+
+
+
+
+
+
+
+        // HALAMAN ADMIN
+
+
+    public function indexadmin()
+    {
+        # code...
+
+        // $paper = DB::table('papers')->count();
+        // $jurnal = DB::table('jurnals')->count();
+
+        // $materi = DB::table('materis')->count();
+        // $ppt = DB::table('ppts')->count();
+        // $seminar = DB::table('seminars')->count();
+        // $submateri = DB::table('submateris')->count();
+
+        $user = DB::table('users')->count();
+        $daftarfestival = DB::table('daftarfestivals')->count();
+        $eksekutif = DB::table('eksekutifs')->count();
+        $pesan = DB::table('pesans')->count();
+        $pemesanan = DB::table('pemesanans')->count();
+        $festival = DB::table('festivals')->count();
+
+        return view('admin.home',compact('user','daftarfestival','eksekutif','pesan','pemesanan','festival'));
+
+
+    }
+
+
+
+
 
 
 
