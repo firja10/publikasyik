@@ -184,8 +184,8 @@ Selamat Datang di Publikasyik
                   <div class="social">
                     <a href=""><i class="ri-twitter-fill"></i></a>
                     <a href=""><i class="ri-facebook-fill"></i></a>
-                    <a href=""><i class="ri-instagram-fill"></i></a>
-                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    <a href="https://www.instagram.com/thoriqakbarrr/"><i class="ri-instagram-fill"></i></a>
+                    <a href="https://www.linkedin.com/in/thoriqakbar/"> <i class="ri-linkedin-box-fill"></i> </a>
                   </div>
                 </div>
               </div>
@@ -202,7 +202,7 @@ Selamat Datang di Publikasyik
                     <a href=""><i class="ri-twitter-fill"></i></a>
                     <a href=""><i class="ri-facebook-fill"></i></a>
                     <a href=""><i class="ri-instagram-fill"></i></a>
-                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    <a href="https://www.linkedin.com/in/muhamad-diki-permana-027571158/"> <i class="ri-linkedin-box-fill"></i> </a>
                   </div>
                 </div>
               </div>
