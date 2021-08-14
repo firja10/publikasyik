@@ -45,7 +45,7 @@ Selamat Datang di Publikasyik
             <div class="col-lg-3 mt-6 mt-lg-0" data-aos="zoom-in" data-aos-delay="100" style = "text-align: center">
               <div class="icon-box" style = "background-color:rgb(255,255,255,0.0)" >
 
-                <div class="icon"> <img src="{{asset('startup-unpad/pomits.png')}}" alt="" style = "width:210px;"> </div>
+                <div class="icon"> <img src="{{asset('startup-unpad/pomits.png')}}" alt="POMITS ITS" style = "width:210px;"> </div>
               </div>
             </div>
 
@@ -53,7 +53,7 @@ Selamat Datang di Publikasyik
             {{-- <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200"> --}}
                 <div class="col-lg-3 mt-6 mt-lg-0" data-aos="zoom-in" data-aos-delay="200" style = "text-align: center">
               <div class="icon-box" style = "background-color:rgb(255,255,255,0.0)">
-                <div class="icon"> <img src="{{asset('startup-unpad/jcena-2.png')}}" alt="" style = "width:210px;"> </div>
+                <div class="icon"> <img src="{{asset('startup-unpad/jcena-2.png')}}" alt="JCENA" style = "width:210px;"> </div>
               </div>
             </div>
 
@@ -61,7 +61,7 @@ Selamat Datang di Publikasyik
             {{-- <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300"> --}}
                 <div class="col-lg-3 mt-6 mt-lg-0" data-aos="zoom-in" data-aos-delay="300" style = "text-align: center">
               <div class="icon-box" style = "background-color:rgb(255,255,255,0.0)">
-                <div class="icon"> <img src="{{asset('startup-unpad/adbis-2.png')}}" alt="" style = "width:210px;"> </div>
+                <div class="icon"> <img src="{{asset('startup-unpad/adbis-2.png')}}" alt="AdBispreneur" style = "width:210px;"> </div>
               </div>
             </div>
 
@@ -69,7 +69,7 @@ Selamat Datang di Publikasyik
             {{-- <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400"> --}}
                 <div class="col-lg-3 mt-6 mt-lg-0" data-aos="zoom-in" data-aos-delay="400" style = "text-align: center">
               <div class="icon-box" style = "background-color:rgb(255,255,255,0.0)">
-                <div class="icon"> <img src="{{asset('startup-unpad/jane-2.png')}}" alt="" style = "width:210px;"> </div>
+                <div class="icon"> <img src="{{asset('startup-unpad/jane-2.png')}}" alt="JANE" style = "width:210px;"> </div>
               </div>
 
             </div>
@@ -87,7 +87,7 @@ Selamat Datang di Publikasyik
 
           <div class="row content">
             <div class="col-lg-6">
-                <img src="{{asset('startup-unpad/gambar-layananpng.png')}}" alt="" style = "margin-top:25px; width:100%;text-align:center;">
+                <img src="{{asset('startup-unpad/gambar-layananpng.png')}}" alt="Layanan Publikasyik" style = "margin-top:25px; width:100%;text-align:center;">
             </div>
 
             <div class="col-lg-6 pt-4 pt-lg-0">
@@ -176,7 +176,7 @@ Selamat Datang di Publikasyik
             <div class="col-lg-6">
               <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
                 {{-- <div class="pic"><img src="{{asset('assets/img/team/team-1.jpg')}}" class="img-fluid" alt="" /></div> --}}
-                <div class="pic"><img src="{{asset('mentor/mas-thoriq.png')}}" class="img-fluid" alt="" /></div>
+                <div class="pic"><img src="{{asset('mentor/mas-thoriq.png')}}" class="img-fluid" alt="Mochamad Thoriq Akbar" /></div>
                 <div class="member-info">
                   <h4>Mochamad Thoriq Akbar</h4>
                   <span>Research Associate at Abdul Latif Jameel Poverty Action Lab (J-PAL)</span>
@@ -193,7 +193,7 @@ Selamat Datang di Publikasyik
 
             <div class="col-lg-6 mt-4 mt-lg-0">
               <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
-                <div class="pic"><img src="{{asset('mentor/mas-diki.jpeg')}}" class="img-fluid" alt="" /></div>
+                <div class="pic"><img src="{{asset('mentor/mas-diki.jpeg')}}" class="img-fluid" alt="Muhammad Diki Permana" /></div>
                 <div class="member-info">
                   <h4>Muhamad Diki Permana</h4>
                   <span>Laboratory Assistant in Inorganic Chemistry, Universitas Padjadjaran</span>
@@ -280,7 +280,7 @@ Selamat Datang di Publikasyik
               <div class="box">
                 <h3 style = "color:#5516DC">Festival Publikasyik</h3>
                 <h4>
-                    <img src="{{asset('startup-unpad/festival-publikasyik.png')}}" alt="">
+                    <img src="{{asset('startup-unpad/festival-publikasyik.png')}}" alt="festival publikasyik">
                 </h4>
                 {{-- <ul>
                   <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
@@ -303,7 +303,7 @@ Selamat Datang di Publikasyik
               <div class="box featured">
                 <h3 style = "color: #F1701C">Kelas Eksekutif</h3>
                 <h4>
-                    <img src="{{asset('startup-unpad/kelas-eksekutif.png')}}" alt="">
+                    <img src="{{asset('startup-unpad/kelas-eksekutif.png')}}" alt="Kelas Eksekutif">
                 </h4>
 
                 <p id = "ke">Pilihan kelas berbayar yang disediakan PUBLIKASYIK untuk pendampingan penyusunan skripsi/karya ilmiah lainnya yang siap dipublikasikan. Kelas ini Meliputi : </p>
@@ -329,7 +329,7 @@ Selamat Datang di Publikasyik
               <div class="box">
                 <h3 style = "color:#438850"> Publikasyik Paper Talent (PPT)</h3>
                 <h4>
-                    <img src="{{asset('startup-unpad/ppt.png')}}" alt="">
+                    <img src="{{asset('startup-unpad/ppt.png')}}" alt="PPT">
                 </h4>
                <p>Lomba karya tulis ilmiah (literature review atau berbasis penelitian) tingkat mahasiswa yang dapat diikuti oleh mahasiswa jurusan saintek/soshum dengan output bahwa karya ilmiah pemenang akan dipublikasikan di jurnal mitra</p>
                     <br><br> <br>

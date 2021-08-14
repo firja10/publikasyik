@@ -135,8 +135,8 @@
       <div class="container d-flex align-items-center">
         <h1 class="logo mr-auto">
           <a href="{{url('/home')}}" class="typing-container">
-             <img src="{{asset('startup-unpad/logo-publikasyik-asli.png')}}" id = "logo-asli-panjang" alt="" style = "margin-right:15px;" >
-             <img src="{{asset('startup-unpad/publikasyik.png')}}" id = "logo-asli-pendek" alt="" style = "margin-right:15px;" >
+             <img src="{{asset('startup-unpad/logo-publikasyik-asli.png')}}" id = "logo-asli-panjang" alt="publikasyik" style = "margin-right:15px;" >
+             <img src="{{asset('startup-unpad/publikasyik.png')}}" id = "logo-asli-pendek" alt="publikasyik" style = "margin-right:15px;" >
              {{-- <span style = "display:inline-block;margin-top:5px;"> U B L I K A S Y I K</span> --}}
               {{-- <span class="input-cursor"></span> --}}
             </a>
@@ -265,7 +265,7 @@
               <div class="col-lg-4 col-md-6 footer-contact">
                 <h3>
                     {{-- Arsha --}}
-                    <img src="{{asset('startup-unpad/logo-publikasyik-asli.png')}}" alt="" style = "width:350px;">
+                    <img src="{{asset('startup-unpad/logo-publikasyik-asli.png')}}" alt="Publikasyik Footer" style = "width:350px;">
 
                 </h3>
                 <p style = "font-size:20px;">
