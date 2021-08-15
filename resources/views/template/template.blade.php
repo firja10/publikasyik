@@ -338,7 +338,7 @@
 
       <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
       <div id="preloader"> <center>
-          <img src="{{asset('startup-unpad/publikasyik.png')}}" id = "gambar-preloader" alt="gambar preloader" >
+          {{-- <img src="{{asset('startup-unpad/publikasyik.png')}}" id = "gambar-preloader" alt="gambar preloader" > --}}
 
         </center>  </div>
 

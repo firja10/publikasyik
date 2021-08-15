@@ -48,11 +48,11 @@ h6 {
     background: #ad3221;
 }
 
-/* #preloader:before {
+#preloader:before {
     content: "";
     position: fixed;
-    top: calc(50% - 30px);
-    left: calc(50% - 30px);
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
 
     border: 6px solid #f1c21c;
     border-top-color: #fff;
@@ -64,9 +64,9 @@ h6 {
     height: 120px;
     -webkit-animation: animate-preloader 1s linear infinite;
     animation: animate-preloader 1s linear infinite;
-} */
+}
 
-#gambar-preloader {
+/* #gambar-preloader {
     width: 60px;
     position: fixed;
 
@@ -86,7 +86,7 @@ h6 {
     height: 150px;
     -webkit-animation: animate-preloader 1s linear infinite;
     animation: animate-preloader 1s linear infinite;
-}
+} */
 
 /* #preloader:after {
     content: url("/public/startup-unpad/publikasyik.png");
