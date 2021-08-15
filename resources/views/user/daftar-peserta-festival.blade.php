@@ -148,7 +148,7 @@ Riwayat Festival
                                 <center><a href="" class="btn btn-warning" style = "color:black;"> Selesaikan Pembayaran </a></center>
                                 <br>
                                 <center>
-                                    <form action="{{route('batalkanpemesanan', $datas->id)}}" method="POST" enctype="multipart/form-data">
+                                    <form action="{{route('batalkanfestival', $datas->id)}}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" name = "submit" class="btn btn-danger">Batalkan Festival</button>
