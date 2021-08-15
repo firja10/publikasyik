@@ -128,12 +128,16 @@ class LandingController extends Controller
         $eksekutif = new Eksekutif;
         $user_id = Auth::id();
 
-        $tagihans = DB::table('pemesanans')->where('status_pembayaran',1)->count();
-        $daftarfestivals = DB::table('daftarfestivals')->where('status_pembayaran',1)->count();
+        // $tagihans = DB::table('pemesanans')->where('status_pembayaran',1)->count();
+        $tagihans = DB::table('pemesanans')->where('status_pembayaran',1);
+        $tagihanuser = $tagihans->where('user_id',$user_id)->count();
+        $daftarfestivals = DB::table('daftarfestivals')->where('status_pembayaran',1);
+        $daftarfestivaluser = $daftarfestivals->where('user_id',$user_id)->count();
+
         $pemesanans = DB::table('pemesanans')->where('user_id',$user_id)->count();
         $eksekutifs = DB::table('eksekutifs')->count();
         $kelas = $eksekutif->where('user_id', $user_id);
-        return view('user.dashboard',compact('eksekutif','eksekutifs','pemesanans','tagihans','kelas','daftarfestivals'));
+        return view('user.dashboard',compact('eksekutif','eksekutifs','pemesanans','tagihanuser','kelas','daftarfestivaluser'));
 
     }
 

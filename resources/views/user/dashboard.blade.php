@@ -106,8 +106,8 @@ Dashboard
                                               Jumlah Tagihan Pembayaran Anda</div>
                                             <div class="h5 mb-0 font-weight-bold text-white-800"><?php
 
-                                            $tagihankelas = intval($tagihans);
-                                            $tagihanfestival = intval($daftarfestivals);
+                                            $tagihankelas = intval($tagihanuser);
+                                            $tagihanfestival = intval($daftarfestivaluser);
                                             $total = $tagihankelas + $tagihanfestival;
                                             echo $total; ?></div>
                                         </div>
