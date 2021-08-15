@@ -129,10 +129,11 @@ class LandingController extends Controller
         $user_id = Auth::id();
 
         $tagihans = DB::table('pemesanans')->where('status_pembayaran',1)->count();
+        $daftarfestivals = DB::table('daftarfestivals')->where('status_pembayaran',1)->count();
         $pemesanans = DB::table('pemesanans')->where('user_id',$user_id)->count();
         $eksekutifs = DB::table('eksekutifs')->count();
         $kelas = $eksekutif->where('user_id', $user_id);
-        return view('user.dashboard',compact('eksekutif','eksekutifs','pemesanans','tagihans','kelas'));
+        return view('user.dashboard',compact('eksekutif','eksekutifs','pemesanans','tagihans','kelas','daftarfestivals'));
 
     }
 

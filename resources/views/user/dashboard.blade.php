@@ -104,7 +104,12 @@ Dashboard
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-white text-uppercase mb-1">
                                               Jumlah Tagihan Pembayaran Anda</div>
-                                            <div class="h5 mb-0 font-weight-bold text-white-800"><?php echo $tagihans; ?></div>
+                                            <div class="h5 mb-0 font-weight-bold text-white-800"><?php
+
+                                            $tagihankelas = intval($tagihans);
+                                            $tagihanfestival = intval($daftarfestivals);
+                                            $total = $tagihankelas + $tagihanfestival;
+                                            echo $total; ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-money-check fa-2x text-gray-300"></i>
