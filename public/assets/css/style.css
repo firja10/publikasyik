@@ -48,20 +48,48 @@ h6 {
     background: #ad3221;
 }
 
-#preloader:before {
+/* #preloader:before {
     content: "";
     position: fixed;
     top: calc(50% - 30px);
     left: calc(50% - 30px);
-    border: 6px solid #37517e;
+
+    border: 6px solid #f1c21c;
     border-top-color: #fff;
     border-bottom-color: #fff;
+
     border-radius: 50%;
+
+    width: 120px;
+    height: 120px;
+    -webkit-animation: animate-preloader 1s linear infinite;
+    animation: animate-preloader 1s linear infinite;
+} */
+
+#gambar-preloader {
     width: 60px;
-    height: 60px;
+    position: fixed;
+
+    content: "";
+    position: fixed;
+    top: calc(50% - 65px);
+    left: calc(50% - 65px);
+
+    border: 6px solid #f1c21c;
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+
+    border-radius: 50%;
+
+    width: 150px;
+    height: 150px;
     -webkit-animation: animate-preloader 1s linear infinite;
     animation: animate-preloader 1s linear infinite;
 }
+
+/* #preloader:after {
+    content: url("/public/startup-unpad/publikasyik.png");
+} */
 
 @-webkit-keyframes animate-preloader {
     0% {
