@@ -43,8 +43,14 @@ Daftar Festival
     <br><br>
     <div class="row">
 
+        @if ($hitung == 0)
+
+        <div class="col-lg-12 mb-11">
+            <h1 style = "color:red;"> Untuk saat ini masih belum ada Festival.</h1>
+        </div>
 
 
+        @else
         @foreach ( $festival as $fest )
 
 
@@ -58,7 +64,7 @@ Daftar Festival
                 <div class="card-body">
                     <div class="text-center">
                         <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
-                            src="{{asset('storage/Festival/'.$fest->gambar_festival)}}" alt="...">
+                            src="{{asset('storage/Festival/'.$fest->gambar_festival)}}" alt="festival">
                     </div>
 
 
@@ -74,7 +80,7 @@ Daftar Festival
                     ?>
                     <center>
                     @if($datesbaru == NULL && $datesbaruakhir == NULL)
-                    <p class="card-text">Belum Ada </p>
+                    <p class="card-text">Belum Ada Tanggal Pelaksanaan </p>
                     @elseif ($datesbaru != NULL && $datesbaruakhir != NULL )
                     <p class="card-text"> <i class = "fa fa-calendar"></i>
                     <?php
@@ -133,6 +139,9 @@ Daftar Festival
 
         </div>
         @endforeach
+        @endif
+
+
         <br><br>
 
     </div>
