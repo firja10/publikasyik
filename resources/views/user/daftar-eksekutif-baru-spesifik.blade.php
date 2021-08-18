@@ -32,17 +32,29 @@ Daftar Kelas Baru
 
 <div class="container-fluid">
     <div class="section-title">
-        <h2>Daftar Kelas Baru</h2>
+        <h2>Metode Pembayaran untuk Kelas Baru</h2>
     </div>
     <br><br>
     <div class="row">
 
+<div class="col-xl-12">
+    <center>
+    <div class="alert" style = "background-color: #AD3221; color:#ffff;"  role="alert">
+        <br> <br>
+            <h2><strong>Silakan Pilih Metode Pembayaran</strong></h2>
+            <span> <strong>Pembayaran bisa dilakukan via : <br>
+                437801014082532 BRI an Dita Amalia</strong>
+            </span>
+            <br><br>
+      </div>
+    </center>
 
+</div>
 
-
+<br>
 
    <!-- Area Chart -->
-   <div class="col-xl-6 col-lg-5">
+   <div class="col-xl-12 col-lg-5">
 
         <form action = "{{route('pemesananstore')}}" method = "POST" enctype="multipart/form-data">
             @csrf
@@ -105,16 +117,18 @@ Daftar Kelas Baru
           </div>
 
           <div class="form-group">
-            <label for="metode_pembayaran">Metode Pembayaran</label>
+            <label for="metode_pembayaran"> <strong> Metode Pembayaran ( Untuk saat ini masih menggunakan BRI saja )</strong></label>
             <select name="metode_pembayaran" id="metode_pembayaran" class = "form-control">
-                  <option value = "BNI">BNI</option>
-                  <option value = "Mandiri">Mandiri</option>
+                  <option value = "BNI">BRI</option>
+                  <option value = "Mandiri" disabled>Mandiri</option>
+                  <option value = "Dana" disabled>Dana</option>
+
             </select>
           </div>
 
           <center>
 
-          <button class="btn btn-primary" type = "submit" name = "submit">Submit</button>
+          <button class="btn btn-primary" type = "submit" name = "submit">Submit Metode Pembayaran</button>
         </center>
         </form>
 

@@ -305,7 +305,7 @@
                   <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
                   <a href="https://www.instagram.com/publikasyik/" class="instagram"><i class="bx bxl-instagram"></i></a>
                   {{-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> --}}
-                  <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                  <a href="https://www.linkedin.com/company/publikasyik" class="linkedin"><i class="bx bxl-linkedin"></i></a>
                 </div>
                 <br>
                 <br>
