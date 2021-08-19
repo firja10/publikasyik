@@ -275,7 +275,7 @@ class LandingController extends Controller
         # code...
         $pemesanan = Pemesanan::findOrFail($id);
         $pemesanan->delete();
-        return redirect('/admin/daftar-langganan')->with('pemesanan-delete'.'data berhasil dihapus');
+        return redirect('/admin/daftar-langganan')->with('pemesanan-delete','Data berhasil dihapus');
 
     }
 
@@ -286,7 +286,7 @@ class LandingController extends Controller
         # code...
         $pemesanan = Pemesanan::findOrFail($id);
         $pemesanan->delete();
-        return redirect('/user/riwayat-kelas')->with('pemesanan-delete'.'data berhasil dihapus');
+        return redirect('/user/riwayat-kelas')->with('pemesanan-hapus','Data berhasil dihapus');
 
     }
 

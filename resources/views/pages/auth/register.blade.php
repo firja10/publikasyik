@@ -42,6 +42,34 @@
                         <div class="row">
                             {{-- <div class="col-lg-6 d-none d-lg-block bg-register-image"></div> --}}
                             <div class="col-lg-12">
+
+
+
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>Email Sudah Ada atau tidak valid</strong>
+                                    </span>
+                                @enderror
+
+
+
+                                @error('password')
+                                <div class="alert alert-warning">
+                                        <strong>Password Anda kurang dari 8</strong>
+                                </div>
+                                @enderror
+
+
+                                @if ( $message = Session::get('error-email-exist'))
+                                <div class="alert alert-warning">
+                                    <strong>{{$message}}</strong>
+                                </div>
+                                @endif
+
+
+
+
+
                                 <div class="p-5">
                                     <div class="text-center">
                                         <center>

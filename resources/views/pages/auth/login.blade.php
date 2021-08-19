@@ -54,6 +54,14 @@
                         <div class="row">
                             {{-- <div class="col-lg-6 d-none d-lg-block bg-register-image"></div> --}}
                             <div class="col-lg-12">
+
+
+                                @if ($message = Session::get('error'))
+                                <div class="alert alert-warning">
+                                    <span> <strong> {{$message}}</strong> </span>
+                                </div>
+                                @endif
+
                                 <div class="p-5">
                                     <div class="text-center">
                                         <center>

@@ -68,6 +68,21 @@ Riwayat Kelas
             <h3 class="m-0 font-weight-bold text-danger">Daftar Riwayat Kelas Anda</h3>
         </div>
         <div class="card-body">
+
+
+            @if ($message = Session::get('pemesanan-kelas'))
+            <div class="alert alert-success">
+                <span> <strong> {{$message}}</strong> </span>
+            </div>
+            @endif
+
+            @if ($message = Session::get('pemesanan-hapus'))
+            <div class="alert alert-danger">
+                <span> <strong> {{$message}}</strong> </span>
+            </div>
+            @endif
+
+
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style = "text-align: center;">
                     <thead>

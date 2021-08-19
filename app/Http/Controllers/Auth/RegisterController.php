@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Symfony\Component\Console\Input\Input;
 
 class RegisterController extends Controller
 {
@@ -71,5 +72,15 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
+        //IKI OPSIONAL YO
+
+        // if(User::where('email','=',Input::get('email'))->exists())
+        // {
+        //     return redirect('register')->with('error-email-exist','Email Sudah Ada');
+        // }
+
+
+
     }
 }
