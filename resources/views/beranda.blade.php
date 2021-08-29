@@ -397,7 +397,7 @@ Selamat Datang di Publikasyik
                             </div>
 
                             <div class="float-right" style = "margin-left:5px;margin-right:5px;">
-                              <a class="btn btn-success" href = "{{url('/user/daftar-kelas-baru')}}">Daftar</a>
+                              <a class="btn btn-success" href = "{{route('daftarkelasbaruspesifik', $kelas->id)}}">Daftar</a>
                             </div>
                           </div>
 

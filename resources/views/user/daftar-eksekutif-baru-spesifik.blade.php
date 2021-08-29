@@ -2,7 +2,7 @@
 
 @section('title')
 
-Daftar Kelas Baru
+Daftar Kelas {{$eksekutif->nama_kelas}}
 
 @endsection
 
@@ -32,7 +32,7 @@ Daftar Kelas Baru
 
 <div class="container-fluid">
     <div class="section-title">
-        <h2>Metode Pembayaran untuk Kelas Baru</h2>
+        <h2>Metode Pembayaran untuk Kelas {{$eksekutif->nama_kelas}}</h2>
     </div>
     <br><br>
     <div class="row">
