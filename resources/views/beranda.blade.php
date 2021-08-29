@@ -347,7 +347,7 @@ Selamat Datang di Publikasyik
 
 
  <!-- ======= Services Section ======= -->
- {{-- <section id="services" class="services">
+ <section id="services" class="services">
   <div class="container" data-aos="fade-up">
     <div class="section-title">
       <h2>Daftar Kelas Eksekutif</h2>
@@ -368,14 +368,14 @@ Selamat Datang di Publikasyik
               @foreach ( $eksekutif as $kelas )
 
               <tr  style = "border-bottom:100px solid white; ">
-
+{{-- 
                   <th scope = "row">
                     <center>
                     <img src="{{asset('storage/Eksekutif/'. $kelas->gambar_kelas)}}" alt="" style = "text-align: center;width:70%; padding-bottom:30px;padding-top:30px;">
                   </center>
-                  </td>
+                  </td> --}}
 
-                  <td>
+                  <th scope = "row">
                     <center>
                   <h1 style = "text-align: center; color:white; padding-top:20px;">{{$kelas->nama_kelas}}</h1>
                   <br>
@@ -389,14 +389,34 @@ Selamat Datang di Publikasyik
                           </h2>
                           </a>
 
+                          <br>
+                          <div style = "display:inline-block; margin:0px auto;">
+                            
+                            <div class = "float-left" style = "margin-left:5px;margin-right:5px;">
+                              <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample_{{ $kelas->id }}" aria-expanded="false" aria-controls="collapseExample_{{ $kelas->id }}" >Lihat Detail</button>
+                            </div>
+
+                            <div class="float-right" style = "margin-left:5px;margin-right:5px;">
+                              <a class="btn btn-success" href = "{{url('/login')}}">Daftar</a>
+                            </div>
+                          </div>
+
+                          <br>
+
+                          <div class="collapse" id="collapseExample_{{ $kelas->id }}">
+                            <div class="card card-body" id = "kartu" style = "background-color:#AD3221; color:white;">
+                             {{$kelas->deskripsi_kelas}}
+                            </div>
+                          </div>
+
                     </center>
                   </td>
 
-                  <td>
+                  {{-- <td>
                     <center>
                       <a href="" class="btn btn-success" style = "margin-bottom:20px; margin-top:50px; margin-right:20px;margin-left:20px;">Daftar Kelas</a>
                     </center>
-                  </td>
+                  </td> --}}
 
 
               </tr>
@@ -423,7 +443,7 @@ Selamat Datang di Publikasyik
 
 
 
-</section> --}}
+</section>
 
 
 
@@ -510,3 +530,4 @@ Selamat Datang di Publikasyik
     </main>
     <!-- End #main -->
 @endsection
+
