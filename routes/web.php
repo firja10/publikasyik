@@ -13,6 +13,7 @@ use App\Http\Controllers\PesanController;
 use App\Http\Controllers\SubmateriController;
 use App\Http\Controllers\DaftarfestivalController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Auth\ForgotPasswordController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -83,6 +84,24 @@ Route::post('/',[LandingController::class,'storepesan'])->name('storepesan');
 Route::post('/daftar-festival/gratis',[LandingController::class,'daftarfestival'])->name('daftarfestival')->middleware('auth');
 Route::post('/daftar-festival',[LandingController::class,'daftarfestivalbayar'])->name('daftarfestivalbayar')->middleware('auth');
 // Route::post('/user/daftar-festival-baru',[LandingController::class,'daftarfestivaluser'])->name('daftarfestivaluser')->middleware('auth');
+
+
+
+
+//LUPA PASSWORD
+
+Route::get('forget-password', [ForgotPasswordController::class, 'showForgetPasswordForm'])->name('forget.password.get');
+Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPasswordForm'])->name('forget.password.post'); 
+Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
+Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
+
+
+
+
+
+
+
+
 
 
 
