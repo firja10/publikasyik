@@ -1,4 +1,10 @@
 @extends('template.template')
+
+@section('title')
+Selamat Datang di Publikasyik
+@endsection
+
+
 @section('content')
 
     <!-- ======= Hero Section ======= -->
@@ -27,48 +33,50 @@
     <!-- End Hero -->
 
     <main id="main">
-      <!-- ======= Cliens Section ======= -->
-      <section id="cliens" class="cliens section-bg">
-        <div class="container">
-            <div class="row" data-aos="zoom-in">
-                <div class="col-lg-12">
-                    <center>
-                    <h3 id = "mitrakami">Berikut Merupakan Mitra Kami</h3>
-                     </center>
-                </div>
+      <!-- ======= Services Section ======= -->
+      <section id="services" class="services" style = "  background-color: rgb(241, 112, 28, 0.2);">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Berikut Merupakan Mitra Kami</h2>
+          </div>
 
+          <div class="row">
+            {{-- <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100" > --}}
+            <div class="col-lg-3 mt-6 mt-lg-0" data-aos="zoom-in" data-aos-delay="100" style = "text-align: center">
+              <div class="icon-box" style = "background-color:rgb(255,255,255,0.0)" >
+
+                <div class="icon"> <img src="{{asset('startup-unpad/pomits.png')}}" alt="POMITS ITS" style = "width:210px;"> </div>
+              </div>
             </div>
 
 
-          <div class="row" data-aos="zoom-in" id = "kumpulan-logo">
-            <div class="col-lg-3 col-md-4 col-7 d-flex align-items-center justify-content-center">
-              {{-- <img src="{{asset('assets/img/clients/client-1.png')}}" class="img-fluid" alt="" /> --}}
-              <img src="{{asset('startup-unpad/pomits-2.png')}}" class="img-fluid" alt=""/>
+            {{-- <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200"> --}}
+                <div class="col-lg-3 mt-6 mt-lg-0" data-aos="zoom-in" data-aos-delay="200" style = "text-align: center">
+              <div class="icon-box" style = "background-color:rgb(255,255,255,0.0)">
+                <div class="icon"> <img src="{{asset('startup-unpad/jcena-2.png')}}" alt="JCENA" style = "width:210px;"> </div>
+              </div>
             </div>
 
-            <div class="col-lg-3 col-md-4 col-7 d-flex align-items-center justify-content-center">
-              <img src="{{asset('startup-unpad/jcena-2.png')}}" class="img-fluid" alt="" />
+
+            {{-- <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300"> --}}
+                <div class="col-lg-3 mt-6 mt-lg-0" data-aos="zoom-in" data-aos-delay="300" style = "text-align: center">
+              <div class="icon-box" style = "background-color:rgb(255,255,255,0.0)">
+                <div class="icon"> <img src="{{asset('startup-unpad/adbis-2.png')}}" alt="AdBispreneur" style = "width:210px;"> </div>
+              </div>
             </div>
 
-            <div class="col-lg-3 col-md-4 col-7 d-flex align-items-center justify-content-center">
-              <img src="{{asset('startup-unpad/adbis-2.png')}}" class="img-fluid" alt="" />
-            </div>
 
-            <div class="col-lg-3 col-md-4 col-7 d-flex align-items-center justify-content-center">
-              <img src="{{asset('startup-unpad/jane-2.png')}}" class="img-fluid" alt="" />
-            </div>
-{{--
-            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-              <img src="{{asset('assets/img/clients/client-5.png')}}" class="img-fluid" alt="" />
-            </div>
+            {{-- <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400"> --}}
+                <div class="col-lg-3 mt-6 mt-lg-0" data-aos="zoom-in" data-aos-delay="400" style = "text-align: center">
+              <div class="icon-box" style = "background-color:rgb(255,255,255,0.0)">
+                <div class="icon"> <img src="{{asset('startup-unpad/jane-2.png')}}" alt="JANE" style = "width:210px;"> </div>
+              </div>
 
-            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-              <img src="{{asset('assets/img/clients/client-6.png')}}" class="img-fluid" alt="" />
-            </div> --}}
+            </div>
           </div>
         </div>
       </section>
-      <!-- End Cliens Section -->
+      <!-- End Services Section -->
 
       <!-- ======= About Us Section ======= -->
       <section id="about" class="about">
@@ -79,7 +87,7 @@
 
           <div class="row content">
             <div class="col-lg-6">
-                <img src="{{asset('startup-unpad/gambar-layananpng.png')}}" alt="" style = "margin-top:25px; width:600px;text-align:center;">
+                <img src="{{asset('startup-unpad/gambar-layananpng.png')}}" alt="Layanan Publikasyik" style = "margin-top:25px; width:100%;text-align:center;">
             </div>
 
             <div class="col-lg-6 pt-4 pt-lg-0">
@@ -167,16 +175,17 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                <div class="pic"><img src="{{asset('assets/img/team/team-1.jpg')}}" class="img-fluid" alt="" /></div>
+                {{-- <div class="pic"><img src="{{asset('assets/img/team/team-1.jpg')}}" class="img-fluid" alt="" /></div> --}}
+                <div class="pic"><img src="{{asset('mentor/mas-thoriq.png')}}" class="img-fluid" alt="Mochamad Thoriq Akbar" /></div>
                 <div class="member-info">
-                  <h4>Walter White</h4>
-                  <span>Mahasiswa Unpad</span>
+                  <h4>Mochamad Thoriq Akbar</h4>
+                  <span>Research Associate at Abdul Latif Jameel Poverty Action Lab (J-PAL)</span>
                   {{-- <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p> --}}
                   <div class="social">
                     <a href=""><i class="ri-twitter-fill"></i></a>
                     <a href=""><i class="ri-facebook-fill"></i></a>
-                    <a href=""><i class="ri-instagram-fill"></i></a>
-                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    <a href="https://www.instagram.com/thoriqakbarrr/"><i class="ri-instagram-fill"></i></a>
+                    <a href="https://www.linkedin.com/in/thoriqakbar/"> <i class="ri-linkedin-box-fill"></i> </a>
                   </div>
                 </div>
               </div>
@@ -184,28 +193,28 @@
 
             <div class="col-lg-6 mt-4 mt-lg-0">
               <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
-                <div class="pic"><img src="{{asset('assets/img/team/team-2.jpg')}}" class="img-fluid" alt="" /></div>
+                <div class="pic"><img src="{{asset('mentor/mas-diki.jpeg')}}" class="img-fluid" alt="Muhammad Diki Permana" /></div>
                 <div class="member-info">
-                  <h4>Sarah Jhonson</h4>
-                  <span>Product Manager</span>
+                  <h4>Muhamad Diki Permana</h4>
+                  <span>Laboratory Assistant in Inorganic Chemistry, Universitas Padjadjaran</span>
                   {{-- <p>Aut maiores voluptates amet et quis praesentium qui senda para</p> --}}
                   <div class="social">
                     <a href=""><i class="ri-twitter-fill"></i></a>
                     <a href=""><i class="ri-facebook-fill"></i></a>
                     <a href=""><i class="ri-instagram-fill"></i></a>
-                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    <a href="https://www.linkedin.com/in/muhamad-diki-permana-027571158/"> <i class="ri-linkedin-box-fill"></i> </a>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-6 mt-4">
+            {{-- <div class="col-lg-6 mt-4">
               <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
                 <div class="pic"><img src="{{asset('assets/img/team/team-3.jpg')}}" class="img-fluid" alt="" /></div>
                 <div class="member-info">
                   <h4>William Anderson</h4>
                   <span>CTO</span>
-                  {{-- <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p> --}}
+
                   <div class="social">
                     <a href=""><i class="ri-twitter-fill"></i></a>
                     <a href=""><i class="ri-facebook-fill"></i></a>
@@ -222,7 +231,7 @@
                 <div class="member-info">
                   <h4>Amanda Jepson</h4>
                   <span>Accountant</span>
-                  {{-- <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p> --}}
+
                   <div class="social">
                     <a href=""><i class="ri-twitter-fill"></i></a>
                     <a href=""><i class="ri-facebook-fill"></i></a>
@@ -231,7 +240,8 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> --}}
+            <br>
           </div>
         </div>
       </section>
@@ -270,7 +280,7 @@
               <div class="box">
                 <h3 style = "color:#5516DC">Festival Publikasyik</h3>
                 <h4>
-                    <img src="{{asset('startup-unpad/festival-publikasyik.png')}}" alt="">
+                    <img src="{{asset('startup-unpad/festival-publikasyik.png')}}" alt="festival publikasyik">
                 </h4>
                 {{-- <ul>
                   <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
@@ -282,7 +292,10 @@
                 <p id = "fp">Berisikan mengenai informasi kegiatan webinar yang diadakan pada bulan Agustus-November dengan mencantumkan posternya dan tempat untuk upload screenshot persyaratan yang telah calon peserta ikuti untuk mengikuti webinar yang akan diadakan</p>
                 <br>
                 <br>
-                <a href="#" class="buy-btn" style = "margin-top:10px;">Daftar</a>
+                {{-- <a href="{{route('festivalindex')}}" class="buy-btn" style = "margin-top:10px;">Daftar</a> --}}
+
+                <a href="{{url('festival-publikasyik')}}" class="buy-btn">Daftar</a>
+                  {{-- <a href="{{url('user/daftar-festival-baru')}}" class="buy-btn">Daftar</a> --}}
               </div>
             </div>
 
@@ -290,15 +303,15 @@
               <div class="box featured">
                 <h3 style = "color: #F1701C">Kelas Eksekutif</h3>
                 <h4>
-                    <img src="{{asset('startup-unpad/kelas-eksekutif.png')}}" alt="">
+                    <img src="{{asset('startup-unpad/kelas-eksekutif.png')}}" alt="Kelas Eksekutif">
                 </h4>
 
                 <p id = "ke">Pilihan kelas berbayar yang disediakan PUBLIKASYIK untuk pendampingan penyusunan skripsi/karya ilmiah lainnya yang siap dipublikasikan. Kelas ini Meliputi : </p>
                 <ul type = 1>
-                    <li> <i class="bx bx-check"></i><strong>Kelas Bab 1</strong> </li>
-                    <li> <i class="bx bx-check"></i><strong>Kelas Bab 2</strong> </li>
-                    <li> <i class="bx bx-check"></i><strong>Kelas Bab 3</strong> </li>
-                    <li> <i class="bx bx-check"></i><strong>Kelas Bab 4</strong> </li>
+                  <li> <i class="bx bx-check"></i><strong>Paket A ( Silver )</strong> </li>
+                  <li> <i class="bx bx-check"></i><strong>Paket B ( Bronze )</strong> </li>
+                  <li> <i class="bx bx-check"></i><strong>Paket C (Bronze 2)</strong> </li>
+                  <li> <i class="bx bx-check"></i><strong>Paket D (Gold)</strong> </li>
                 </ul>
                 {{-- <ul>
                   <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
@@ -307,7 +320,8 @@
                   <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
                   <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
                 </ul> --}}
-                <a href="#" class="buy-btn">Daftar</a>
+                {{-- <a href="{{url('/daftar-kelas')}}" class="buy-btn">Daftar</a> --}}
+                <a href="{{url('user/daftar-kelas-baru')}}" class="buy-btn">Daftar</a>
               </div>
             </div>
 
@@ -315,18 +329,121 @@
               <div class="box">
                 <h3 style = "color:#438850"> Publikasyik Paper Talent (PPT)</h3>
                 <h4>
-                    <img src="{{asset('startup-unpad/ppt.png')}}" alt="">
+                    <img src="{{asset('startup-unpad/ppt.png')}}" alt="PPT">
                 </h4>
                <p>Lomba karya tulis ilmiah (literature review atau berbasis penelitian) tingkat mahasiswa yang dapat diikuti oleh mahasiswa jurusan saintek/soshum dengan output bahwa karya ilmiah pemenang akan dipublikasikan di jurnal mitra</p>
                     <br><br> <br>
 
-                <a href="#" class="buy-btn" style = "margin-top:10px;">Daftar</a>
+                <a href="{{url('/ppt')}}" class="buy-btn" style = "margin-top:10px;">Daftar</a>
               </div>
             </div>
           </div>
         </div>
       </section>
       <!-- End Pricing Section -->
+
+
+
+
+
+ <!-- ======= Services Section ======= -->
+ {{-- <section id="services" class="services">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Daftar Kelas Eksekutif</h2>
+    </div>
+
+    <div class="row">
+
+
+
+
+
+
+      <div class="col-lg-12">
+
+      <table class = 'table' style = "background-color:#AD3221 ;">
+          <tbody>
+
+              @foreach ( $eksekutif as $kelas )
+
+              <tr  style = "border-bottom:100px solid white; ">
+
+                  <th scope = "row">
+                    <center>
+                    <img src="{{asset('storage/Eksekutif/'. $kelas->gambar_kelas)}}" alt="" style = "text-align: center;width:70%; padding-bottom:30px;padding-top:30px;">
+                  </center>
+                  </td>
+
+                  <td>
+                    <center>
+                  <h1 style = "text-align: center; color:white; padding-top:20px;">{{$kelas->nama_kelas}}</h1>
+                  <br>
+                      <h3 style = "color:white;">{{$kelas->materi_kelas}}</h3>
+
+                       <br>
+
+                          <a class="btn" style = "background-color:#F1C21C; margin-bottom:20px;">
+                              <h2>
+                           RP. {{$kelas->harga_kelas}}
+                          </h2>
+                          </a>
+
+                    </center>
+                  </td>
+
+                  <td>
+                    <center>
+                      <a href="" class="btn btn-success" style = "margin-bottom:20px; margin-top:50px; margin-right:20px;margin-left:20px;">Daftar Kelas</a>
+                    </center>
+                  </td>
+
+
+              </tr>
+
+              @endforeach
+          </tbody>
+      </table>
+
+      </div>
+
+
+
+
+
+
+  </div>
+</div>
+
+
+
+  <br><br><br>
+
+
+
+
+
+</section> --}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -342,35 +459,48 @@
 
 
             <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+
+              <form action="{{route('storepesan')}}" method="POST" role="form" class="php-email-form">
+                @csrf
+
+                @if ($message = Session::get('store-pesan'))
+                <div class="alert alert-success alert-block">
+                  <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>{{ $message }}</strong>
+                </div>
+              @endif
+
+
                 <div class="form-row">
+
+
                   <div class="form-group col-md-6">
-                    <label for="name">Nama Anda</label>
-                    <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                    <div class="validate"></div>
+                    <label for="nama">Nama Anda</label>
+                    <input type="text" name="nama" class="form-control" id="nama" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                    {{-- <div class="validate"></div> --}}
                   </div>
                   <div class="form-group col-md-6">
-                    <label for="name">Email Anda</label>
+                    <label for="email">Email Anda</label>
                     <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
-                    <div class="validate"></div>
+                    {{-- <div class="validate"></div> --}}
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="name">Judul Pesan</label>
-                  <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validate"></div>
+                  <label for="judul_pesan">Judul Pesan</label>
+                  <input type="text" class="form-control" name="judul_pesan" id="judul_pesan" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  {{-- <div class="validate"></div> --}}
                 </div>
                 <div class="form-group">
-                  <label for="name">Isi Pesan</label>
-                  <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
-                  <div class="validate"></div>
+                  <label for="isi_pesan">Isi Pesan</label>
+                  <textarea class="form-control" name="isi_pesan" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
+                  {{-- <div class="validate"></div> --}}
                 </div>
-                <div class="mb-3">
+                {{-- <div class="mb-3">
                   <div class="loading">Loading</div>
                   <div class="error-message"></div>
                   <div class="sent-message">Pesan Telah Terkirim, Terima Kasih</div>
-                </div>
-                <div class="text-center"><button type="submit">Kirimkan Pesan</button></div>
+                </div> --}}
+                <div class="text-center"><button type="submit" name = "submit">Kirimkan Pesan</button></div>
               </form>
             </div>
           </div>

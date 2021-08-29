@@ -24,14 +24,22 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
+// Route::get('/', function () {
 
-    return view('beranda');
-});
+//     return view('beranda');
+// });
 
-Route::get('/home', function () {
-    return view('beranda');
-});
+// Route::get('/home', function () {
+//     return view('home');
+// });
+
+Route::get('/', [LandingController::class,'homeindex'])->name('homeindex');
+
+
+Route::get('/home', [LandingController::class,'homeindexdua'])->name('homeindexdua');
+
+
+
 
 // Route::get('/loginpage', function () {
 //     return view('pages.auth.login');

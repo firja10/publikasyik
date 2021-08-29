@@ -83,6 +83,26 @@ class LandingController extends Controller
 
 
 
+    public function homeindex()
+    {
+        # code...
+
+        $eksekutif = Eksekutif::all();
+        return view('home',compact('eksekutif'));
+
+    }
+
+
+    public function homeindexdua()
+    {
+        # code...
+
+        $eksekutif = Eksekutif::all();
+        return view('home',compact('eksekutif'));
+
+    }
+
+
 
 
 

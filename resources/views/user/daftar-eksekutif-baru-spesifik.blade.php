@@ -119,7 +119,7 @@ Daftar Kelas Baru
           <div class="form-group">
             <label for="metode_pembayaran"> <strong> Metode Pembayaran ( Untuk saat ini masih menggunakan BRI saja )</strong></label>
             <select name="metode_pembayaran" id="metode_pembayaran" class = "form-control">
-                  <option value = "BNI">BRI</option>
+                  <option value = "BRI">BRI</option>
                   <option value = "Mandiri" disabled>Mandiri</option>
                   <option value = "Dana" disabled>Dana</option>
 
