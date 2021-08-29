@@ -77,7 +77,7 @@ Daftar Kelas Baru
                             $strings = explode(' - ', $kata);
                             foreach ($strings as $str ) {
                                 # code...
-                                echo "<li>". $str."</li>";
+                                echo "<ul> <li>". $str."</li> </ul>";
                             }
                             ?>
                         {{-- {{$exe->deskripsi_kelas}} --}}

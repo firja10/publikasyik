@@ -383,9 +383,24 @@ Selamat Datang di Publikasyik
 
                        <br>
 
+                       <?php
+
+                       $angka = $kelas->harga_kelas;
+                       $hasil_rupiah = "Rp. " . number_format($angka,2,',','.');
+
+                       $angkadiskon = $kelas->diskon;
+
+                       $hasil_diskon =  "Rp. " . number_format($angkadiskon,2,',','.');
+                   ?>
+
+
+                       <h4 style = "color:white;"><del>
+                        <?php echo $hasil_rupiah; ?>
+                       </del></h4>
+
                           <a class="btn" style = "background-color:#F1C21C; margin-bottom:20px;">
                               <h2>
-                           RP. {{$kelas->harga_kelas}}
+                         <?php echo $hasil_diskon; ?>
                           </h2>
                           </a>
 
@@ -405,10 +420,28 @@ Selamat Datang di Publikasyik
 
                           <div class="collapse" id="collapseExample_{{ $kelas->id }}">
                             <br>
-                            <div class="card card-body" id = "kartu" style = "background-color:#AD3221; color:white;">
-                             {{$kelas->deskripsi_kelas}}
+                            <div class="card card-body" id = "kartu" style = "background-color:#AD3221; color:white; text-align:left;">
+                             
+                            
+                            
+                              {{-- {{$kelas->deskripsi_kelas}} --}}
+                            
+                              <?php
+                            $kata = $kelas->deskripsi_kelas;
+                            $strings = explode(' - ', $kata);
+                            foreach ($strings as $str ) {
+                                # code...
+                                echo "<li>". $str."</li>";
+                            }
+                            ?>
+
+
+
+                            
+                            
                             </div>
                           </div>
+                          <br>
 
                     </center>
                   </td>
