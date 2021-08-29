@@ -1,4 +1,4 @@
-<h1>Forget Password Email</h1>
+<h1>Email Lupa Password</h1>
    
-You can reset password from bellow link:
+Silakan Anda Bisa Mereset password Anda Di Sini:
 <a href="{{ route('reset.password.get', $token) }}">Reset Password</a>
