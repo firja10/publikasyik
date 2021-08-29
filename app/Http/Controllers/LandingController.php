@@ -88,7 +88,7 @@ class LandingController extends Controller
         # code...
 
         $eksekutif = Eksekutif::all();
-        return view('home',compact('eksekutif'));
+        return view('beranda',compact('eksekutif'));
 
     }
 
@@ -98,7 +98,7 @@ class LandingController extends Controller
         # code...
 
         $eksekutif = Eksekutif::all();
-        return view('home',compact('eksekutif'));
+        return view('beranda',compact('eksekutif'));
 
     }
 
