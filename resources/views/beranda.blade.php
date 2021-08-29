@@ -404,6 +404,7 @@ Selamat Datang di Publikasyik
                           <br>
 
                           <div class="collapse" id="collapseExample_{{ $kelas->id }}">
+                            <br>
                             <div class="card card-body" id = "kartu" style = "background-color:#AD3221; color:white;">
                              {{$kelas->deskripsi_kelas}}
                             </div>
