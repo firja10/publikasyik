@@ -131,7 +131,7 @@
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="forgot-password.html" style = "color:white;">Lupa Password ?</a>
+                                        <a class="small" href="{{url('/forget-password')}}" style = "color:white;">Lupa Password ?</a>
                                     </div>
                                     <div class="text-center">
                                         <a class="small" href="{{url('/login')}}" style = "color:white;">Sudah Punya Akun ? Silakan Klik Ini !</a>
