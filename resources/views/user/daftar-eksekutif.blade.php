@@ -72,6 +72,7 @@ Riwayat Kelas
 
             @if ($message = Session::get('pemesanan-kelas'))
             <div class="alert alert-success">
+                
                 <span> <strong> {{$message}}</strong> </span>
             </div>
             @endif
@@ -92,6 +93,7 @@ Riwayat Kelas
                             <th>Harga Kelas</th>
                             <th>Metode Pembayaran</th>
                             <th>Status Pembayaran</th>
+                            <th>Tanggal Akhir Pembayaran</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -148,17 +150,51 @@ Riwayat Kelas
                                     echo "Belum Mendaftar";
                                 }
                                 ?></td>
+
+                                <td>
+                                    <?php 
+                
+                                    // $tanggal = \Carbon\Carbon::createFromFormat('Y-m-d', $datas->created_at);
+                                    $tanggal = \Carbon\Carbon::parse($datas->created_at);
+        
+                                    $deadline = $tanggal->addDays(2);
+
+                                    $deadlineanyar = date('d M Y H:i:s', strtotime($deadline));
+
+                                    echo $deadlineanyar;
+                                    ?>
+
+                                    {{-- {{$datas->created_at}} --}}
+                                </td>
+
                             <td>
-                              @if($datas->status_pembayaran == 1)
-                                <center><a href="" class="btn btn-warning" style = "color:black;"> Selesaikan Pembayaran </a></center>
-                                <br>
-                                <center>
-                                    <form action="{{route('batalkanpemesanan', $datas->id)}}" method="POST" enctype="multipart/form-data">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" name = "submit" class="btn btn-danger">Batalkan Kelas</button>
-                                    </form>
-                                </center>
+
+                              @if($datas->status_pembayaran == 1 && $deadline >= date('Y-m-d H:i:s'))
+                              <center><a href="" class="btn btn-warning" style = "color:black;"> Selesaikan Pembayaran </a></center>
+                              <br>
+                              <center>
+                                  <form action="{{route('batalkanpemesanan', $datas->id)}}" method="POST" enctype="multipart/form-data">
+                                      @csrf
+                                      @method('DELETE')
+                                      <button type="submit" name = "submit" class="btn btn-danger">Batalkan Kelas</button>
+                                  </form>
+                              </center>
+
+
+                              @elseif($datas->status_pembayaran == 1 && $deadline < date('Y-m-d H:i:s'))
+
+                              <center><a href="" class="btn btn-dark"> Pemesanan Sudah Kedaluarsa </a></center>
+                             
+                              <br>
+                              <center>
+                                  <form action="{{route('batalkanpemesanan', $datas->id)}}" method="POST" enctype="multipart/form-data">
+                                      @csrf
+                                      @method('DELETE')
+                                      <button type="submit" name = "submit" class="btn btn-danger">Hapus Kelas</button>
+                                  </form>
+                              </center>
+
+                              
                               @elseif($datas->status_pembayaran == 2)
                               <center><a href="{{route('akseskelas', $datas->id)}}" class="btn btn-success"> Akses Kelas </a></center>
                               <br>

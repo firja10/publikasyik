@@ -18,6 +18,7 @@ use App\Models\Pesan;
 use App\Models\Daftarfestival;
 use Illuminate\Support\Facades\Storage;
 use PhpParser\Node\Stmt\Return_;
+use Illuminate\Support\Carbon;
 
 class LandingController extends Controller
 {
@@ -245,7 +246,7 @@ class LandingController extends Controller
         $data->diskon = $request['diskon'];
         $data->save();
 
-        return redirect('/user/riwayat-kelas')->with('pemesanan-kelas','Anda telah mendaftar kelas');
+        return redirect('/user/riwayat-kelas')->with('pemesanan-kelas','Anda telah mendaftar kelas, lakukan pembayaran maksimal 2 x 24 Jam');
     }
 
 

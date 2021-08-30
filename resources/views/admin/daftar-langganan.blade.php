@@ -45,6 +45,7 @@ Daftar Kelas Eksekutif - Admin
                 <th scope="col">Harga Kelas</th>
                 <th scope="col">ID User</th>
                 <th scope="col">ID Kelas</th>
+                <th scope = "col">Tanggal Akhir Pembayaran</th>
                 <th scope = "col">Status Pembayaran</th>
                 <th scope="col">Aksi</th>
               </tr>
@@ -66,9 +67,33 @@ Daftar Kelas Eksekutif - Admin
                 <td>{{$exe->kelas_id}}</td>
 
                 <td>
+                  <?php 
+                
+                  // $tanggal = \Carbon\Carbon::createFromFormat('Y-m-d', $datas->created_at);
+                  $tanggal = \Carbon\Carbon::parse($exe->created_at);
+
+                  $deadline = $tanggal->addDays(2);
+
+                  $deadlineanyar = date('d M Y H:i:s', strtotime($deadline));
+
+                  echo $deadlineanyar ;
+
+
+                  ?>
+                </td>
+
+
+
+
+                <td>
                     <center>
-                        @if($exe->status_pembayaran == 1)
-                      <strong><span style = "color:yellow;">Belum Membayar</span></strong>
+                        @if($exe->status_pembayaran == 1 && $deadline >= date('Y-m-d H:i:s'))
+                      <strong><span style = "color:yellow;">Belum Membayar
+                
+                      </span></strong>
+                        @elseif( $exe->status_pembayaran == 1 && $deadline < date('Y-m-d H:i:s'))
+                        <strong><span style = "color:red;">Kedaluarsa</span></strong>
+                      
                         @elseif($exe->status_pembayaran == 2)
                         <a href="" class="btn btn-success">Sudah Membayar</a>
                         @endif

@@ -105,7 +105,7 @@
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="forgot-password.html" style = "color:white;">Lupa Password ?</a>
+                                        <a class="small" href="{{url('/forgot-password')}}" style = "color:white;">Lupa Password ?</a>
                                     </div>
                                     <div class="text-center">
                                         <a class="small" href="{{url('/register')}}" style = "color:white;">Buatlah Akun !</a>
