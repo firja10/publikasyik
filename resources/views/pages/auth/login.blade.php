@@ -62,6 +62,12 @@
                                 </div>
                                 @endif
 
+                                @if ($message = Session::get('ubah'))
+                                <div class="alert alert-success">
+                                    <span> <strong> {{$message}}</strong> </span>
+                                </div>
+                                @endif
+
                                 <div class="p-5">
                                     <div class="text-center">
                                         <center>
@@ -113,7 +119,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>\
+                    </div>
                 </div>
 
             </div>

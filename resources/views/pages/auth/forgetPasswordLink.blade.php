@@ -68,6 +68,14 @@
                                             </button>
                                         </center>
                                     </form>
+                                    <hr>
+                                    <div class="text-center">
+                                        <a class="small" href="{{url('/login')}}" style = "color:white;">Sudah Punya Akun ?</a>
+                                    </div>
+                                    <div class="text-center">
+                                        <a class="small" href="{{url('/register')}}" style = "color:white;">Belum Mendaftar ?</a>
+                                    </div>
+
 
 
                                 </div>

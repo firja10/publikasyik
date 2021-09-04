@@ -23,7 +23,7 @@ Masukkan Email Reset Password
                             <div class="col-lg-12">
 
 
-                                @if ($message = Session::get('error'))
+                                @if ($message = Session::get('message'))
                                 <div class="alert alert-warning">
                                     <span> <strong> {{$message}}</strong> </span>
                                 </div>
@@ -55,6 +55,16 @@ Masukkan Email Reset Password
                                             </button>
                                         </center>
                                     </form>
+
+                                    <hr>
+                                    <div class="text-center">
+                                        <a class="small" href="{{url('/login')}}" style = "color:white;">Sudah Punya Akun ?</a>
+                                    </div>
+                                    <div class="text-center">
+                                        <a class="small" href="{{url('/register')}}" style = "color:white;">Belum Mendaftar ?</a>
+                                    </div>
+
+
 
 
                                 </div>
