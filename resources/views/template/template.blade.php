@@ -219,7 +219,10 @@
 
         @else
 
-        <a href="{{url('/login')}}" class="get-started-btn scrollto">Log In</a>
+        <a href="{{url('/login')}}" class="get-started-btn scrollto">
+          {{-- Log In --}}
+         Log In
+        </a>
 
         @endif
 
