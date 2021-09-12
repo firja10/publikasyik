@@ -248,7 +248,8 @@ h6 {
 .nav-menu .drop-down ul a:hover,
 .nav-menu .drop-down ul .active > a,
 .nav-menu .drop-down ul li:hover > a {
-    color: #47b2e4;
+    /* color: #47b2e4; */
+    color:#ad3221;
 }
 
 .nav-menu .drop-down > a:after {
@@ -349,7 +350,8 @@ h6 {
     left: 15px;
     z-index: 9999;
     overflow-y: auto;
-    background: #fff;
+    /* background: #fff; */
+    background:#ad3221;
     transition: ease-in-out 0.2s;
     opacity: 0;
     visibility: hidden;
@@ -361,21 +363,26 @@ h6 {
     margin: 0;
     padding: 0;
     list-style: none;
+   
 }
 
 .mobile-nav a {
     display: block;
     position: relative;
-    color: #37517e;
+    /* color: #37517e; */
+    color: #fff;
     padding: 10px 20px;
     font-weight: 500;
     outline: none;
+
 }
 
 .mobile-nav a:hover,
 .mobile-nav .active > a,
 .mobile-nav li:hover > a {
-    color: #47b2e4;
+    /* color: #47b2e4; */
+    /* color:#ad3221; */
+    color: #f1c21c;
     text-decoration: none;
 }
 
