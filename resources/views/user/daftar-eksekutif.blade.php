@@ -170,7 +170,7 @@ Riwayat Kelas
                             <td>
 
                               @if($datas->status_pembayaran == 1 && $deadline >= date('Y-m-d H:i:s'))
-                              <center><a href="" class="btn btn-warning" style = "color:black;"> Selesaikan Pembayaran </a></center>
+                              <center><a href="https://api.whatsapp.com/send?phone=6287847972064&text=Halo%2C+Admin+Publikasyik%21+Saya+{{Auth::user()->name}}+ingin+mengirimkan+bukti+pembayaran." class="btn btn-warning" style = "color:black;"> Selesaikan Pembayaran </a></center>
                               <br>
                               <center>
                                   <form action="{{route('batalkanpemesanan', $datas->id)}}" method="POST" enctype="multipart/form-data">
