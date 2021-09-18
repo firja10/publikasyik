@@ -289,9 +289,13 @@ Selamat Datang di Publikasyik
                   <li class="na"><i class="bx bx-x"></i> <span>Pharetra massa massa ultricies</span></li>
                   <li class="na"><i class="bx bx-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
                 </ul> --}}
-                <p id = "fp">Berisikan mengenai informasi kegiatan webinar yang diadakan pada bulan Agustus-November dengan mencantumkan posternya dan tempat untuk upload screenshot persyaratan yang telah calon peserta ikuti untuk mengikuti webinar yang akan diadakan</p>
+                <p id = "fp">Berisikan mengenai informasi kegiatan webinar yang akan diadakan pada bulan Agustus-November yang tersebar di seluruh PTN/PTS Se-Indonesia</p>
                 <br>
                 <br>
+                <br>
+                <br>
+                <br>
+             
                 {{-- <a href="{{route('festivalindex')}}" class="buy-btn" style = "margin-top:10px;">Daftar</a> --}}
 
                 <a href="{{url('festival-publikasyik')}}" class="buy-btn">Daftar</a>

@@ -693,5 +693,17 @@ class LandingController extends Controller
 
 
 
+    public function festivalhome()
+    {
+        # code...
+        $festival = Festival::all();
+        return view('festival-home',compact('festival'));
+    }
+
+
+
+
+
+
 
 }

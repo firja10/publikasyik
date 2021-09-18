@@ -59,9 +59,15 @@ Route::get('/ppt', function () {
     return view('ppt-home');
 });
 
-Route::get('/festival-publikasyik', function () {
-    return view('festival-home');
-});
+// Route::get('/festival-publikasyik', function () {
+//     return view('festival-home');
+// });
+
+
+Route::get('festival-publikasyik', [LandingController::class,'festivalhome'])->name('festivalhome')->middleware('auth');
+
+
+
 
 
 Route::get('/halaman-kelas', function () {
