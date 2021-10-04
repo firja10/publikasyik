@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content = "Fairuz Firjatullah" name = "author">
+    <meta name = "description" name = "Layanan jasa pendampingan yang menyenangkan dalam pembuatan karya ilmiah hingga proses publikasi di jurnal yang bereputasi">
     <title>
         @yield('title')
 
