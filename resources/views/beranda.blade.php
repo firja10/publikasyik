@@ -295,6 +295,7 @@ Selamat Datang di Publikasyik
                 <br>
                 <br>
                 <br>
+            
              
                 {{-- <a href="{{route('festivalindex')}}" class="buy-btn" style = "margin-top:10px;">Daftar</a> --}}
 
@@ -316,6 +317,9 @@ Selamat Datang di Publikasyik
                   <li> <i class="bx bx-check"></i><strong>Paket B ( Bronze )</strong> </li>
                   <li> <i class="bx bx-check"></i><strong>Paket C (Bronze 2)</strong> </li>
                   <li> <i class="bx bx-check"></i><strong>Paket D (Gold)</strong> </li>
+                  <li> <i class="bx bx-check"></i><strong>Paket Komplit Skripsi (Platinum)</strong> </li>
+                  <li> <i class="bx bx-check"></i><strong>Paket Komplit Jurnal (Gold)</strong> </li>
+                  <li> <i class="bx bx-check"></i><strong>Paket Komplit Jurnal (Platinum)</strong> </li>
                 </ul>
                 {{-- <ul>
                   <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
