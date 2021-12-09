@@ -42,6 +42,20 @@ Route::get('/home', [LandingController::class,'homeindexdua'])->name('homeindexd
 
 
 
+Route::get('/activity', [LandingController::class,'homeindextiga'])->name('homeindextiga');
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Route::get('/loginpage', function () {
 //     return view('pages.auth.login');
 // });
@@ -73,6 +87,7 @@ Route::get('festival-publikasyik', [LandingController::class,'festivalhome'])->n
 Route::get('/halaman-kelas', function () {
         return view('user.halaman-materi');
 });
+
 
 
 
