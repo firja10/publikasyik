@@ -384,20 +384,20 @@ Aktivitas Kami !
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            {{-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> --}}
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img class="d-block w-100" src="{{asset('img/kegiatan1.png')}}" alt="First slide">
               <div class="carousel-caption d-none d-md-block">
-                <h5>Kelas Besar</h5>
+                <h2>Kelas Besar</h2>
                 <p>Kelas Besar merupakan kegiatan kelas yang diadakan secara Daring dan dilaksanakan pada 12 September 2021</p>
               </div>
             </div>
             <div class="carousel-item">
               <img class="d-block w-100" src="{{asset('img/kegiatan2.png')}}" alt="Second slide">
               <div class="carousel-caption d-none d-md-block">
-                <h5>Seminar Keilmiahan</h5>
+                <h2>Seminar Keilmiahan</h2>
                 <p>Seminar Keilmiahan merupakan sebuah kegiatan mengenai sharing keilmiahan yang diadakan pada tanggal ...</p>
               </div>
             </div>
