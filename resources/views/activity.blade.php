@@ -1,7 +1,7 @@
 @extends('template.templatebaru')
 
 @section('title')
-Aktivitas Kami ! 
+Selamat Datang di Publikasyik ! 
 @endsection
 
 
