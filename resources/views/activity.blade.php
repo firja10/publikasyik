@@ -33,50 +33,7 @@ Selamat Datang di Publikasyik !
     <!-- End Hero -->
 
     <main id="main">
-      <!-- ======= Services Section ======= -->
-      <section id="services" class="services" style = "  background-color: rgba(34,64,92, 0.2);">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Berikut Merupakan Mitra Kami</h2>
-          </div>
-
-          <div class="row">
-            {{-- <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100" > --}}
-            <div class="col-lg-3 mt-6 mt-lg-0" data-aos="zoom-in" data-aos-delay="100" style = "text-align: center">
-              <div class="icon-box" style = "background-color:rgb(255,255,255,0.0)" >
-
-                <div class="icon"> <img src="{{asset('startup-unpad/pomits.png')}}" alt="POMITS ITS" style = "width:210px;"> </div>
-              </div>
-            </div>
-
-
-            {{-- <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200"> --}}
-                <div class="col-lg-3 mt-6 mt-lg-0" data-aos="zoom-in" data-aos-delay="200" style = "text-align: center">
-              <div class="icon-box" style = "background-color:rgb(255,255,255,0.0)">
-                <div class="icon"> <img src="{{asset('startup-unpad/jcena-2.png')}}" alt="JCENA" style = "width:210px;"> </div>
-              </div>
-            </div>
-
-
-            {{-- <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300"> --}}
-                <div class="col-lg-3 mt-6 mt-lg-0" data-aos="zoom-in" data-aos-delay="300" style = "text-align: center">
-              <div class="icon-box" style = "background-color:rgb(255,255,255,0.0)">
-                <div class="icon"> <img src="{{asset('startup-unpad/adbis-2.png')}}" alt="AdBispreneur" style = "width:210px;"> </div>
-              </div>
-            </div>
-
-
-            {{-- <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400"> --}}
-                <div class="col-lg-3 mt-6 mt-lg-0" data-aos="zoom-in" data-aos-delay="400" style = "text-align: center">
-              <div class="icon-box" style = "background-color:rgb(255,255,255,0.0)">
-                <div class="icon"> <img src="{{asset('startup-unpad/jane-2.png')}}" alt="JANE" style = "width:210px;"> </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Services Section -->
+      
 
       <!-- ======= About Us Section ======= -->
       <section id="about" class="about">
@@ -397,8 +354,8 @@ Selamat Datang di Publikasyik !
             <div class="carousel-item">
               <img class="d-block w-100" src="{{asset('img/kegiatan2.png')}}" alt="Second slide">
               <div class="carousel-caption d-none d-md-block">
-                <h2>Seminar Keilmiahan</h2>
-                <p>Seminar Keilmiahan merupakan sebuah kegiatan mengenai sharing keilmiahan yang diadakan pada tanggal ...</p>
+                <h2>Live instagram Seminar Keilmiahan</h2>
+                <p>Live instagram Seminar Keilmiahan merupakan sebuah kegiatan mengenai sharing keilmiahan yang dilaksanakan di media sosial Instagram</p>
               </div>
             </div>
 
