@@ -38,7 +38,7 @@
 </head>
 
 {{-- <body class="bg-gradient-danger"> --}}
-<body style = "background-color:#AD3221;">
+<body style = "background-color:#22405C;">
     <br><br> <br>
 
     <div class="container">
