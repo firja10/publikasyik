@@ -34,10 +34,14 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 //     return view('home');
 // });
 
-Route::get('/', [LandingController::class,'homeindex'])->name('homeindex');
+// Route::get('/', [LandingController::class,'homeindex'])->name('homeindex');
+
+Route::get('/', [LandingController::class,'homeindexempat'])->name('homeindexempat');
+
+Route::get('/home', [LandingController::class,'homeindexlima'])->name('homeindexlima');
 
 
-Route::get('/home', [LandingController::class,'homeindexdua'])->name('homeindexdua');
+// Route::get('/home', [LandingController::class,'homeindexdua'])->name('homeindexdua');
 
 
 
